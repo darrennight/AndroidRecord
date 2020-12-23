@@ -27,6 +27,7 @@
         <activity android:name=".activity.KeyBoardPopDialog"/>
         <activity android:name=".custom.selector.ui.MatisseActivity"/>
         <activity android:name=".custom.selector.ui.MatisseCustomActivity"/>
+
     </application>
 
 </manifest>
