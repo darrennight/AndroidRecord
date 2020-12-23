@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ms="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/color_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+    <ImageView
+        android:id="@+id/error_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_error_icon" />
+
+    <TextView
+        android:id="@+id/error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/color_6C747B"
+        android:textSize="13sp"
+        android:text="加载失败" />
+
+        <com.hao.androidrecord.custom.RoundBackGround
+            android:id="@+id/retry"
+            android:layout_width="154dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            ms:bnb_bt_text="刷新一下"
+            ms:bnb_bt_text_color="@color/color_white"
+            ms:bnb_bt_text_size="14sp"
+            ms:bnb_corner_radius="22dp"
+            ms:bnb_gradient_orientation="left_right"
+            ms:bnb_has_gradient="true"
+            ms:gradient_normal_end_color="@color/color_FE6E47"
+            ms:gradient_normal_start_color="@color/color_FF4D4C"
+            ms:gradient_press_end_color="@color/color_FE6E47"
+            ms:gradient_press_start_color="@color/color_FF4D4C" />
+    </LinearLayout>
+</RelativeLayout>

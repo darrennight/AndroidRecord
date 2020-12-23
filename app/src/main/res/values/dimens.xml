@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="media_grid_size">48dp</dimen>
+    <dimen name="media_grid_spacing">4dp</dimen>
+    <dimen name="custom_media_grid_spacing">2dp</dimen>
+
+    <dimen name="album_item_height">72dp</dimen>
+    <dimen name="default_stroke_width">7dp</dimen>
+    <dimen name="default_background_stroke_width">3dp</dimen>
+
+    <dimen name="ugckit_item_thumb_height">60dp</dimen>
+    <dimen name="ugckit_cut_margin">10dp</dimen>
+
+</resources>

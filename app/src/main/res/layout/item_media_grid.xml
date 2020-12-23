@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hao.androidrecord.custom.selector.internal.ui.widget.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/iv_video_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:textSize="12sp"
+        android:textColor="@color/color_white"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_4k"
+        android:layout_width="28dp"
+        android:layout_height="16dp"
+        android:textSize="10sp"
+        android:textColor="@color/color_white"
+        android:text="4K"
+        android:visibility="invisible"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:background="@drawable/bg_4k"
+        />
+
+</com.hao.androidrecord.custom.selector.internal.ui.widget.SquareFrameLayout>

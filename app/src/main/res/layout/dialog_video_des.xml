@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_outside_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:id="@+id/rl_inputdlg_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_141518"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_comment"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/black">
+
+            <EditText
+                android:id="@+id/et_input_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="13dp"
+                android:background="@color/color_transparent"
+                android:gravity="top"
+                android:hint="惊艳的描述会增加更多曝光机会哦！～"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:imeActionLabel="确定"
+                android:imeOptions="actionDone"
+                android:lineSpacingMultiplier="1.1"
+                tools:ignore="InvalidImeActionId" />
+
+            <TextView
+                android:id="@+id/tv_edit_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="0/60"
+                 />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

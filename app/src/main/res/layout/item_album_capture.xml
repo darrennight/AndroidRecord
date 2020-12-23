@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hao.androidrecord.custom.selector.internal.ui.widget.SquareLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_FF4D4C"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_album_capture"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/color_white"
+        android:text="拍摄视频"
+        android:layout_marginTop="11dp"
+        />
+
+</com.hao.androidrecord.custom.selector.internal.ui.widget.SquareLinearLayout>

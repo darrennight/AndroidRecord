@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="127dp"
+    android:layout_gravity="center"
+    xmlns:bread="http://schemas.android.com/apk/res-auto"
+    >
+    <com.hao.androidrecord.custom.RoundBackGround
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        bread:pure_normal_color="@color/color_white"
+        bread:pure_press_color="@color/color_white"
+        bread:bnb_corner_radius="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_permission_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_22222B"
+        android:textSize="13sp"
+        android:text="美视需要存储和拍摄等相关权限才能正常使用视频上传"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="270dp"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_22222B"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="取消"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_EA5B55"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="去开启"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_E6E6E6"/>
+
+    <View
+        android:layout_width="270dp"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/layout_btn"
+        android:background="@color/color_E6E6E6"/>
+
+</RelativeLayout>

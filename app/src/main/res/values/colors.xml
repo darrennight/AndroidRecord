@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_66FFFFFF">#66FFFFFF</color>
+    <color name="color_transparent">#00FFFFFF</color>
+    <color name="color_B3FFFFFF">#B3FFFFFF</color>
+    <color name="color_404040">#404040</color>
+    <color name="color_FF3300">#FF3300</color>
+    <color name="color_282828">#282828</color>
+    <color name="color_141518">#141518</color>
+
+    <color name="dracula_primary">#263237</color>
+    <color name="dracula_primary_dark">#1D282C</color>
+
+    <color name="dracula_album_popup_bg">#34474E</color>
+    <color name="dracula_album_dropdown_title_text">#DEFFFFFF</color>
+    <color name="dracula_album_dropdown_count_text">#89FFFFFF</color>
+    <color name="dracula_album_dropdown_thumbnail_placeholder">#455A64</color>
+    <color name="dracula_album_empty_view">#4DFFFFFF</color>
+
+    <color name="dracula_item_placeholder">#37474F</color>
+    <color name="dracula_item_checkCircle_backgroundColor">#263237</color>
+    <color name="dracula_item_checkCircle_borderColor">#FFFFFF</color>
+    <color name="dracula_capture">#FFFFFF</color>
+
+    <color name="dracula_page_bg">#232E32</color>
+    <color name="dracula_bottom_toolbar_bg">#34474E</color>
+
+    <color name="dracula_bottom_toolbar_preview_text">#DEFFFFFF</color>
+    <color name="dracula_bottom_toolbar_preview_text_disable">#4DFFFFFF</color>
+    <color name="dracula_bottom_toolbar_apply_text">#03A9F4</color>
+    <color name="dracula_bottom_toolbar_apply_text_disable">#4D03A9F4</color>
+
+    <color name="dracula_preview_bottom_toolbar_back_text">#FFFFFF</color>
+    <color name="dracula_preview_bottom_toolbar_apply_text">#03A9F4</color>
+    <color name="dracula_preview_bottom_toolbar_apply_text_disable">#4D03A9F4</color>
+    <color name="zhihu_primary">#1E8AE8</color>
+    <color name="zhihu_primary_dark">#176EB9</color>
+
+    <color name="zhihu_album_popup_bg">#FFFFFF</color>
+    <color name="zhihu_album_dropdown_title_text">#DE000000</color>
+    <color name="zhihu_album_dropdown_count_text">#999999</color>
+    <color name="zhihu_album_dropdown_thumbnail_placeholder">#EAEEF4</color>
+    <color name="zhihu_album_empty_view">#4D000000</color>
+
+    <color name="zhihu_item_placeholder">#EAEEF4</color>
+    <color name="zhihu_item_checkCircle_backgroundColor">#1E8AE8</color>
+    <color name="zhihu_item_checkCircle_borderColor">#FFFFFF</color>
+    <color name="zhihu_capture">#424242</color>
+
+    <color name="zhihu_page_bg">#FFFFFF</color>
+    <color name="zhihu_bottom_toolbar_bg">#FFFFFF</color>
+
+    <color name="zhihu_bottom_toolbar_preview_text">#DE000000</color>
+    <color name="zhihu_bottom_toolbar_preview_text_disable">#4D000000</color>
+    <color name="zhihu_bottom_toolbar_apply_text">#0077D9</color>
+    <color name="zhihu_bottom_toolbar_apply_text_disable">#4D0077D9</color>
+
+    <color name="zhihu_preview_bottom_toolbar_back_text">#FFFFFF</color>
+    <color name="zhihu_preview_bottom_toolbar_apply_text">#0077D9</color>
+    <color name="zhihu_preview_bottom_toolbar_apply_text_disable">#4D0077D9</color>
+
+    <color name="zhihu_check_original_radio_disable">#808080</color>
+
+    <color name="preview_bottom_toolbar_bg">#CC000000</color>
+    <color name="preview_bottom_size">#61FFFFFF</color>
+
+    <color name="color_FF4D4C">#FF4D4C</color>
+    <color name="color_FF2F4C">#FF2F4C</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_22222B">#22222B</color>
+    <color name="color_EA5B55">#EA5B55</color>
+    <color name="color_E6E6E6">#E6E6E6</color>
+    <color name="color_6C747B">#6C747B</color>
+    <color name="color_FE6E47">#FE6E47</color>
+
+</resources>
