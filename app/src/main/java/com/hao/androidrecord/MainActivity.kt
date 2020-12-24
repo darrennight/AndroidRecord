@@ -5,9 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.hao.androidrecord.activity.AnimlogoActivity
 import com.hao.androidrecord.activity.KeyBoardPageScroll
 import com.hao.androidrecord.activity.KeyBoardPopDialog
 import com.hao.androidrecord.activity.blur.BlurActivity
+import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
@@ -63,9 +65,14 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity, KeyBoardPopDialog::class.java))
                     }
                     4->{
-
                         openAlbumWithPermissionCheck()
+                    }
 
+                    5->{
+                        startActivity(Intent(this@MainActivity, ParallaxMainActivity::class.java))
+                    }
+                    6->{
+                        startActivity(Intent(this@MainActivity, AnimlogoActivity::class.java))
                     }
                 }
             }
@@ -80,6 +87,8 @@ class MainActivity : AppCompatActivity() {
         list.add("2键盘弹出页面滚动")
         list.add("3键盘弹出--弹出对话框输入--类似添加评论")
         list.add("4相册列出视频")
+        list.add("5RecycleView背景视差decoration")
+        list.add("6启动页logo文字动画")
         adapter.notifyDataSetChanged()
     }
 }

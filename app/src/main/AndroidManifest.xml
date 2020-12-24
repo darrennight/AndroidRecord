@@ -28,6 +28,11 @@
         <activity android:name=".custom.selector.ui.MatisseActivity"/>
         <activity android:name=".custom.selector.ui.MatisseCustomActivity"/>
 
+        <activity android:name=".activity.parallaxdecoration.ParallaxMainActivity"/>
+        <activity android:name=".activity.parallaxdecoration.HorizontalActivity"/>
+        <activity android:name=".activity.parallaxdecoration.VerticalActivity"/>
+        <activity android:name=".activity.AnimlogoActivity"/>
+
     </application>
 
 </manifest>

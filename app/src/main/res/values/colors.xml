@@ -15,6 +15,9 @@
     <color name="color_FF3300">#FF3300</color>
     <color name="color_282828">#282828</color>
     <color name="color_141518">#141518</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
 
     <color name="dracula_primary">#263237</color>
     <color name="dracula_primary_dark">#1D282C</color>
