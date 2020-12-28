@@ -9,6 +9,7 @@ import com.hao.androidrecord.activity.AnimlogoActivity
 import com.hao.androidrecord.activity.KeyBoardPageScroll
 import com.hao.androidrecord.activity.KeyBoardPopDialog
 import com.hao.androidrecord.activity.blur.BlurActivity
+import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.adapter.DemoAdapter
@@ -74,6 +75,9 @@ class MainActivity : AppCompatActivity() {
                     6->{
                         startActivity(Intent(this@MainActivity, AnimlogoActivity::class.java))
                     }
+                    7->{
+                        startActivity(Intent(this@MainActivity, NestedMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -89,6 +93,7 @@ class MainActivity : AppCompatActivity() {
         list.add("4相册列出视频")
         list.add("5RecycleView背景视差decoration")
         list.add("6启动页logo文字动画")
+        list.add("7RecyclerView和头部layout交互集合")
         adapter.notifyDataSetChanged()
     }
 }

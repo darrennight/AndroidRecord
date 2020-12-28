@@ -33,6 +33,11 @@
         <activity android:name=".activity.parallaxdecoration.VerticalActivity"/>
         <activity android:name=".activity.AnimlogoActivity"/>
 
+        <activity android:name=".activity.nestedscrolling.NestedMainActivity"/>
+        <activity android:name=".activity.nestedscrolling.NestedScrollTestActivity"/>
+        <activity android:name=".activity.nestedscrolling.RecyclerViewAndRecyclerViewActivity"/>
+        <activity android:name=".activity.nestedscrolling.ScrollViewAndRecyclerViewActivity"/>
+
     </application>
 
 </manifest>

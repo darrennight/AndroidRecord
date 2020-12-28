@@ -94,4 +94,11 @@ dependencies {
 
     api "org.permissionsdispatcher:permissionsdispatcher:4.8.0"
     kapt "org.permissionsdispatcher:permissionsdispatcher-processor:4.8.0"
+
+    implementation "com.google.android.material:material:1.2.1"
+
+    //我的简单图片加载库
+    implementation 'com.hfy.imageloader:imageloader:1.0.0'
+    //BRVAH
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
 }
