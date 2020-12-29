@@ -42,6 +42,8 @@
         <activity android:name=".activity.scrollable.HeaderAndTablayoutRV"/>
         <activity android:name=".activity.scrollable.HeaderAndTablayoutRV02"/>
         <activity android:name=".activity.scrollable01.ScrollableMainActivity"/>
+        <activity android:name=".activity.scrollable02.MainActivity"/>
+        <activity android:name=".activity.scrollable02.TestActivity"/>
 
     </application>
 

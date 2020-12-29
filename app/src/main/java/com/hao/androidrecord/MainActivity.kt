@@ -14,6 +14,7 @@ import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
 import com.hao.androidrecord.activity.scrollable01.ScrollableMainActivity
+import com.hao.androidrecord.activity.scrollable02.MainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
@@ -90,6 +91,9 @@ class MainActivity : AppCompatActivity() {
                     10->{
                         startActivity(Intent(this@MainActivity, ScrollableMainActivity::class.java))
                     }
+                    11->{
+                        startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                    }
                 }
             }
         }
@@ -106,9 +110,10 @@ class MainActivity : AppCompatActivity() {
         list.add("5RecycleView背景视差decoration")
         list.add("6启动页logo文字动画")
         list.add("7RecyclerView和头部layout交互集合")
-        list.add("8RecyclerView和头部layout")
+        list.add("8RecyclerView和头部layout+顶部下拉刷新")
         list.add("9RecyclerView和头部layout")
         list.add("10RecyclerView和头部layout")
+        list.add("11RecyclerView和头部layout")
         adapter.notifyDataSetChanged()
     }
 }
