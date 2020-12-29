@@ -22,4 +22,10 @@
     <string name="button_sure_default">确定</string>
     <string name="button_sure">确定(%1$d)</string>
     <string name="ugckit_video_cutter_activity_load_video_success_already_picked">已选取</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAF9F9"
+    android:orientation="vertical"
+    >
+    <!--title-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_white"
+        android:clickable="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="房态"
+            android:textColor="@color/color_22222B"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:id="@+id/view_title_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_BFC9D4"
+            />
+    </RelativeLayout>
+
+    <!--layoutStae-->
+
+
+            <!-- <com.cpoopc.scrollablelayoutlib.ScrollableLayout-->
+            <com.hao.androidrecord.custom.ScrollableLayout
+                android:id="@+id/layout_scrollable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/color_FAF9F9"
+                >
+                <!--header-->
+                <View android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/color_6C747B"/>
+
+
+                <!--tabStrip-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:id="@+id/tv_today_index"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="今天"
+                                android:textColor="@color/color_22222B"
+
+                                />
+                            <View
+                                android:id="@+id/view_today_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="11dp"
+                                android:layout_marginTop="10dp"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="38dp"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_tomorrow_index"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="明天"
+                                android:textColor="@color/color_BFC9D4"
+                                />
+                            <View
+                                android:id="@+id/view_tomorrow_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="11dp"
+                                android:layout_marginTop="10dp"
+                                android:visibility="invisible"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_BFC9D4"
+                        />
+                </LinearLayout>
+
+
+                <com.liaoinstan.springview.widget.SpringView
+                    android:id="@+id/spring_index_load"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_order_house_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="LinearLayoutManager"
+                        android:background="@color/color_white"
+                        android:overScrollMode="never"
+                        />
+                </com.liaoinstan.springview.widget.SpringView>
+
+            </com.hao.androidrecord.custom.ScrollableLayout>
+
+
+
+
+
+</LinearLayout>

@@ -37,6 +37,11 @@
         <activity android:name=".activity.nestedscrolling.NestedScrollTestActivity"/>
         <activity android:name=".activity.nestedscrolling.RecyclerViewAndRecyclerViewActivity"/>
         <activity android:name=".activity.nestedscrolling.ScrollViewAndRecyclerViewActivity"/>
+        <activity android:name=".activity.nestedscrolling.NestedScrollTestRefreshActivity"/>
+
+        <activity android:name=".activity.scrollable.HeaderAndTablayoutRV"/>
+        <activity android:name=".activity.scrollable.HeaderAndTablayoutRV02"/>
+        <activity android:name=".activity.scrollable01.ScrollableMainActivity"/>
 
     </application>
 

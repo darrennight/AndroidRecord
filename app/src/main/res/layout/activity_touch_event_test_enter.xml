@@ -60,4 +60,12 @@
         android:text="使用NestedScrollParent2Layout，解决嵌套滑动：recyclerview 套viewPager+recyclerview"
         android:textAllCaps="false"/>
 
+
+    <Button
+        android:id="@+id/btn_add_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NestedScroll机制：NestedScrollingParent2Layout+ViewPager+RecyclerView+refresh"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

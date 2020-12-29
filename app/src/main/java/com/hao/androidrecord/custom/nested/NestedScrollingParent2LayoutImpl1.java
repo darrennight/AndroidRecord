@@ -2,6 +2,7 @@ package com.hao.androidrecord.custom.nested;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -43,6 +44,7 @@ public class NestedScrollingParent2LayoutImpl1 extends NestedScrollingParent2Lay
     @Override
     public boolean onStartNestedScroll(@NonNull View child, @NonNull View target, int axes, int type) {
         return (axes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
+//        return false; 不能整体滚动
     }
 
 
@@ -61,6 +63,8 @@ public class NestedScrollingParent2LayoutImpl1 extends NestedScrollingParent2Lay
         //这里不管手势滚动还是fling都处理
         boolean hideTop = dy > 0 && getScrollY() < mTopViewHeight;
         boolean showTop = dy < 0 && getScrollY() >= 0 && !target.canScrollVertically(-1);
+//        Log.e("=====hide",""+hideTop);
+//        Log.e("=====showTop",""+showTop);
         if (hideTop || showTop) {
             scrollBy(0, dy);
             consumed[1] = dy;

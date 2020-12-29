@@ -84,5 +84,12 @@
     <color name="color_E6E6E6">#E6E6E6</color>
     <color name="color_6C747B">#6C747B</color>
     <color name="color_FE6E47">#FE6E47</color>
+    <color name="color_FAF9F9">#FAF9F9</color>
+    <color name="color_BFC9D4">#BFC9D4</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="c_0">#7B68EE</color>
+    <color name="c_1">#FF69B4</color>
+    <color name="c_2">#6495ED</color>
+    <color name="c_3">#FFBF00</color>
 
 </resources>

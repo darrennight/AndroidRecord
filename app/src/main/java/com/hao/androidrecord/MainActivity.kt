@@ -11,6 +11,9 @@ import com.hao.androidrecord.activity.KeyBoardPopDialog
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
+import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
+import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
+import com.hao.androidrecord.activity.scrollable01.ScrollableMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
@@ -78,6 +81,15 @@ class MainActivity : AppCompatActivity() {
                     7->{
                         startActivity(Intent(this@MainActivity, NestedMainActivity::class.java))
                     }
+                    8->{
+                        startActivity(Intent(this@MainActivity, HeaderAndTablayoutRV::class.java))
+                    }
+                    9->{
+                        startActivity(Intent(this@MainActivity, HeaderAndTablayoutRV02::class.java))
+                    }
+                    10->{
+                        startActivity(Intent(this@MainActivity, ScrollableMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -94,6 +106,9 @@ class MainActivity : AppCompatActivity() {
         list.add("5RecycleView背景视差decoration")
         list.add("6启动页logo文字动画")
         list.add("7RecyclerView和头部layout交互集合")
+        list.add("8RecyclerView和头部layout")
+        list.add("9RecyclerView和头部layout")
+        list.add("10RecyclerView和头部layout")
         adapter.notifyDataSetChanged()
     }
 }

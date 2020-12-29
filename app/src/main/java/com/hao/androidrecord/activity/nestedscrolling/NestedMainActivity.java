@@ -45,6 +45,7 @@ public class NestedMainActivity extends AppCompatActivity implements View.OnClic
         findViewById(R.id.btn_test_nested_scroll_parent2_view_recycler_view).setOnClickListener(this);
         findViewById(R.id.btn_test_nested_scroll_recycler_view_and_recycler_view).setOnClickListener(this);
         findViewById(R.id.btn_test_recycler_view_and_recycler_view).setOnClickListener(this);
+        findViewById(R.id.btn_add_refresh).setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +73,8 @@ public class NestedMainActivity extends AppCompatActivity implements View.OnClic
             case R.id.btn_test_nested_scroll_recycler_view_and_recycler_view:
                 RecyclerViewAndRecyclerViewActivity.launch(this, true);
                 break;
+            case R.id.btn_add_refresh:
+                NestedScrollTestRefreshActivity.launch(this, true);
             default:
                 break;
         }
