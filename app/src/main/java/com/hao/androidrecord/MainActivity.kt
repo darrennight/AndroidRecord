@@ -2,12 +2,18 @@ package com.hao.androidrecord
 
 import android.Manifest
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hao.androidrecord.activity.AnimlogoActivity
 import com.hao.androidrecord.activity.KeyBoardPageScroll
 import com.hao.androidrecord.activity.KeyBoardPopDialog
+import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
@@ -15,6 +21,7 @@ import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
 import com.hao.androidrecord.activity.scrollable01.ScrollableMainActivity
 import com.hao.androidrecord.activity.scrollable02.MainActivity
+import com.hao.androidrecord.activity.shadow.MainShadowActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
@@ -24,6 +31,7 @@ import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.RuntimePermissions
+
 
 @RuntimePermissions
 class MainActivity : AppCompatActivity() {
@@ -94,6 +102,15 @@ class MainActivity : AppCompatActivity() {
                     11->{
                         startActivity(Intent(this@MainActivity, MainActivity::class.java))
                     }
+                    12->{
+                        startActivity(Intent(this@MainActivity, MainShadowActivity::class.java))
+                    }
+                    13->{
+                        startActivity(Intent(this@MainActivity, TestActivity::class.java))
+                    }
+                    14->{
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.MultiScroll.activity.MainActivity::class.java))
+                    }
                 }
             }
         }
@@ -114,6 +131,45 @@ class MainActivity : AppCompatActivity() {
         list.add("9RecyclerView和头部layout")
         list.add("10RecyclerView和头部layout")
         list.add("11RecyclerView和头部layout")
+        list.add("12阴影")
+        list.add("13RecyclerView和头部layout")
+        list.add("14RecyclerView和头部layout")
         adapter.notifyDataSetChanged()
+
+
+//        testWebView()
+        wv_webview.visibility = View.GONE
+    }
+
+
+    private fun testWebView(){
+
+        webiewSetting()
+        wv_webview.loadUrl("http://s.taishimei.com/dist1/index.html?index=1")
+        wv_webview.visibility = View.GONE
+    }
+
+    private fun webiewSetting() {
+        //声明WebSettings子类
+        val webSettings: WebSettings = wv_webview.getSettings()
+        webSettings.setJavaScriptEnabled(true);
+
+
+
+        //设置自适应屏幕，两者合用
+        webSettings.useWideViewPort = true //将图片调整到适合webview的大小
+        webSettings.loadWithOverviewMode = true // 缩放至屏幕的大小
+
+        //缩放操作
+        webSettings.setSupportZoom(true) //支持缩放，默认为true。是下面那个的前提。
+        webSettings.builtInZoomControls = true //设置内置的缩放控件。若为false，则该WebView不可缩放
+        webSettings.displayZoomControls = false //隐藏原生的缩放控件
+
+        //其他细节操作
+        webSettings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK //关闭webview中缓存
+        webSettings.allowFileAccess = true //设置可以访问文件
+        webSettings.javaScriptCanOpenWindowsAutomatically = true //支持通过JS打开新窗口
+        webSettings.loadsImagesAutomatically = true //支持自动加载图片
+        webSettings.defaultTextEncodingName = "utf-8" //设置编码格式
     }
 }

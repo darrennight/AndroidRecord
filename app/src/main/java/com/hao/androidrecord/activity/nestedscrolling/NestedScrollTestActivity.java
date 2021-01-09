@@ -35,8 +35,8 @@ public class NestedScrollTestActivity extends AppCompatActivity {
     ViewPager viewPager;
     TextView tvHead;
 
-    //    private String[] titles = {"头条", "新闻", "娱乐"};
-    private String[] titles = {"头条"};
+        private String[] titles = {"头条", "新闻", "娱乐"};
+//    private String[] titles = {"头条"};
 
     /**
      * 首页fragments
@@ -56,6 +56,7 @@ public class NestedScrollTestActivity extends AppCompatActivity {
         Intent intent = getIntent();
         mIsNested = intent.getBooleanExtra("isNested", false);
         if (mIsNested) {
+
             setContentView(R.layout.activity_nested_scroll);
         } else {
             setContentView(R.layout.activity_traditional_scroll);
@@ -71,8 +72,8 @@ public class NestedScrollTestActivity extends AppCompatActivity {
 
     private void initView() {
         fragments.add(new NestedScrollTestFragment());
-//        fragments.add(new NestedScrollTestFragment());
-//        fragments.add(new NestedScrollTestFragment());
+        fragments.add(new NestedScrollTestFragment());
+        fragments.add(new NestedScrollTestFragment());
         HomePagerAdapter adapter = new HomePagerAdapter(getSupportFragmentManager(), titles, fragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

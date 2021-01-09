@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AndroidRecord">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -44,6 +45,11 @@
         <activity android:name=".activity.scrollable01.ScrollableMainActivity"/>
         <activity android:name=".activity.scrollable02.MainActivity"/>
         <activity android:name=".activity.scrollable02.TestActivity"/>
+        <activity android:name=".activity.shadow.MainShadowActivity"/>
+
+        <activity android:name=".activity.StickyHeaderViewPager.TestActivity"/>
+        <activity android:name=".activity.StickyHeaderViewPager.SimpleActivity"/>
+        <activity android:name=".activity.MultiScroll.activity.MainActivity"/>
 
     </application>
 

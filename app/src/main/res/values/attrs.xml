@@ -331,4 +331,15 @@
     </declare-styleable>
 
     <attr name="aspect" />
+
+
+
+
+    <declare-styleable name="SlidingTabLayoutStick">
+        <attr name="indicatorColor" format="color"/>
+        <attr name="shouldExpand" format="boolean" />
+        <attr name="slidingTabView" format="reference" />
+        <attr name="slidingTabTextViewId" format="reference"/>
+    </declare-styleable>
+
 </resources>

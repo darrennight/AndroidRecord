@@ -45,6 +45,7 @@ public class NestedScrollTestRecyclerViewAdapter extends RecyclerView.Adapter<Ne
         DataBean dataBean = list.get(i);
         viewHoder.textView.setText(dataBean.text);
         ImageLoader.with(context).loadBitmapAsync(dataBean.url,viewHoder.imageView);
+        Log.i(TAG, "onBindViewHolder: "+i);
     }
 
     @Override
