@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- indicator -->
     <!-- 设置显示器颜色 -->
     <attr name="tl_indicator_color" format="color"/>
@@ -340,6 +340,114 @@
         <attr name="shouldExpand" format="boolean" />
         <attr name="slidingTabView" format="reference" />
         <attr name="slidingTabTextViewId" format="reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="WheelFullDatePickerStyle">
+
+        <!-- 顯示民國年 -->
+        <attr name="showTaiwanYear" format="boolean" />
+        <!-- 小於0的數字前面加0 -->
+        <attr name="addZeroIfSmallThanTen" format="boolean" />
+        <!-- 選單日期是否即時顯示 -->
+        <attr name="setCurrentTimeVisible" format="boolean" />
+        <!-- 能不能設定今天以前的時間 -->
+        <attr name="canSetUpPastTime" format="boolean" />
+        <!-- 能不能設定今天以後的時間 -->
+        <attr name="canSetUpFutureTime" format="boolean" />
+        <!-- 是否顯示年月日字串 -->
+        <attr name="showDateLastString" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="WheelTwoDimensionPickerStyle">
+
+        <!-- 是否總是顯示兩個滾輪 -->
+        <attr name="alwaysShowTwoWheel" format="boolean" />
+        <!-- 如果滾輪樣式是純粹顯示文字，左邊滾輪的顯示行數 預設為一行 -->
+        <attr name="leftWheelVisibleLine" format="integer" />
+        <!-- 如果滾輪樣式是純粹顯示文字，右邊滾輪的顯示行數 預設為一行 -->
+        <attr name="rightWheelVisibleLine" format="integer" />
+        <!-- 如果滾輪樣式是純粹顯示文字，兩邊滾輪的文字大小 格式為dip -->
+        <attr name="wheelTwoDimensionTextSize" format="integer" />
+        <!-- 是否即時顯示所選資料 -->
+        <attr name="isCurrentSelectVisible" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="WheelSinglePickerStyle">
+
+        <!-- 如果滾輪樣式是純粹顯示文字，滾輪的顯示行數 預設為一行 -->
+        <attr name="visibleLine" format="integer" />
+        <!-- 如果滾輪樣式是純粹顯示文字，兩邊滾輪的文字大小 格式為dip -->
+        <attr name="singleTextSize" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TriangleViewStyle">
+        <attr name="triangleColor" format="reference|color" />
+        <attr name="shapeArrow">
+
+            <!-- show event in current month. -->
+            <enum name="UP" value="0" />
+            <!-- show event in current month and preious month. -->
+            <enum name="DOWN" value="1" />
+            <!-- show event in current month and next month. -->
+            <enum name="RIGHT" value="2" />
+            <!-- show event in all month. -->
+            <enum name="LEFT" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="WheelTimerStyle">
+        <!-- 是否總是顯示兩個滾輪 -->
+        <attr name="timeMode">
+            <!-- 選擇模式 -->
+            <enum name="select" value="0" />
+            <!-- 倒數模式 -->
+            <enum name="countDown" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="DatePicker">
+        <attr name="picker_text_color" format="color" />
+        <attr name="picker_select_textColor" format="color" />
+        <attr name="picker_split" format="color" />
+        <attr name="picker_split_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SmileView">
+        <attr name="smil_radius" format="integer" />
+        <attr name="smil_line_width" format="integer" />
+        <attr name="smil_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="WidgetSlideLayout">
+        <attr name="widget_slide_overlay_distance" format="dimension" />
+        <attr name="widget_disable_slider_refresh" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WidgetMinVerticalMarginFrameLayout">
+        <attr name="widget_min_vertical_margin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswThumbRangeRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextThumbInset" format="dimension"/>
+        <attr name="kswTextExtra" format="dimension"/>
+        <attr name="kswTextAdjust" format="dimension"/>
     </declare-styleable>
 
 </resources>

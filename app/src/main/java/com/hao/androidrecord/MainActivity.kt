@@ -14,14 +14,19 @@ import com.hao.androidrecord.activity.AnimlogoActivity
 import com.hao.androidrecord.activity.KeyBoardPageScroll
 import com.hao.androidrecord.activity.KeyBoardPopDialog
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
+import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
+import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
 import com.hao.androidrecord.activity.scrollable01.ScrollableMainActivity
 import com.hao.androidrecord.activity.scrollable02.MainActivity
+import com.hao.androidrecord.activity.scrollable03.MainActivityScrollable03
+import com.hao.androidrecord.activity.scrollable04.Demo4Activity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
+import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
@@ -111,6 +116,26 @@ class MainActivity : AppCompatActivity() {
                     14->{
                         startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.MultiScroll.activity.MainActivity::class.java))
                     }
+
+                    15->{
+                        startActivity(Intent(this@MainActivity, DateTimePicerActivity::class.java))
+                    }
+                    16->{
+                        startActivity(Intent(this@MainActivity, MainActivityScrollable03::class.java))
+                    }
+
+                    17->{
+                        startActivity(Intent(this@MainActivity, Demo4Activity::class.java))
+                    }
+                    18->{
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.scrollable05.MainActivity::class.java))
+                    }
+                    19->{
+                        startActivity(Intent(this@MainActivity, AliHomeMainActivity::class.java))
+                    }
+                    20->{
+                        startActivity(Intent(this@MainActivity, SwitchButtonMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -134,6 +159,12 @@ class MainActivity : AppCompatActivity() {
         list.add("12阴影")
         list.add("13RecyclerView和头部layout")
         list.add("14RecyclerView和头部layout")
+        list.add("15时间选择器")
+        list.add("16RecyclerView和头部layout仿京东,淘宝商品展示")
+        list.add("17RecyclerView和头部layout仿支付宝首页")
+        list.add("18RecyclerView和头部layout即刻出品")
+        list.add("19RecyclerView和头部layout支付宝首页")
+        list.add("20滑动按钮")
         adapter.notifyDataSetChanged()
 
 

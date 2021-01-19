@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hao.androidrecord">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -13,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
+        tools:replace="android:theme"
         android:theme="@style/Theme.AndroidRecord">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -50,6 +52,17 @@
         <activity android:name=".activity.StickyHeaderViewPager.TestActivity"/>
         <activity android:name=".activity.StickyHeaderViewPager.SimpleActivity"/>
         <activity android:name=".activity.MultiScroll.activity.MainActivity"/>
+        <activity android:name=".activity.datetime.DateTimePicerActivity"/>
+        <activity android:name=".activity.scrollable03.MainActivityScrollable03"/>
+        <activity android:name=".activity.scrollable04.Demo4Activity"/>
+        <activity android:name=".activity.scrollable05.MainActivity"/>
+        <activity android:name=".activity.scrollable05.DebugSlideActivity"/>
+        <activity android:name=".activity.alihome.AliHomeMainActivity"/>
+        <activity android:name=".activity.switchButton.RecyclerActivity"/>
+        <activity android:name=".activity.switchButton.StyleActivity"/>
+        <activity android:name=".activity.switchButton.StyleInCodeActivity"/>
+        <activity android:name=".activity.switchButton.SwitchButtonMainActivity"/>
+        <activity android:name=".activity.switchButton.UseActivity"/>
 
     </application>
 

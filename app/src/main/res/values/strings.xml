@@ -23,8 +23,6 @@
     <string name="button_sure">确定(%1$d)</string>
     <string name="ugckit_video_cutter_activity_load_video_success_already_picked">已选取</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -44,4 +42,85 @@
     <string name="answer">答</string>
     <string name="no_more">没有更多了</string>
     <string name="more_loading">更多加载中...</string>
+
+    <string name="appbar_coali_behavior">com.hao.androidrecord.activity.scrollable04.AlipayRefreshBehavior</string>
+
+    <string name="debug_slide_header_title">NestedScrolling</string>
+    <string name="debug_slide_header_description_short">
+        This interface should be implemented by View subclasses that wish to support dispatching nested scrolling operations to a cooperating parent ViewGroup.
+    </string>
+    <string name="debug_slide_header_description_long">
+        This interface should be implemented by View subclasses that wish to support dispatching nested scrolling operations to a cooperating parent ViewGroup.\n
+        Classes implementing this interface should create a final instance of a NestedScrollingChildHelper as a field and delegate any View methods to the NestedScrollingChildHelper methods of the same signature.
+        Views invoking nested scrolling functionality should always do so from the relevant ViewCompat, ViewGroupCompat or ViewParentCompat compatibility shim static methods. This ensures interoperability with nested scrolling views on Android 5.0 Lollipop and newer.
+        Dispatch a fling to a nested scrolling parent.
+        This method should be used to indicate that a nested scrolling child has detected suitable conditions for a fling. Generally this means that a touch scroll has ended with a velocity in the direction of scrolling that meets or exceeds the minimum fling velocity along a scrollable axis.
+        If a nested scrolling child view would normally fling but it is at the edge of its own content, it can use this method to delegate the fling to its nested scrolling parent instead. The parent may optionally consume the fling or observe a child fling.
+    </string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="copyright">version&#160;<b>2.0.3</b>\nby&#160;<b>kyleduo</b></string>
+    <string name="license">Apache License 2.0</string>
+
+    <!-- style title -->
+    <string name="style_default">Default Style</string>
+    <string name="style_default_measure"><b>Specific exact width.</b> \n1. 80dp width;\n2. 80dp width &amp; 20dp thumb width;\n3. 20dp width &amp; 20dp thumb width, no enough room so do NOT display and no event;\n4. 2nd line negative thumbMargin;\n5. 3rd line. with text.</string>
+    <string name="style_text">With Status Text</string>
+    <string name="style_nofade">Default Style without background fade effect.</string>
+    <string name="style_tint_color">Custom by tint color</string>
+    <string name="style_custom">Custom Style</string>
+    <string name="style_flyme">Flyme5 Style</string>
+    <string name="style_miui">MIUI7 Style</string>
+    <string name="style_md_ios">Material Design &#038; iOS Style</string>
+    <string name="style_disable">Disable state</string>
+    <string name="style_disable_opt">Toggle the others\' enable state</string>
+    <string name="enable_title">enable/disable other SwitchButtons</string>
+
+    <!-- use title -->
+    <string name="use_listener">Work with listener</string>
+    <string name="use_listener_distinguish_manually">Distinguish between manually and by code</string>
+    <string name="use_listener_distinguish_manually_hint">Use the SwitchButton above to control this one.</string>
+    <string name="use_delay">Work with delay</string>
+    <string name="use_check_in_check">call setChecked(boolean)/setCheckedImmediately(boolean) in OnCheckedChangeListener\nIf the second SwitchButton is checked, the first one was "locked" to checked state.</string>
+    <string name="use_listener_finish">You did it!</string>
+    <string name="use_trigger_manually">Manually</string>
+    <string name="use_trigger_by_code">By Code</string>
+    <string name="use_long">work with stuff takes long</string>
+    <string name="use_long_hint">Click "Start" button to kick it off.</string>
+    <string name="use_long_finish">Click "Start" button to kick it off.</string>
+    <string name="use_toggle">2 ways to TOGGLE</string>
+    <string name="use_checked">2 ways to SET_CHECKED</string>
+    <string name="toggle_animated">toggle();</string>
+    <string name="toggle_animated_no_event">toggleNoEvent();</string>
+    <string name="toggle_not_animated">toggleImmediately();</string>
+    <string name="toggle_not_animated_no_event">toggleImmediatelyNoEvent();</string>
+    <string name="checked_animated">setChecked(boolean);</string>
+    <string name="checked_animated_no_event">setCheckedNoEvent(boolean);</string>
+    <string name="checked_not_animated">setCheckedImmediately(boolean);</string>
+    <string name="checked_not_animated_no_event">setCheckedImmediatelyNoEvent(boolean);</string>
+    <string name="bt_start">Start</string>
+
+    <style name="style_in_code">Change properties in code.</style>
+
+    <!-- menu -->
+    <string name="action_github">view in github</string>
+    <string name="action_blog">my blog</string>
+
+    <!-- contents -->
+    <string-array name="contents">
+        <item>@string/title_activity_style</item>
+        <item>@string/title_activity_style_in_code</item>
+        <item>@string/title_activity_use</item>
+        <item>@string/title_activity_recycler_view</item>
+        <item>@string/copyright</item>
+        <item>@string/license</item>
+    </string-array>
+
+    <string name="title_activity_style">Style in xml</string>
+    <string name="title_activity_use">Easy to use</string>
+    <string name="title_activity_style_in_code">Style in code</string>
+    <string name="title_activity_recycler_view">Used in RecyclerView</string>
+    <string name="disable_no_event">The right SwitchButton was checked in code using setCheckedImmediatelyNoEvent when first enter, so no effects there.</string>
 </resources>

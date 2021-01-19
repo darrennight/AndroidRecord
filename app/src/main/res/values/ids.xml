@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="tag_item" type="id" />
+    <item name="tool_bar" type="id"/>
+    <item name="empty_view" type="id"/>
+
+    <item name="alipay_bar" type="id"/>
+    <item name="alipay_snap" type="id"/>
 </resources>
