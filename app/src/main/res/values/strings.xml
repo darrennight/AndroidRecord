@@ -123,4 +123,37 @@
     <string name="title_activity_style_in_code">Style in code</string>
     <string name="title_activity_recycler_view">Used in RecyclerView</string>
     <string name="disable_no_event">The right SwitchButton was checked in code using setCheckedImmediatelyNoEvent when first enter, so no effects there.</string>
+
+    <string-array name="list">
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+        <item>List</item>
+    </string-array>
+
+
 </resources>

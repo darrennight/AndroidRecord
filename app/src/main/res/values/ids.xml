@@ -6,4 +6,7 @@
 
     <item name="alipay_bar" type="id"/>
     <item name="alipay_snap" type="id"/>
+
+    <item name="kdpl_draggable_panel" type="id"/>
+    <item name="kdpl_content" type="id"/>
 </resources>

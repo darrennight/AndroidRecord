@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.scrollable07;
+package com.hao.androidrecord.activity.scrollable07.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

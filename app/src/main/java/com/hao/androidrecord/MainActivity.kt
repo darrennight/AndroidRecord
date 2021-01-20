@@ -11,6 +11,8 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hao.androidrecord.activity.AnimlogoActivity
+import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
+import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
 import com.hao.androidrecord.activity.KeyBoardPageScroll
 import com.hao.androidrecord.activity.KeyBoardPopDialog
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
@@ -25,6 +27,8 @@ import com.hao.androidrecord.activity.scrollable01.ScrollableMainActivity
 import com.hao.androidrecord.activity.scrollable02.MainActivity
 import com.hao.androidrecord.activity.scrollable03.MainActivityScrollable03
 import com.hao.androidrecord.activity.scrollable04.Demo4Activity
+import com.hao.androidrecord.activity.scrollable06.Scroll06MainActivity
+import com.hao.androidrecord.activity.scrollable07.Scroll07MainActivity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
@@ -71,7 +75,8 @@ class MainActivity : AppCompatActivity() {
             override fun onDemoItemClick(position: Int) {
                 when(position){
                     0->{
-                        startActivity(Intent(this@MainActivity,ChangeTableColorActivity::class.java))
+//                        startActivity(Intent(this@MainActivity,ChangeTableColorActivity::class.java))
+                        testMeiShi()
                     }
                     1->{
                         startActivity(Intent(this@MainActivity,BlurActivity::class.java))
@@ -136,6 +141,22 @@ class MainActivity : AppCompatActivity() {
                     20->{
                         startActivity(Intent(this@MainActivity, SwitchButtonMainActivity::class.java))
                     }
+
+                    21->{
+                        startActivity(Intent(this@MainActivity, Scroll06MainActivity::class.java))
+                    }
+
+                    22->{
+                        startActivity(Intent(this@MainActivity, Scroll07MainActivity::class.java))
+                    }
+
+                    23->{
+                        startActivity(Intent(this@MainActivity, DashedLineMainActivity::class.java))
+                    }
+
+                    24->{
+                        startActivity(Intent(this@MainActivity, DragMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -165,6 +186,10 @@ class MainActivity : AppCompatActivity() {
         list.add("18RecyclerView和头部layout即刻出品")
         list.add("19RecyclerView和头部layout支付宝首页")
         list.add("20滑动按钮")
+        list.add("21RecyclerView和头部layout仿京东,淘宝商品展示")
+        list.add("22吸顶效果实现的五种方式")
+        list.add("23虚线")
+        list.add("24RecyclerView和头部layout")
         adapter.notifyDataSetChanged()
 
 
@@ -172,6 +197,15 @@ class MainActivity : AppCompatActivity() {
         wv_webview.visibility = View.GONE
     }
 
+
+
+    private fun testMeiShi(){
+        val intent = Intent()
+        intent.setClassName("com.meishi.app","com.taishimei.video.ui.other.SplashActivity")
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setAction("testMeiShi")
+        startActivity(intent);
+    }
 
     private fun testWebView(){
 

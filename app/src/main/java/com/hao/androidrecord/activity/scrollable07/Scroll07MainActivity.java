@@ -1,13 +1,14 @@
 package com.hao.androidrecord.activity.scrollable07;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lhx.scrollbardemo.R;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.hao.androidrecord.R;
+
+public class Scroll07MainActivity extends AppCompatActivity {
 
     private Activity activity;
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activity = this;
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_scroll07);
     }
 
     public void onClickTwoTopBar(View view) {

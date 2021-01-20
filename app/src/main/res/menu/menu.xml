@@ -1,17 +1,14 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_github"
-        android:icon="@drawable/icon_github"
-        android:orderInCategory="100"
-        app:showAsAction="always"
-        android:title="@string/action_github"/>
+        android:id="@+id/java"
+        android:title="java"
+        app:showAsAction="always" />
+
     <item
-        android:id="@+id/action_blog"
-        android:icon="@drawable/icon_blog"
-        android:orderInCategory="100"
-        app:showAsAction="always"
-        android:title="@string/action_blog"/>
+        android:id="@+id/kotlin"
+        android:title="kotlin"
+        app:showAsAction="always" />
 </menu>

@@ -1,18 +1,19 @@
 package com.hao.androidrecord.activity.scrollable06
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.gaohui.nestedrecyclerview.BaseMenuActivity
-import com.gaohui.nestedrecyclerview.R
-import com.gaohui.nestedrecyclerview.kotlin.adapter.MultiTypeAdapter
-import com.gaohui.nestedrecyclerview.kotlin.bean.CategoryBean
-import kotlinx.android.synthetic.main.activity_main.*
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.scrollable06.adapter.MultiTypeAdapter
+import com.hao.androidrecord.activity.scrollable06.bean.CategoryBean
+import kotlinx.android.synthetic.main.activity_main_scroll06.*
 import java.util.*
 
 
-class MainActivity : BaseMenuActivity() {
+/**
+ * https://github.com/JasonGaoH/NestedRecyclerView
+ */
+class Scroll06MainActivity : BaseMenuActivity() {
 
     private val mDataList = ArrayList<Any>()
 
@@ -25,7 +26,7 @@ class MainActivity : BaseMenuActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_scroll06)
 
         kttRecyclerView.initLayoutManager()
         kttRecyclerView.adapter = multiTypeAdapter

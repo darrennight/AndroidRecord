@@ -1,17 +1,18 @@
-package com.hao.androidrecord.activity.scrollable07;
+package com.hao.androidrecord.activity.scrollable07.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.lhx.scrollbardemo.adapter.GroupAdapter;
-import com.lhx.scrollbardemo.util.ViewUtils;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.hao.androidrecord.activity.scrollable07.adapter.GroupAdapter;
+import com.hao.androidrecord.activity.scrollable07.util.ViewUtils;
 
 /**
  * Created by lihongxin on 2019/1/22
