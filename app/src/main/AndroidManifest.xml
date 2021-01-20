@@ -63,6 +63,20 @@
         <activity android:name=".activity.switchButton.StyleInCodeActivity"/>
         <activity android:name=".activity.switchButton.SwitchButtonMainActivity"/>
         <activity android:name=".activity.switchButton.UseActivity"/>
+        
+        <activity android:name=".activity.scrollable06.Scroll06MainActivity"/>
+
+        <activity android:name=".activity.scrollable07.DecorationActivity"/>
+        <activity android:name=".activity.scrollable07.GroupAndDecorationActivity"/>
+        <activity android:name=".activity.scrollable07.ListViewAddHeaderActivity"/>
+        <activity android:name=".activity.scrollable07.MaterialDesignTopBarActivity"/>
+        <activity android:name=".activity.scrollable07.OneTopBarActivity"/>
+        <activity android:name=".activity.scrollable07.Scroll07MainActivity"/>
+        <activity android:name=".activity.scrollable07.ScrollViewActivity"/>
+        <activity android:name=".activity.scrollable07.TwoSameTopBarActivity"/>
+
+        <activity android:name=".activity.DashedLineDivider.DashedLineMainActivity"/>
+        <activity android:name=".activity.DragPanelLayout.DragMainActivity"/>
 
     </application>
 
