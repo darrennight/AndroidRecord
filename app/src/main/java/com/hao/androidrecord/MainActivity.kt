@@ -15,7 +15,9 @@ import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
 import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
 import com.hao.androidrecord.activity.KeyBoardPageScroll
 import com.hao.androidrecord.activity.KeyBoardPopDialog
+import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
+import com.hao.androidrecord.activity.WhellViewActivity
 import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
@@ -157,6 +159,12 @@ class MainActivity : AppCompatActivity() {
                     24->{
                         startActivity(Intent(this@MainActivity, DragMainActivity::class.java))
                     }
+                    25->{
+                        startActivity(Intent(this@MainActivity, NotchToolsMainActivity::class.java))
+                    }
+                    26->{
+                        startActivity(Intent(this@MainActivity, WhellViewActivity::class.java))
+                    }
                 }
             }
         }
@@ -190,6 +198,8 @@ class MainActivity : AppCompatActivity() {
         list.add("22吸顶效果实现的五种方式")
         list.add("23虚线")
         list.add("24RecyclerView和头部layout")
+        list.add("25刘海适配全屏没有状态栏")
+        list.add("26wheelview3D选择")
         adapter.notifyDataSetChanged()
 
 

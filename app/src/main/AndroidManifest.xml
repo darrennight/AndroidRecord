@@ -78,6 +78,15 @@
         <activity android:name=".activity.DashedLineDivider.DashedLineMainActivity"/>
         <activity android:name=".activity.DragPanelLayout.DragMainActivity"/>
 
+        <activity android:name=".activity.NotchTools.NotchToolsMainActivity"/>
+        <activity android:name=".activity.NotchTools.FullScreenNoUseNotchActivity"
+            android:theme="@style/AppTheme"
+            />
+        <activity android:name=".activity.NotchTools.FullScreenUseNotchActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".activity.WhellViewActivity"/>
+
     </application>
 
 </manifest>

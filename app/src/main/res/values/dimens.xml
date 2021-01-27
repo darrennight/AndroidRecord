@@ -230,4 +230,5 @@
     <dimen name="ksw_md_thumb_shadow_offset">2dp</dimen>
 
     <dimen name="size">240dp</dimen>
+    <dimen name="pickerview_textsize">20sp</dimen>
 </resources>
