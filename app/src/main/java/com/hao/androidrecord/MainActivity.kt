@@ -10,14 +10,11 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hao.androidrecord.activity.AnimlogoActivity
+import com.hao.androidrecord.activity.*
 import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
 import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
-import com.hao.androidrecord.activity.KeyBoardPageScroll
-import com.hao.androidrecord.activity.KeyBoardPopDialog
 import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
-import com.hao.androidrecord.activity.WhellViewActivity
 import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
@@ -165,6 +162,21 @@ class MainActivity : AppCompatActivity() {
                     26->{
                         startActivity(Intent(this@MainActivity, WhellViewActivity::class.java))
                     }
+                    27->{
+                        startActivity(Intent(this@MainActivity, TestCoroutineActivity::class.java))
+                    }
+                    28->{
+                        startActivity(Intent(this@MainActivity, TestCoroutineActivity01::class.java))
+                    }
+                    29->{
+                        startActivity(Intent(this@MainActivity, TestCoroutineActivity02::class.java))
+                    }
+                    30->{
+                        startActivity(Intent(this@MainActivity, TestCoroutineActivity03::class.java))
+                    }
+                    31->{
+                        startActivity(Intent(this@MainActivity, TestCoroutineActivity04::class.java))
+                    }
                 }
             }
         }
@@ -200,6 +212,11 @@ class MainActivity : AppCompatActivity() {
         list.add("24RecyclerView和头部layout")
         list.add("25刘海适配全屏没有状态栏")
         list.add("26wheelview3D选择")
+        list.add("27kotlin协程测试使用")
+        list.add("28kotlin协程测试使用")
+        list.add("29kotlin协程测试使用")
+        list.add("30kotlin协程测试使用")
+        list.add("31kotlin协程测试使用")
         adapter.notifyDataSetChanged()
 
 
