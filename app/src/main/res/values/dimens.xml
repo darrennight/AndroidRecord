@@ -231,4 +231,13 @@
 
     <dimen name="size">240dp</dimen>
     <dimen name="pickerview_textsize">20sp</dimen>
+
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
 </resources>

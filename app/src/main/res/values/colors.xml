@@ -181,5 +181,13 @@
     <color name="ksw_md_solid_disable">#FFFFFF</color>
     <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
 
+    <color name="gray_d8">#ffd8d8d8</color>
+    <color name="color_6f">#6f6f6f</color>
+    <color name="gray_9b">#9B9B9B</color>
+    <color name="black_21">#212121</color>
+
+    <color name="color_EFEFEF">#EFEFEF</color>
+    <color name="color_9D9D9D">#9D9D9D</color>
+    <color name="color_D8D8D8">#D8D8D8</color>
 
 </resources>

@@ -18,9 +18,16 @@ class TestCoroutineActivity01:AppCompatActivity() ,CoroutineScope by MainScope()
         Log.e("========","start")
 
         launch {
+
             var i=0
             while (i>=0){
+                //这个是挂起函数，挂起函数就是非阻塞式
                 delay(500)
+
+                //不能执行下面耗时相关代码，协程是运行在线程中，这个是运行在主线程中
+                //会阻塞主线程，可以执行 挂起函数做耗时操作
+                //如果协程执行在主线程中直接运行耗时的代码，也是阻塞主线程，需要使用挂起函数
+//                Thread.sleep(10000)
 
                 Log.e("========","delay$i")
                 i++

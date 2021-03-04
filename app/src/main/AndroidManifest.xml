@@ -91,6 +91,15 @@
         <activity android:name=".activity.TestCoroutineActivity02"/>
         <activity android:name=".activity.TestCoroutineActivity03"/>
         <activity android:name=".activity.TestCoroutineActivity04"/>
+        <activity android:name=".activity.TestCoroutineActivity05"/>
+        <activity android:name=".activity.TestCoroutineActivity06"/>
+        <activity android:name=".activity.TestCoroutineActivity07"/>
+
+        <activity android:name=".activity.hilt.TestHiltActivity"/>
+        <activity android:name=".activity.bookpage.BookPageActivity"/>
+        <activity android:name=".activity.bookpage.BookPageActivity00"/>
+        <activity android:name=".activity.paing3.TestPaging3Activity"/>
+        <activity android:name=".activity.tiktokComments.CommentMultiActivity"/>
 
     </application>
 

@@ -5,6 +5,12 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.*
 
+/**
+ * ViewModel里面使用要在onCleared方法里面cancel掉协程
+ *
+ * SupervisorJob()
+ * 为了解决上述问题，可以使用SupervisorJob替代Job，SupervisorJob与Job基本类似，区别在于不会被子协程的异常所影响。
+ */
 class TestCoroutineActivity:AppCompatActivity() {
     //主线程
     private val mainScope: CoroutineScope by lazy {

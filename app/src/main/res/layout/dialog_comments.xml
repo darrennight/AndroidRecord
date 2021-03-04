@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_top_round_white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_404040"
+            android:textSize="13sp"
+            android:layout_marginLeft="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_close_comments"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_EFEFEF"
+        />
+   <!-- <com.kennyc.view.MultiStateView
+        android:id="@+id/multi_state_view_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/empty_view"
+        app:msv_errorView="@layout/error_view"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="loading"
+        android:layout_marginTop="11dp"
+        android:layout_weight="1">
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/sv_comment_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tv_video_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        />
+    </com.liaoinstan.springview.widget.SpringView>
+    </com.kennyc.view.MultiStateView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tv_video_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_marginTop="11dp"
+        android:layout_weight="1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/color_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="1dp"
+            android:hint="留下你的精彩评论吧~~"
+            android:textColorHint="@color/color_9D9D9D"
+            android:textColor="@color/color_9D9D9D"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/color_D8D8D8" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

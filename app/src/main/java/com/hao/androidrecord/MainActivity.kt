@@ -2,9 +2,10 @@ package com.hao.androidrecord
 
 import android.Manifest
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -17,8 +18,12 @@ import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
 import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
+import com.hao.androidrecord.activity.bookpage.BookPageActivity
+import com.hao.androidrecord.activity.bookpage.BookPageActivity00
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
+import com.hao.androidrecord.activity.hilt.TestHiltActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
+import com.hao.androidrecord.activity.paing3.TestPaging3Activity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
@@ -30,7 +35,7 @@ import com.hao.androidrecord.activity.scrollable06.Scroll06MainActivity
 import com.hao.androidrecord.activity.scrollable07.Scroll07MainActivity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
-import com.hao.androidrecord.activity.table.ChangeTableColorActivity
+import com.hao.androidrecord.activity.tiktokComments.CommentMultiActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
 import com.hao.androidrecord.custom.selector.MimeType
@@ -47,12 +52,16 @@ class MainActivity : AppCompatActivity() {
         ArrayList<String>()
     }
     private lateinit var adapter:DemoAdapter
-    @NeedsPermission(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    @NeedsPermission(
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE
+    )
     fun openAlbum(){
         //允许打开相册
         Matisse.from(this@MainActivity)
             .choose(
-                MimeType.ofVideo())
+                MimeType.ofVideo()
+            )
             .theme(R.style.Matisse_Dracula)
             .showSingleMediaType(true)
             .countable(false)
@@ -69,113 +78,193 @@ class MainActivity : AppCompatActivity() {
         val manager = LinearLayoutManager(this)
         manager.orientation = LinearLayoutManager.VERTICAL
         rv_demo_list.layoutManager = manager
-        adapter = DemoAdapter(this,list)
+        adapter = DemoAdapter(this, list)
         adapter.clickListener = object :DemoAdapter.DemoItemClickListener{
             override fun onDemoItemClick(position: Int) {
                 when(position){
-                    0->{
+                    0 -> {
 //                        startActivity(Intent(this@MainActivity,ChangeTableColorActivity::class.java))
                         testMeiShi()
                     }
-                    1->{
-                        startActivity(Intent(this@MainActivity,BlurActivity::class.java))
+                    1 -> {
+                        startActivity(Intent(this@MainActivity, BlurActivity::class.java))
                     }
-                    2->{
-                        startActivity(Intent(this@MainActivity,KeyBoardPageScroll::class.java))
+                    2 -> {
+                        startActivity(Intent(this@MainActivity, KeyBoardPageScroll::class.java))
                     }
-                    3->{
+                    3 -> {
                         startActivity(Intent(this@MainActivity, KeyBoardPopDialog::class.java))
                     }
-                    4->{
+                    4 -> {
                         openAlbumWithPermissionCheck()
                     }
 
-                    5->{
+                    5 -> {
                         startActivity(Intent(this@MainActivity, ParallaxMainActivity::class.java))
                     }
-                    6->{
+                    6 -> {
                         startActivity(Intent(this@MainActivity, AnimlogoActivity::class.java))
                     }
-                    7->{
+                    7 -> {
                         startActivity(Intent(this@MainActivity, NestedMainActivity::class.java))
                     }
-                    8->{
+                    8 -> {
                         startActivity(Intent(this@MainActivity, HeaderAndTablayoutRV::class.java))
                     }
-                    9->{
+                    9 -> {
                         startActivity(Intent(this@MainActivity, HeaderAndTablayoutRV02::class.java))
                     }
-                    10->{
+                    10 -> {
                         startActivity(Intent(this@MainActivity, ScrollableMainActivity::class.java))
                     }
-                    11->{
+                    11 -> {
                         startActivity(Intent(this@MainActivity, MainActivity::class.java))
                     }
-                    12->{
+                    12 -> {
                         startActivity(Intent(this@MainActivity, MainShadowActivity::class.java))
                     }
-                    13->{
+                    13 -> {
                         startActivity(Intent(this@MainActivity, TestActivity::class.java))
                     }
-                    14->{
-                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.MultiScroll.activity.MainActivity::class.java))
+                    14 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                com.hao.androidrecord.activity.MultiScroll.activity.MainActivity::class.java
+                            )
+                        )
                     }
 
-                    15->{
+                    15 -> {
                         startActivity(Intent(this@MainActivity, DateTimePicerActivity::class.java))
                     }
-                    16->{
-                        startActivity(Intent(this@MainActivity, MainActivityScrollable03::class.java))
+                    16 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                MainActivityScrollable03::class.java
+                            )
+                        )
                     }
 
-                    17->{
+                    17 -> {
                         startActivity(Intent(this@MainActivity, Demo4Activity::class.java))
                     }
-                    18->{
-                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.scrollable05.MainActivity::class.java))
+                    18 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                com.hao.androidrecord.activity.scrollable05.MainActivity::class.java
+                            )
+                        )
                     }
-                    19->{
+                    19 -> {
                         startActivity(Intent(this@MainActivity, AliHomeMainActivity::class.java))
                     }
-                    20->{
-                        startActivity(Intent(this@MainActivity, SwitchButtonMainActivity::class.java))
+                    20 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                SwitchButtonMainActivity::class.java
+                            )
+                        )
                     }
 
-                    21->{
+                    21 -> {
                         startActivity(Intent(this@MainActivity, Scroll06MainActivity::class.java))
                     }
 
-                    22->{
+                    22 -> {
                         startActivity(Intent(this@MainActivity, Scroll07MainActivity::class.java))
                     }
 
-                    23->{
+                    23 -> {
                         startActivity(Intent(this@MainActivity, DashedLineMainActivity::class.java))
                     }
 
-                    24->{
+                    24 -> {
                         startActivity(Intent(this@MainActivity, DragMainActivity::class.java))
                     }
-                    25->{
+                    25 -> {
                         startActivity(Intent(this@MainActivity, NotchToolsMainActivity::class.java))
                     }
-                    26->{
+                    26 -> {
                         startActivity(Intent(this@MainActivity, WhellViewActivity::class.java))
                     }
-                    27->{
+                    27 -> {
                         startActivity(Intent(this@MainActivity, TestCoroutineActivity::class.java))
                     }
-                    28->{
-                        startActivity(Intent(this@MainActivity, TestCoroutineActivity01::class.java))
+                    28 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity01::class.java
+                            )
+                        )
                     }
-                    29->{
-                        startActivity(Intent(this@MainActivity, TestCoroutineActivity02::class.java))
+                    29 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity02::class.java
+                            )
+                        )
                     }
-                    30->{
-                        startActivity(Intent(this@MainActivity, TestCoroutineActivity03::class.java))
+                    30 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity03::class.java
+                            )
+                        )
                     }
-                    31->{
-                        startActivity(Intent(this@MainActivity, TestCoroutineActivity04::class.java))
+                    31 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity04::class.java
+                            )
+                        )
+                    }
+                    32 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity05::class.java
+                            )
+                        )
+                    }
+                    33 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity06::class.java
+                            )
+                        )
+                    }
+                    34 -> {
+                        startActivity(Intent(this@MainActivity, TestHiltActivity::class.java))
+                    }
+                    35 -> {
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                TestCoroutineActivity07::class.java
+                            )
+                        )
+                    }
+                    36 -> {
+                        startActivity(Intent(this@MainActivity, BookPageActivity::class.java))
+                    }
+
+                    37 -> {
+                        startActivity(Intent(this@MainActivity, BookPageActivity00::class.java))
+                    }
+                    38 -> {
+                        startActivity(Intent(this@MainActivity, TestPaging3Activity::class.java))
+                    }
+                    39 -> {
+                        startActivity(Intent(this@MainActivity, CommentMultiActivity::class.java))
                     }
                 }
             }
@@ -217,18 +306,25 @@ class MainActivity : AppCompatActivity() {
         list.add("29kotlin协程测试使用")
         list.add("30kotlin协程测试使用")
         list.add("31kotlin协程测试使用")
+        list.add("32kotlin协程测试使用withContext")
+        list.add("33协程并发执行")
+        list.add("34测试Hilt")
+        list.add("35kotlin协程测试使用lifecycleScope")
+        list.add("36bookpage")
+        list.add("37bookpage00")
+        list.add("38测试Paging3")
+        list.add("39评论多类型")
         adapter.notifyDataSetChanged()
 
 
-//        testWebView()
-        wv_webview.visibility = View.GONE
+        testWebView()
     }
 
 
 
     private fun testMeiShi(){
         val intent = Intent()
-        intent.setClassName("com.meishi.app","com.taishimei.video.ui.other.SplashActivity")
+        intent.setClassName("com.meishi.app", "com.taishimei.video.ui.other.SplashActivity")
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setAction("testMeiShi")
         startActivity(intent);
@@ -236,8 +332,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun testWebView(){
 
-        webiewSetting()
-        wv_webview.loadUrl("http://s.taishimei.com/dist1/index.html?index=1")
+//        webiewSetting()
+//        wv_webview.loadUrl("http://s.taishimei.com/dist1/index.html?index=1")
+//        wv_webview.loadUrl("http://s.taishimei.com/ms_ks/?videoId=11288&source=ks&ms=1")
         wv_webview.visibility = View.GONE
     }
 
@@ -263,5 +360,31 @@ class MainActivity : AppCompatActivity() {
         webSettings.javaScriptCanOpenWindowsAutomatically = true //支持通过JS打开新窗口
         webSettings.loadsImagesAutomatically = true //支持自动加载图片
         webSettings.defaultTextEncodingName = "utf-8" //设置编码格式
+
+
+        wv_webview.setWebViewClient(object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+                Log.d("=========smsg", "url=$url")
+                val uri: Uri = Uri.parse(url)
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+
+                /*val uri: Uri = Uri.parse(url)
+                val host = resources.getString(R.string.host_)
+                val scheme = resources.getString(R.string.scheme_)
+                if (uri.getScheme().equals(scheme)
+                    && uri.getHost().equals(host)
+                ) {
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                    return false
+                } else {
+                    view.loadUrl(url)
+                }*/
+                return true
+            }
+        })
+
     }
 }

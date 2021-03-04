@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hao.androidrecord.custom.bookpage.BookPageView00
+        android:id="@+id/view_book_page"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        >
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/finger_2"
+            android:scaleType="centerCrop"
+            />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green_send"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="haha"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="false"
+            android:layout_marginBottom="@dimen/dimen_50"
+            />
+    </com.hao.androidrecord.custom.bookpage.BookPageView00>
+
+</RelativeLayout>
