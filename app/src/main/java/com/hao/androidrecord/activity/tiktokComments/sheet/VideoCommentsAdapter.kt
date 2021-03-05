@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.hao.androidrecord.R
-import com.hao.androidrecord.activity.tiktokComments.CommentEntity
-import com.hao.androidrecord.activity.tiktokComments.CommentMoreBean
-import com.hao.androidrecord.activity.tiktokComments.FirstLevelBean
-import com.hao.androidrecord.activity.tiktokComments.SecondLevelBean
+import com.hao.androidrecord.activity.tiktokComments.bean.CommentEntity
+import com.hao.androidrecord.activity.tiktokComments.bean.CommentMoreBean
+import com.hao.androidrecord.activity.tiktokComments.bean.FirstLevelBean
+import com.hao.androidrecord.activity.tiktokComments.bean.SecondLevelBean
 import kotlinx.android.synthetic.main.item_comment_child_new.view.*
 import kotlinx.android.synthetic.main.item_comments_parent.view.*
 
@@ -118,6 +118,6 @@ class VideoCommentsAdapter(val context: Context, val list: ArrayList<MultiItemEn
     class MoreCommentsHolder(itemView: View):RecyclerView.ViewHolder(itemView)
 
     interface AddMoreComments{
-        fun addMore(bean:CommentMoreBean,position: Int)
+        fun addMore(bean: CommentMoreBean, position: Int)
     }
 }

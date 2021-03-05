@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.hao.androidrecord.R
-import com.hao.androidrecord.activity.tiktokComments.CommentMoreBean
-import com.hao.androidrecord.activity.tiktokComments.FirstLevelBean
-import com.hao.androidrecord.activity.tiktokComments.SecondLevelBean
+import com.hao.androidrecord.activity.tiktokComments.bean.CommentMoreBean
+import com.hao.androidrecord.activity.tiktokComments.bean.FirstLevelBean
+import com.hao.androidrecord.activity.tiktokComments.bean.SecondLevelBean
 import kotlinx.android.synthetic.main.dialog_comments.*
 
 class VideoCommentDialog:BaseBottomSheetDialog() {
@@ -50,7 +50,8 @@ class VideoCommentDialog:BaseBottomSheetDialog() {
         adapter?.listener = object : VideoCommentsAdapter.AddMoreComments {
             override fun addMore(moreBean: CommentMoreBean, position: Int) {
 
-                val secondLevelBean = SecondLevelBean()
+                val secondLevelBean =
+                    SecondLevelBean()
                 secondLevelBean.content = "more comment" + 1
                 secondLevelBean.createTime = System.currentTimeMillis()
                 secondLevelBean.headImg =
@@ -78,7 +79,8 @@ class VideoCommentDialog:BaseBottomSheetDialog() {
     private fun initData() {
         val size = 10
         for (i in 0 until size) {
-            val firstLevelBean = FirstLevelBean()
+            val firstLevelBean =
+                FirstLevelBean()
             firstLevelBean.content =
                 "第" + (i + 1) + "人评论内容" + if (i % 3 == 0) content + (i + 1) + "次" else ""
             firstLevelBean.createTime = System.currentTimeMillis()
@@ -91,7 +93,8 @@ class VideoCommentDialog:BaseBottomSheetDialog() {
             firstLevelBean.totalCount = (i + size).toLong()
             val beans: MutableList<SecondLevelBean> = ArrayList()
             for (j in 0..9) {
-                val secondLevelBean = SecondLevelBean()
+                val secondLevelBean =
+                    SecondLevelBean()
                 secondLevelBean.content =
                     "一级第" + (i + 1) + "人 二级第" + (j + 1) + "人评论内容" + if (j % 3 == 0) content + (j + 1) + "次" else ""
                 secondLevelBean.createTime = System.currentTimeMillis()
@@ -152,7 +155,8 @@ class VideoCommentDialog:BaseBottomSheetDialog() {
 
             //展示更多的item
             if (beanSize <= 18) {
-                val moreBean = CommentMoreBean()
+                val moreBean =
+                    CommentMoreBean()
                 moreBean.position = i.toLong()
                 moreBean.positionCount = posCount.toLong()
                 moreBean.totalCount = firstLevelBean.totalCount

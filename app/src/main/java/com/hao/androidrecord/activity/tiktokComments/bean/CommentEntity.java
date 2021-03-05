@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.tiktokComments;
+package com.hao.androidrecord.activity.tiktokComments.bean;
 
 import java.util.List;
 

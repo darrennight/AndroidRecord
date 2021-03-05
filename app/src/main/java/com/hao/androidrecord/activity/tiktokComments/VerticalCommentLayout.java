@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.tiktokComments.bean.SecondLevelBean;
 import com.hao.androidrecord.application.MyApplication;
 import com.hao.androidrecord.util.ViewUtils;
 

@@ -1,10 +1,10 @@
-package com.hao.androidrecord.activity.tiktokComments;
+package com.hao.androidrecord.activity.tiktokComments.bean;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 import java.util.List;
 
-import static com.hao.androidrecord.activity.tiktokComments.CommentEntity.TYPE_COMMENT_PARENT;
+import static com.hao.androidrecord.activity.tiktokComments.bean.CommentEntity.TYPE_COMMENT_PARENT;
 
 
 /**
