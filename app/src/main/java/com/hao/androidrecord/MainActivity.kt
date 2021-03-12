@@ -1,6 +1,7 @@
 package com.hao.androidrecord
 
 import android.Manifest
+import android.app.LauncherActivity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -21,8 +22,12 @@ import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity00
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
+import com.hao.androidrecord.activity.flowRecycle.LanuchActivity
 import com.hao.androidrecord.activity.hilt.TestHiltActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
+import com.hao.androidrecord.activity.nine.CustomGirdActivity
+import com.hao.androidrecord.activity.nine.NineGridActivity
+import com.hao.androidrecord.activity.nine.NineGridNewActivity
 import com.hao.androidrecord.activity.paing3.TestPaging3Activity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
@@ -266,6 +271,18 @@ class MainActivity : AppCompatActivity() {
                     39 -> {
                         startActivity(Intent(this@MainActivity, CommentMultiActivity::class.java))
                     }
+                    40 -> {
+                        startActivity(Intent(this@MainActivity, NineGridActivity::class.java))
+                    }
+                    41 -> {
+                        startActivity(Intent(this@MainActivity, CustomGirdActivity::class.java))
+                    }
+                    42 -> {
+                        startActivity(Intent(this@MainActivity, NineGridNewActivity::class.java))
+                    }
+                    43 -> {
+                        startActivity(Intent(this@MainActivity, LanuchActivity::class.java))
+                    }
                 }
             }
         }
@@ -314,6 +331,10 @@ class MainActivity : AppCompatActivity() {
         list.add("37bookpage00")
         list.add("38测试Paging3")
         list.add("39评论多类型")
+        list.add("40动态九宫格")
+        list.add("41动态九宫格")
+        list.add("42动态九宫格--网络图片")
+        list.add("43recycleview实现的flow")
         adapter.notifyDataSetChanged()
 
 

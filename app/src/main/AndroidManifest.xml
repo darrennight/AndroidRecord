@@ -101,6 +101,17 @@
         <activity android:name=".activity.paing3.TestPaging3Activity"/>
         <activity android:name=".activity.tiktokComments.CommentMultiActivity"/>
 
+        <activity android:name=".activity.nine.NineGridActivity"/>
+        <activity android:name=".activity.nine.CustomGirdActivity"/>
+        <activity android:name=".activity.nine.NineGridNewActivity"/>
+
+        <activity android:name=".activity.flowRecycle.LanuchActivity"/>
+        <activity android:name=".activity.flowRecycle.DiffHeightTextFlowActivity"/>
+        <activity android:name=".activity.flowRecycle.PhotoFlowActivity"/>
+        <activity android:name=".activity.flowRecycle.ProductActivity"/>
+        <activity android:name=".activity.flowRecycle.SuspensionProductActivity"/>
+        <activity android:name=".activity.flowRecycle.TextFlowActivity"/>
+
     </application>
 
 </manifest>

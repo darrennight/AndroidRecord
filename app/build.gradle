@@ -192,4 +192,6 @@ dependencies {
     implementation "com.google.code.gson:gson:2.8.6"
     implementation "com.squareup.retrofit2:converter-gson:$version_retrofit"
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit_gson"
+
+    implementation 'com.github.donkingliang:GroupedRecyclerViewAdapter:2.4.0'
 }
