@@ -189,5 +189,28 @@
     <color name="color_EFEFEF">#EFEFEF</color>
     <color name="color_9D9D9D">#9D9D9D</color>
     <color name="color_D8D8D8">#D8D8D8</color>
+    <color name="chh_split_line_middle">#e5e5e5</color>
+    <color name="color_4abdcc">#4abdcc</color>
+    <color name="tracksNotes">#5C5C5C</color>
+    <color name="chh_bg">#fbfbfb</color>
+    <color name="themeColor">#4ABDCC</color>
+    <color name="chh_text_light">#BDBDBD</color>
+    <color name="chh_tabtext_selected">#424242</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="chh_tabtext_unselected">#9E9E9E</color>
+    <color name="bread_darkprimary">#2E9DAB</color>
+    <color name="v_line_color">#E7E7E7</color>
+    <color name="cp_colorPrimary">#3F51B5</color>
+    <color name="cp_colorPrimaryDark">#303F9F</color>
+    <color name="cp_colorAccent">#3F51B5</color>
+
+    <color name="cp_color_gray_light">#cdcdcd</color>
+    <color name="cp_color_gray">#999999</color>
+    <color name="cp_color_gray_deep">#666666</color>
+    <color name="cp_color_gray_dark">#333333</color>
+    <color name="cp_color_section_bg">#EDEDED</color>
+    <color name="cp_color_grid_item_bg">#f5f5f5</color>
+    <color name="color_red">#FD2E4A</color>
+    <color name="color_green">#13D1BE</color>
 
 </resources>

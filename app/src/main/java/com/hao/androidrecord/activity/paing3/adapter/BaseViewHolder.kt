@@ -8,7 +8,7 @@ abstract class BaseViewHolder<T>(view: View) :
     RecyclerView.ViewHolder(view),
     ViewHolderVisibleCallback {
 
-    open fun bind(data: T) {
+    open fun bind(data: T,position:Int) {
     }
 
     override fun onVisibleChange(visible: Boolean) {

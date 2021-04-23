@@ -1,10 +1,9 @@
 package com.hao.androidrecord
 
 import android.Manifest
-import android.app.LauncherActivity
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
+import android.util.Base64
 import android.util.Log
 import android.view.View
 import android.webkit.WebSettings
@@ -24,6 +23,7 @@ import com.hao.androidrecord.activity.bookpage.BookPageActivity00
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
 import com.hao.androidrecord.activity.flowRecycle.LanuchActivity
 import com.hao.androidrecord.activity.hilt.TestHiltActivity
+import com.hao.androidrecord.activity.indexBar.CountryChooseActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.nine.CustomGirdActivity
 import com.hao.androidrecord.activity.nine.NineGridActivity
@@ -40,15 +40,26 @@ import com.hao.androidrecord.activity.scrollable06.Scroll06MainActivity
 import com.hao.androidrecord.activity.scrollable07.Scroll07MainActivity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
+import com.hao.androidrecord.activity.table.ChangeTableColorActivity
 import com.hao.androidrecord.activity.tiktokComments.CommentMultiActivity
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.custom.selector.Matisse
 import com.hao.androidrecord.custom.selector.MimeType
 import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
+import com.hao.androidrecord.indexable.IndexableCityActivity
+import com.hao.androidrecord.util.AliBase64
+import com.hao.androidrecord.util.LocalBase64
+import com.hao.androidrecord.util.MBase64
 import kotlinx.android.synthetic.main.activity_main.*
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.RuntimePermissions
+import java.security.KeyFactory
+import java.security.PrivateKey
+import java.security.PublicKey
+import java.security.spec.PKCS8EncodedKeySpec
+import java.security.spec.X509EncodedKeySpec
+import javax.crypto.Cipher
 
 
 @RuntimePermissions
@@ -88,8 +99,13 @@ class MainActivity : AppCompatActivity() {
             override fun onDemoItemClick(position: Int) {
                 when(position){
                     0 -> {
-//                        startActivity(Intent(this@MainActivity,ChangeTableColorActivity::class.java))
-                        testMeiShi()
+                        startActivity(
+                            Intent(
+                                this@MainActivity,
+                                ChangeTableColorActivity::class.java
+                            )
+                        )
+//                        testMeiShi()
                     }
                     1 -> {
                         startActivity(Intent(this@MainActivity, BlurActivity::class.java))
@@ -283,11 +299,29 @@ class MainActivity : AppCompatActivity() {
                     43 -> {
                         startActivity(Intent(this@MainActivity, LanuchActivity::class.java))
                     }
+                    44 -> {
+                        startActivity(Intent(this@MainActivity, CountryChooseActivity::class.java))
+                    }
+                    45 -> {
+                        startActivity(Intent(this@MainActivity, IndexableCityActivity::class.java))
+                    }
+                    46 -> {
+                        startActivity(Intent(this@MainActivity, ClickSpanActivity::class.java))
+                    }
                 }
             }
         }
         rv_demo_list.adapter = adapter
         initData()
+
+        val en = encryptByPublicKey("${System.currentTimeMillis()}")
+//        val en = encryptByPublicKey("1618824407630")
+        val des = decryptByPrivateKey(en)
+
+//        val des = decryptByPrivateKey("Lr0JNhdKJVAGycPCYHYsiv0Pmm1BoymMI9XHImmhlAy9/yanaeJPZhGNjKa8rpSHNZ9mO/2VASu/9k2oh3Gmzg==")
+        Log.e("=======des", des)
+
+//        val test = encryptByPublicKeyTest("1618824407630")
     }
 
     private fun initData(){
@@ -335,6 +369,9 @@ class MainActivity : AppCompatActivity() {
         list.add("41动态九宫格")
         list.add("42动态九宫格--网络图片")
         list.add("43recycleview实现的flow")
+        list.add("44国家城市index索引")
+        list.add("45城市index索引")
+        list.add("46textview click span")
         adapter.notifyDataSetChanged()
 
 
@@ -356,6 +393,7 @@ class MainActivity : AppCompatActivity() {
 //        webiewSetting()
 //        wv_webview.loadUrl("http://s.taishimei.com/dist1/index.html?index=1")
 //        wv_webview.loadUrl("http://s.taishimei.com/ms_ks/?videoId=11288&source=ks&ms=1")
+//        wv_webview.loadUrl("http://192.168.1.211:8080/deeplink.html")
         wv_webview.visibility = View.GONE
     }
 
@@ -386,10 +424,10 @@ class MainActivity : AppCompatActivity() {
         wv_webview.setWebViewClient(object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 Log.d("=========smsg", "url=$url")
-                val uri: Uri = Uri.parse(url)
-                val intent = Intent(Intent.ACTION_VIEW, uri)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
+//                val uri: Uri = Uri.parse(url)
+//                val intent = Intent(Intent.ACTION_VIEW, uri)
+//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+//                startActivity(intent)
 
                 /*val uri: Uri = Uri.parse(url)
                 val host = resources.getString(R.string.host_)
@@ -408,4 +446,67 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
+
+
+
+    private val TASK_PUBLICK_KEY = "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL3Wg/zb8F+jcM6GwM1d9LkUhq4ly4dw/q0sQXgwGF80mND47ADxCvmoDNrpI1k7zx8N1VXO0GpvxWOjBXfVhb8CAwEAAQ=="
+
+    private fun encryptByPublicKey(timestamp: String): String {
+
+
+        Log.e("========time", "$timestamp")
+        val NO_WRAP = MBase64.decode(TASK_PUBLICK_KEY)
+
+
+
+        val x509EncodedKeySpec = X509EncodedKeySpec(NO_WRAP)
+        val keyFactory: KeyFactory = KeyFactory.getInstance("RSA")
+        val publicKey: PublicKey = keyFactory.generatePublic(x509EncodedKeySpec)
+
+//        val cipher: Cipher = Cipher.getInstance("RSA")
+        val cipher: Cipher = Cipher.getInstance("RSA/None/PKCS1Padding")
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey)
+        val result: ByteArray = cipher.doFinal(timestamp.toByteArray())
+        val ss = MBase64.encode(result)
+        Log.e("=======ss", ss)
+
+        return ss
+    }
+
+    val PrivateKey =
+        "MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAvdaD/NvwX6NwzobAzV30uRSGriXLh3D+rSxBeDAYXzSY0PjsAPEK+agM2ukjWTvPHw3VVc7Qam/FY6MFd9WFvwIDAQABAkBxCfst5gkL6daSI8tKflfqnT5VFExNKgt8Mo4JcxoQFcr9JtcEB9Y0HEgkd9F8aZckj2Ofuk/U/A1rmRHKPhEBAiEA45Vtk3ItAW5aE1bB+iB4O5iENZPH82COQhv7SD4f8ekCIQDVipFoBUY6EBBjGiR/eNKP+BAGhUSVWtU3cqWNV2oJZwIgV6GLHtJA+CMYtgebC4gDI9d3WPX9cP5F6LjDii65uDkCIBvaKwUKSxKfrcN/UWte8vfcPxranwtsAYtt5LH+yNHZAiEAwo8MhymEKP7ACawdIZOaEfYQ8Vaf6k71JVOwV0utT1s="
+    fun decryptByPrivateKey(text: String): String {
+        val pkcs8EncodedKeySpec5 = PKCS8EncodedKeySpec(Base64.decode(PrivateKey, Base64.NO_WRAP))
+        val keyFactory = KeyFactory.getInstance("RSA")
+        val privateKey: PrivateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec5)
+//        val cipher = Cipher.getInstance("RSA")
+        val cipher: Cipher = Cipher.getInstance("RSA/None/PKCS1Padding")
+        cipher.init(Cipher.DECRYPT_MODE, privateKey)
+        val result = cipher.doFinal(Base64.decode(text, Base64.NO_WRAP))
+        return String(result)
+    }
+
+
+    private fun encryptByPublicKeyTest(timestamp: String): String {
+
+
+        Log.e("========timetest", "$timestamp")
+
+
+
+        val de = AliBase64.decode(TASK_PUBLICK_KEY)
+
+        val x509EncodedKeySpec = X509EncodedKeySpec(de)
+        val keyFactory: KeyFactory = KeyFactory.getInstance("RSA")
+        val publicKey: PublicKey = keyFactory.generatePublic(x509EncodedKeySpec)
+        val cipher: Cipher = Cipher.getInstance("RSA")
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey)
+        val result: ByteArray = cipher.doFinal(timestamp.toByteArray())
+        val ss = AliBase64.encode(result)
+        Log.e("=======sstest", ss)
+
+        return ss
+    }
+
+
 }

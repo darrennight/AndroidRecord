@@ -25,7 +25,7 @@ class MainSource :PagingSource<Int, ArticleEntity>(){
             // 需要注意的是，如果是第一页，prevKey就传null，如果是最后一页那么nextKey也传null
             // 其他情况prevKey就是page-1，nextKey就是page+1
 
-            delay(500)
+            delay(2000)
             val response = Api.getHomeArticles(page)
             LoadResult.Page(
                 data = response.datas,

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/full_screen"
+    android:background="@color/chh_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/themeColor" >
+
+        <ImageView
+            android:id="@+id/iv_country_choose_back"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/cityhunter_hunter_back_btn" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/personal_setting_actionbar_title_style"
+            android:layout_toRightOf="@id/iv_country_choose_back"
+            android:text="@string/country_choose_select_position" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/country_choose_location"
+            android:layout_marginTop="26dp"
+            android:textColor="@color/chh_text_light"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:id="@+id/tv_country_current_positon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:text="@string/region_positoning"
+                android:textColor="@color/chh_text_light"
+                android:textSize="14sp" />
+
+            <ImageView android:id="@+id/ivGetLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_get_location"/>
+        </RelativeLayout>
+
+        <View style="@style/split_line_style" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_all"
+            android:layout_marginTop="34dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/chh_text_light"
+            android:textSize="12sp" />
+
+        <ListView
+            android:id="@+id/lv_country_shoose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp" >
+
+    <TextView
+        android:id="@+id/tv_city_first_letter"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@color/chh_tabtext_selected"
+        android:textSize="20sp" />
+
+    <View android:id="@+id/view_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_toRightOf="@id/tv_city_first_letter"
+        android:layout_marginRight="37dip"
+        android:layout_marginLeft="16dp"
+        android:background="@color/chh_split_line_middle" />
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/tv_city_first_letter"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:background="@drawable/country_list_selector"
+        android:singleLine="true"
+        android:text="country"
+        android:textColor="@color/chh_tabtext_unselected"
+        android:textSize="14sp" />
+
+</RelativeLayout>

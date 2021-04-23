@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/themeColor" >
+
+        <ImageView
+            android:id="@+id/iv_city_choose_back"
+            style="@style/personal_setting_back_btn_style" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_toRightOf="@id/iv_city_choose_back"
+            style="@style/personal_setting_actionbar_title_style"
+            android:text="@string/country_choose_select_position" />
+   </RelativeLayout>
+   
+    
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <com.hao.androidrecord.activity.indexBar.PinnedListView
+            android:id="@+id/plv_city_choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_city_cover"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/chh_tabtext_selected"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <com.hao.androidrecord.activity.indexBar.TipScrollBar
+            android:id="@+id/tsb_city_scrollbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_city_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/country_empty_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textSize="15sp"
+                android:textColor="@color/v_line_color"
+                android:text="@string/search_country_empty" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

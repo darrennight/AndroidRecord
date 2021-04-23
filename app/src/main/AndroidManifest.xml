@@ -112,6 +112,13 @@
         <activity android:name=".activity.flowRecycle.SuspensionProductActivity"/>
         <activity android:name=".activity.flowRecycle.TextFlowActivity"/>
 
+        <activity android:name=".activity.indexBar.CountryChooseActivity"/>
+        <activity android:name=".activity.indexBar.ProvinceChooseActivity"/>
+        <activity android:name=".activity.indexBar.CityChooseActivity"/>
+
+        <activity android:name=".indexable.IndexableCityActivity"/>
+        <activity android:name=".activity.ClickSpanActivity"/>
+
     </application>
 
 </manifest>

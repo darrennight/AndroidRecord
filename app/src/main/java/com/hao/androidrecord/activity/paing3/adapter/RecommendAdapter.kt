@@ -21,7 +21,7 @@ class RecommendAdapter :PagingDataAdapter<ArticleEntity, BaseViewHolder<ArticleE
 
     override fun onBindViewHolder(holder: BaseViewHolder<ArticleEntity>, position: Int) {
         getItem(position)?.let {
-            holder.bind(it)
+            holder.bind(it,position)
         }
     }
 

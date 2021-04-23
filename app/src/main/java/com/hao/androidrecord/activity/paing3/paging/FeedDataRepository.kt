@@ -10,7 +10,7 @@ class FeedDataRepository{
 
     fun loadFeedData(): Flow<PagingData<ArticleEntity>> {
         return Pager(
-            config = PagingConfig(enablePlaceholders = false, pageSize = 50),
+            config = PagingConfig(enablePlaceholders = false, pageSize = 15),
             initialKey = 0,
             pagingSourceFactory = { MainSource() }
         ).flow
