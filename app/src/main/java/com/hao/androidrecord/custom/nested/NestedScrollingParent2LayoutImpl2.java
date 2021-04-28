@@ -2,6 +2,7 @@ package com.hao.androidrecord.custom.nested;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -24,7 +25,11 @@ public class NestedScrollingParent2LayoutImpl2 extends NestedScrollingParent2Lay
     private View mRecyclerView;
 
     private int mTopViewHeight;
+    private LayoutScrollListener layoutScrollListener;
 
+    public void setLayoutScrollListener(LayoutScrollListener layoutScrollListener) {
+        this.layoutScrollListener = layoutScrollListener;
+    }
 
     public NestedScrollingParent2LayoutImpl2(Context context) {
         this(context, null);
@@ -58,6 +63,12 @@ public class NestedScrollingParent2LayoutImpl2 extends NestedScrollingParent2Lay
      */
     @Override
     public void onNestedPreScroll(@NonNull View target, int dx, int dy, @NonNull int[] consumed, int type) {
+
+        Log.e("========getScrollY()",getScrollY()+"");
+        if(layoutScrollListener!=null){
+            layoutScrollListener.onScroll(getScrollY());
+        }
+
         //这里不管手势滚动还是fling都处理
         boolean hideTop = dy > 0 && getScrollY() < mTopViewHeight;
         boolean showTop = dy < 0 && getScrollY() >= 0 && !target.canScrollVertically(-1);
@@ -75,6 +86,9 @@ public class NestedScrollingParent2LayoutImpl2 extends NestedScrollingParent2Lay
             //表示已经向下滑动到头
             scrollBy(0, dyUnconsumed);
         }
+
+//        Log.e("========dyConsumed",dyConsumed+"");
+//        Log.e("========dyUnconsumed",dyUnconsumed+"");
     }
 
     @Override
@@ -150,5 +164,9 @@ public class NestedScrollingParent2LayoutImpl2 extends NestedScrollingParent2Lay
         super.scrollTo(x, y);
     }
 
+
+    public interface LayoutScrollListener{
+        void onScroll(int dy);
+    }
 
 }

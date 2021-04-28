@@ -119,6 +119,31 @@
         <activity android:name=".indexable.IndexableCityActivity"/>
         <activity android:name=".activity.ClickSpanActivity"/>
 
+        <activity android:name=".activity.cusTab.TabMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.basic.DemoBasicActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.autoselect.DemoAutoSelectActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.customview01.DemoCustomView01Activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.customview02.DemoCustomView02Activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.years.DemoYearsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.imitationloop.DemoImitationLoopActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.rtl.DemoRtlActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.tabscrolldisabled.DemoTabScrollDisabledActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.cusTab.tabonscreenlimit.DemoTabOnScreenLimitActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <activity android:name=".activity.scrool.ScrollChangeTitleActivity"
+            android:theme="@style/ImageTranslucentTheme"/>
+
     </application>
 
 </manifest>

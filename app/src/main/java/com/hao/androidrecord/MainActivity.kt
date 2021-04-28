@@ -20,6 +20,7 @@ import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity00
+import com.hao.androidrecord.activity.cusTab.TabMainActivity
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
 import com.hao.androidrecord.activity.flowRecycle.LanuchActivity
 import com.hao.androidrecord.activity.hilt.TestHiltActivity
@@ -38,6 +39,7 @@ import com.hao.androidrecord.activity.scrollable03.MainActivityScrollable03
 import com.hao.androidrecord.activity.scrollable04.Demo4Activity
 import com.hao.androidrecord.activity.scrollable06.Scroll06MainActivity
 import com.hao.androidrecord.activity.scrollable07.Scroll07MainActivity
+import com.hao.androidrecord.activity.scrool.ScrollChangeTitleActivity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
@@ -308,6 +310,13 @@ class MainActivity : AppCompatActivity() {
                     46 -> {
                         startActivity(Intent(this@MainActivity, ClickSpanActivity::class.java))
                     }
+                    47 -> {
+                        startActivity(Intent(this@MainActivity, TabMainActivity::class.java))
+                    }
+
+                    48 -> {
+                        startActivity(Intent(this@MainActivity, ScrollChangeTitleActivity::class.java))
+                    }
                 }
             }
         }
@@ -372,6 +381,8 @@ class MainActivity : AppCompatActivity() {
         list.add("44国家城市index索引")
         list.add("45城市index索引")
         list.add("46textview click span")
+        list.add("47tab")
+        list.add("48滚动标题变化")
         adapter.notifyDataSetChanged()
 
 
