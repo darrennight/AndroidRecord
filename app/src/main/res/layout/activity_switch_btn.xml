@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <com.hao.androidrecord.custom.SwitchButton
+            android:id="@+id/sb_button"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"/>
+
+        <com.hao.androidrecord.custom.SwitchButton
+            android:id="@+id/sb_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:sb_interpolator="Accelerate"
+            app:sb_status="open"
+            app:sb_circleRadius="10dp"
+            app:sb_closeBackground="@android:color/black"
+            app:sb_openBackground="@android:color/holo_blue_bright"
+            app:sb_circleColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

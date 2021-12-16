@@ -223,5 +223,48 @@
     <color name="divider">#B6B6B6</color>
 
     <color name="primary_light_alpha50">#7FCFD8DC</color>
+    <color name="graY">#EFEFEF</color>
+    <color name="style_color_main">#f77500</color><!--主题色-->
+    <color name="textSelect">#FD3535</color>
+    <color name="textback">#11B898</color>
+    <color name="colorText">#222222</color>
+
+    <color name="mine_color">#855a20</color>
+    <color name="solink_background">#1b1c20</color>
+
+
+    <color name="color_luo">#7781C9</color>
+    <!--26 -->
+    <color name="color_luo_alpha">#1a7781C9</color>
+    <color name="color_mor">#337781C9</color>
+    <color name="jidu_1">#fb60ac</color>
+    <color name="jidu_2">#b569dd</color>
+    <color name="jidu_3">#8065cc</color>
+    <color name="jidu_4">#7781c9</color>
+    <color name="jidu_5">#425a90</color>
+    <color name="jidu_6">#2d4476</color>
+    <color name="anse">#1a2d55</color>
+    <color name="noUser">#84858b</color>
+
+
+    <color name="global_ffe0e0e0">#ffe0e0e0</color>
+    <color name="global_ffff4338">#ffff4338</color>
+    <color name="global_ff666666">#ff666666</color>
+
+
+    <color name="seekbar_bg">#0000ff00</color>
+    <color name="seekbar_progress_second">#0000ff00</color>
+    <color name="seekbar_progress">#0000ff00</color>
+
+    <color name="redd">#ff0000</color>
+
+    <color name="yellow_f5">#FF6E00</color>
+    <color name="black1b">#1b1b1b</color>
+    <color name="grey_f2">#f2f2f2</color>
+    <color name="green_4e">#34C2D7</color>
+    <color name="grey_ef">#efefef</color>
+    <color name="line">#EEEEEE</color>
+    <color name="yellow_c9">#FFEEC9</color>
+    <color name="black_shuo">#5B5B5B</color>
 
 </resources>

@@ -595,4 +595,52 @@
         <attr name="rtl_scrollEnabled" format="boolean"/>
 
     </declare-styleable>
+
+
+    <declare-styleable name="SwitchButtonView" >
+        <attr name="sb_openBackground" format="color"/>
+        <attr name="sb_closeBackground" format="color"/>
+        <attr name="sb_circleColor" format="color"/>
+        <attr name="sb_circleRadius" format="dimension"/>
+        <attr name="sb_status">
+            <enum name="close" value="0"/>
+            <enum name="open" value="1"/>
+        </attr>
+        <attr name="sb_interpolator">
+            <enum name="Linear" value="0"/>
+            <enum name="Overshoot" value="1"/>
+            <enum name="Accelerate" value="2"/>
+            <enum name="Decelerate" value="3"/>
+            <enum name="AccelerateDecelerate" value="4"/>
+            <enum name="LinearOutSlowIn" value="5"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleRelativeLayoutLayout">
+        <attr name="background_color" format="color" />
+        <attr name="background_alpha" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LeoTitleBar">
+        <attr name="hl_background" format="color" />
+        <attr name="hl_textTitleColor" format="color" />
+        <attr name="hl_textTitleSize" format="integer" />
+        <attr name="hl_textTitle" format="string" />
+        <attr name="hl_showLeftBtn" format="boolean" />
+        <attr name="hl_leftBtnDrawable" format="reference" />
+        <attr name="hl_showRightText" format="string" />
+        <attr name="hl_rightBtnDrawable" format="reference" />
+        <attr name="hl_divideColor" format="color" />
+        <attr name="hl_bold" format="boolean" />
+
+    </declare-styleable>
 </resources>

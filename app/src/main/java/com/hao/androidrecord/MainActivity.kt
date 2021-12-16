@@ -1,7 +1,9 @@
 package com.hao.androidrecord
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
+import android.content.res.AssetManager
 import android.os.Bundle
 import android.util.Base64
 import android.util.Log
@@ -11,7 +13,11 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
+import com.google.gson.JsonArray
 import com.hao.androidrecord.activity.*
+import com.hao.androidrecord.activity.ArcSelectList.StartActivity
+import com.hao.androidrecord.activity.CardScrool.MainImpActivity
 import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
 import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
 import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
@@ -20,6 +26,9 @@ import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity00
+import com.hao.androidrecord.activity.bottom.MainBottomActivity
+import com.hao.androidrecord.activity.bottom.MainBottomActivity01
+import com.hao.androidrecord.activity.bottom.MainBottomActivity02
 import com.hao.androidrecord.activity.cusTab.TabMainActivity
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
 import com.hao.androidrecord.activity.flowRecycle.LanuchActivity
@@ -31,6 +40,8 @@ import com.hao.androidrecord.activity.nine.NineGridActivity
 import com.hao.androidrecord.activity.nine.NineGridNewActivity
 import com.hao.androidrecord.activity.paing3.TestPaging3Activity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
+import com.hao.androidrecord.activity.richeditor.RichEditorActivity
+import com.hao.androidrecord.activity.scrollMove.MainScrollActivity
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
 import com.hao.androidrecord.activity.scrollable01.ScrollableMainActivity
@@ -43,19 +54,27 @@ import com.hao.androidrecord.activity.scrool.ScrollChangeTitleActivity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
+import com.hao.androidrecord.activity.tiger.SlotMachineActivity
+import com.hao.androidrecord.activity.tiger2.LuckyMainActivity
+import com.hao.androidrecord.activity.tiger3.FortuneActivity
 import com.hao.androidrecord.activity.tiktokComments.CommentMultiActivity
+import com.hao.androidrecord.adapter.CityData
 import com.hao.androidrecord.adapter.DemoAdapter
+import com.hao.androidrecord.adapter.JsonBean
 import com.hao.androidrecord.custom.selector.Matisse
 import com.hao.androidrecord.custom.selector.MimeType
 import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import com.hao.androidrecord.indexable.IndexableCityActivity
 import com.hao.androidrecord.util.AliBase64
-import com.hao.androidrecord.util.LocalBase64
 import com.hao.androidrecord.util.MBase64
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONArray
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.RuntimePermissions
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStreamReader
 import java.security.KeyFactory
 import java.security.PrivateKey
 import java.security.PublicKey
@@ -92,6 +111,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        initCity()
 
         val manager = LinearLayoutManager(this)
         manager.orientation = LinearLayoutManager.VERTICAL
@@ -317,6 +338,49 @@ class MainActivity : AppCompatActivity() {
                     48 -> {
                         startActivity(Intent(this@MainActivity, ScrollChangeTitleActivity::class.java))
                     }
+                    49 -> {
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.RichEdit.MainActivity::class.java))
+                    }
+                    50 -> {
+                        startActivity(Intent(this@MainActivity, RichEditorActivity::class.java))
+                    }
+                    51 -> {
+                        startActivity(Intent(this@MainActivity, SwitchActivity::class.java))
+                    }
+                    52 -> {
+                        startActivity(Intent(this@MainActivity, MainBottomActivity::class.java))
+                    }
+                    53 -> {
+                        startActivity(Intent(this@MainActivity, MainBottomActivity01::class.java))
+                    }
+
+                    54 -> {
+                        startActivity(Intent(this@MainActivity, MainBottomActivity02::class.java))
+                    }
+                    55 -> {
+                        startActivity(Intent(this@MainActivity, StartActivity::class.java))
+                    }
+                    56 -> {
+                        startActivity(Intent(this@MainActivity, RelationActivity::class.java))
+                    }
+                    57 -> {
+                        startActivity(Intent(this@MainActivity, MainImpActivity::class.java))
+                    }
+                    58 -> {
+                        startActivity(Intent(this@MainActivity, MainScrollActivity::class.java))
+                    }
+                    59 -> {
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.live.MainActivity::class.java))
+                    }
+                    60 -> {
+                        startActivity(Intent(this@MainActivity, SlotMachineActivity::class.java))
+                    }
+                    61 -> {
+                        startActivity(Intent(this@MainActivity, LuckyMainActivity::class.java))
+                    }
+                    62 -> {
+                        startActivity(Intent(this@MainActivity, FortuneActivity::class.java))
+                    }
                 }
             }
         }
@@ -383,6 +447,20 @@ class MainActivity : AppCompatActivity() {
         list.add("46textview click span")
         list.add("47tab")
         list.add("48滚动标题变化")
+        list.add("49edittext话题@")
+        list.add("50edittext话题@")
+        list.add("51滑动按钮自定义")
+        list.add("52底部凹陷导航")
+        list.add("53底部凹陷导航")
+        list.add("54底部凹陷导航")
+        list.add("55选择器弧形")
+        list.add("56亲属关系")
+        list.add("57卡片滑到详情，详情退出回到卡片")
+        list.add("58高仿药房网商品详情页面（滑动联动）。效果流畅到你难以想象")
+        list.add("59直播打赏榜，顶部、底部渐变效果")
+        list.add("60老虎机")
+        list.add("61老虎机")
+        list.add("62老虎机")
         adapter.notifyDataSetChanged()
 
 
@@ -519,5 +597,64 @@ class MainActivity : AppCompatActivity() {
         return ss
     }
 
+
+  private  fun getJson(context: Context, fileName: String?): String {
+        val stringBuilder = StringBuilder()
+        try {
+            val assetManager: AssetManager = context.getAssets()
+            val bf = BufferedReader(
+                InputStreamReader(
+                    assetManager.open(fileName!!)
+                )
+            )
+            var line: String?
+            while (bf.readLine().also { line = it } != null) {
+                stringBuilder.append(line)
+            }
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        return stringBuilder.toString()
+    }
+    fun parseData(result: String): ArrayList<JsonBean> { //Gson 解析
+        val detail: ArrayList<JsonBean> = ArrayList()
+        try {
+            val data = JSONArray(result)
+            val gson = Gson()
+            for (i in 0 until data.length()) {
+                val entity: JsonBean =
+                    gson.fromJson(data.optJSONObject(i).toString(), JsonBean::class.java)
+                detail.add(entity)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return detail
+    }
+    private fun initCity(){
+        val listPri = ArrayList<CityData>()
+        val json = getJson(this,"province_city_county.json")
+
+        val list = parseData(json)
+
+        list.forEach {
+
+            val listCity = ArrayList<String>()
+            it.cityList.forEach { cityBean ->
+                if(cityBean.name != "其他" && cityBean.name != "其他市"){
+                    listCity.add(cityBean.name)
+                }
+
+            }
+            val data = CityData(it.name,listCity)
+            listPri.add(data)
+        }
+
+
+        Log.e("=======city","$listPri")
+        val gson = Gson()
+        val jscity = gson.toJson(listPri)
+        Log.e("=======city","$jscity")
+    }
 
 }

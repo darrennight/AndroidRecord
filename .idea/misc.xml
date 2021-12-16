@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/text_background.xml" value="0.3026041666666667" />
+        <entry key="app/src/main/res/layout/activity_arc_select_r.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_auto_select.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_auto_select_h.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_bottom_arc.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_rv.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/layout/activity_select_arc.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_start.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/bottom_02.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/layout/item_arc.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/layout/item_auto_select.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/item_auto_select_h.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/item_bottom_arc.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/item_circle.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/item_pading.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/layout_bottom_activity.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/layout_bottom_activity01.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.2046875" />
+        <entry key="app/src/main/res/menu/bottom_menu_02.xml" value="0.2864583333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

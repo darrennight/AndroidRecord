@@ -86,7 +86,7 @@ class ToastCompat(context:Context,var toast:Toast) : Toast(context) {
 
 
     override fun getView(): View {
-        return toast.view
+        return toast.view!!
     }
 
 
@@ -110,7 +110,7 @@ class ToastCompat(context:Context,var toast:Toast) : Toast(context) {
 
         fun makeText(context: Context,text:CharSequence,duration:Int): ToastCompat {
             val toast = Toast.makeText(context,text,duration)
-            setContextCompat(toast.view, SafeToastContext(context,toast))
+            setContextCompat(toast.view!!, SafeToastContext(context,toast))
             return ToastCompat(context,toast)
         }
 

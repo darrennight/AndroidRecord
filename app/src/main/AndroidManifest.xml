@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hao.androidrecord">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -143,6 +144,46 @@
 
         <activity android:name=".activity.scrool.ScrollChangeTitleActivity"
             android:theme="@style/ImageTranslucentTheme"/>
+
+
+        <activity android:name=".activity.RichEdit.MainActivity"/>
+        <activity android:name=".activity.RichEdit.TopicListActivity"/>
+        <activity android:name=".activity.RichEdit.UserListActivity"/>
+
+        <activity android:name=".activity.richeditor.RichEditorActivity"/>
+        <activity android:name=".activity.richeditor.StockListActivity"/>
+        <activity android:name=".activity.richeditor.UserListActivity"/>
+        <activity android:name=".activity.SwitchActivity"/>
+
+        <activity android:name=".activity.bottom.MainBottomActivity"/>
+        <activity android:name=".activity.bottom.MainBottomActivity01"/>
+        <activity android:name=".activity.bottom.MainBottomActivity02"/>
+
+        <activity android:name=".activity.ArcSelectList.StartActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.ArcActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.ArcSelectActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.ArcSelectRotateActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.AutoSelectActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.BottomArcActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.CircleArcActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.HorizontalSelectActivity"/>
+        <activity android:name=".activity.ArcSelectList.ui.PadingArcActivity"/>
+
+        <activity android:name=".activity.RelationActivity"/>
+        <activity android:name=".custom.AirRelationView.release.ReleaseActivity"/>
+        <activity android:name=".custom.AirRelationView.release.ShowActivity"/>
+
+        <activity android:name=".activity.CardScrool.MainImpActivity"/>
+        <activity android:name=".activity.CardScrool.DetailActivity"/>
+
+        <activity android:name=".activity.scrollMove.MainScrollActivity"
+            android:theme="@style/WhiteFront_green_AppTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.live.MainActivity"/>
+        <activity android:name=".activity.tiger.SlotMachineActivity"/>
+        <activity android:name=".activity.tiger2.LuckyMainActivity"/>
+        <activity android:name=".activity.tiger3.FortuneActivity"/>
 
     </application>
 

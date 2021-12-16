@@ -9,7 +9,8 @@
         android:id="@+id/tv_demo_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:textIsSelectable="true"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
