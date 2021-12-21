@@ -4,6 +4,7 @@
     package="com.hao.androidrecord">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -184,6 +185,13 @@
         <activity android:name=".activity.tiger.SlotMachineActivity"/>
         <activity android:name=".activity.tiger2.LuckyMainActivity"/>
         <activity android:name=".activity.tiger3.FortuneActivity"/>
+
+        <activity android:name=".activity.AdvancedTextView.SelectMainActivity"/>
+        <activity android:name=".activity.AdvancedTextView.HoriActivity"/>
+        <activity android:name=".activity.AdvancedTextView.VertActivity"/>
+        <activity android:name=".activity.SelectableTextView.SelectTextActivity"/>
+
+        <activity android:name=".activity.SelectableTextHelper.SelectHelpMainActivity"/>
 
     </application>
 

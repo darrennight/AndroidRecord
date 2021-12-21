@@ -16,11 +16,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.hao.androidrecord.activity.*
+import com.hao.androidrecord.activity.AdvancedTextView.SelectMainActivity
 import com.hao.androidrecord.activity.ArcSelectList.StartActivity
 import com.hao.androidrecord.activity.CardScrool.MainImpActivity
 import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
 import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
 import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
+import com.hao.androidrecord.activity.SelectableTextHelper.SelectHelpMainActivity
+import com.hao.androidrecord.activity.SelectableTextView.SelectTextActivity
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
 import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
@@ -381,6 +384,15 @@ class MainActivity : AppCompatActivity() {
                     62 -> {
                         startActivity(Intent(this@MainActivity, FortuneActivity::class.java))
                     }
+                    63 -> {
+                        startActivity(Intent(this@MainActivity, SelectMainActivity::class.java))
+                    }
+                    64 -> {
+                        startActivity(Intent(this@MainActivity, SelectTextActivity::class.java))
+                    }
+                    65 -> {
+                        startActivity(Intent(this@MainActivity, SelectHelpMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -461,6 +473,9 @@ class MainActivity : AppCompatActivity() {
         list.add("60老虎机")
         list.add("61老虎机")
         list.add("62老虎机")
+        list.add("63TextView 内容对齐 滑动选择内容 弹出复制等操作")
+        list.add("64TextView 选择内容 弹出复制等操作")
+        list.add("65TextView 选择内容 弹出复制等操作")
         adapter.notifyDataSetChanged()
 
 

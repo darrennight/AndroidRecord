@@ -266,5 +266,13 @@
     <color name="line">#EEEEEE</color>
     <color name="yellow_c9">#FFEEC9</color>
     <color name="black_shuo">#5B5B5B</color>
+    <color name="text_gray">#888888</color>
+    <color name="text_dark">#454545</color>
+
+
+    <color name="cursor_handle_color">#0d7aff</color>
+    <color name="selected_blue">#afe1f4</color>
+
+
 
 </resources>
