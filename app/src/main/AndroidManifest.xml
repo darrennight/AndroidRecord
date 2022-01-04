@@ -192,6 +192,9 @@
         <activity android:name=".activity.SelectableTextView.SelectTextActivity"/>
 
         <activity android:name=".activity.SelectableTextHelper.SelectHelpMainActivity"/>
+        <activity android:name=".activity.halfScreen.HalfMainActivity"/>
+        <activity android:name=".activity.halfScreen.MainHalf2Activity"/>
+        <activity android:name=".activity.autoscroll.AutoScrollRecycleActivity"/>
 
     </application>
 

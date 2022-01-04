@@ -26,6 +26,7 @@ import com.hao.androidrecord.activity.SelectableTextHelper.SelectHelpMainActivit
 import com.hao.androidrecord.activity.SelectableTextView.SelectTextActivity
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
 import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
+import com.hao.androidrecord.activity.autoscroll.AutoScrollRecycleActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity00
@@ -35,6 +36,8 @@ import com.hao.androidrecord.activity.bottom.MainBottomActivity02
 import com.hao.androidrecord.activity.cusTab.TabMainActivity
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
 import com.hao.androidrecord.activity.flowRecycle.LanuchActivity
+import com.hao.androidrecord.activity.halfScreen.HalfMainActivity
+import com.hao.androidrecord.activity.halfScreen.MainHalf2Activity
 import com.hao.androidrecord.activity.hilt.TestHiltActivity
 import com.hao.androidrecord.activity.indexBar.CountryChooseActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
@@ -393,6 +396,16 @@ class MainActivity : AppCompatActivity() {
                     65 -> {
                         startActivity(Intent(this@MainActivity, SelectHelpMainActivity::class.java))
                     }
+                    66 -> {
+                        startActivity(Intent(this@MainActivity, HalfMainActivity::class.java))
+                    }
+
+                    67 -> {
+                        startActivity(Intent(this@MainActivity, MainHalf2Activity::class.java))
+                    }
+                    68 -> {
+                        startActivity(Intent(this@MainActivity, AutoScrollRecycleActivity::class.java))
+                    }
                 }
             }
         }
@@ -476,6 +489,9 @@ class MainActivity : AppCompatActivity() {
         list.add("63TextView 内容对齐 滑动选择内容 弹出复制等操作")
         list.add("64TextView 选择内容 弹出复制等操作")
         list.add("65TextView 选择内容 弹出复制等操作")
+        list.add("66半屏类似sheet webview")
+        list.add("67半屏类似sheet webview")
+        list.add("67RecyclerView实现垂直自动无限滚动，类似于中奖信息，跑马灯")
         adapter.notifyDataSetChanged()
 
 
