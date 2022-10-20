@@ -26,8 +26,12 @@ package com.hao.androidrecord.activity.TableView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-    public MainActivity() {
-        super(R.layout.activity_main);
+import com.hao.androidrecord.R;
+
+//https://github.com/evrencoskun/TableView
+
+public class TableViewActivity extends AppCompatActivity {
+    public TableViewActivity() {
+        super(R.layout.activity_table_view);
     }
 }

@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.interestingkeyboard;
+package com.hao.androidrecord.activity.keyboard;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -22,8 +22,10 @@ import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.hao.androidrecord.R;
 
-public class KeyboardPopup extends PopupWindow implements OnClickListener, LongClickRepeatListener {
+
+public class KeyboardPopup extends PopupWindow implements OnClickListener, LongClickButton.LongClickRepeatListener {
 
 	private ViewGroup contentContainer;
 	private LongClickButton btn_1;

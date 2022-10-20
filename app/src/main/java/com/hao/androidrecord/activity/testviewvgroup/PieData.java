@@ -17,9 +17,10 @@
  *
  */
 
-package com.gcssloop.view.pieview;
+package com.hao.androidrecord.activity.testviewvgroup;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 public class PieData {
     // 用户关心数据

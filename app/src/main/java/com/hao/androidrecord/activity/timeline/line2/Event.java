@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.timeline.line1;
+package com.hao.androidrecord.activity.timeline.line2;
 
 /**
  * *          _       _

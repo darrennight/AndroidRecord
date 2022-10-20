@@ -1,6 +1,7 @@
-package com.hjq.base.action
+package com.hao.androidrecord.custom.pickerads
 
-import com.hjq.base.R
+import com.hao.androidrecord.R
+
 
 /**
  *    author : Android 轮子哥

@@ -1,4 +1,13 @@
 package com.hao.androidrecord.activity
 
-class CuSwitchButtonActivity {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.hao.androidrecord.R
+
+class CuSwitchButtonActivity:AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_rc_switch_btn)
+    }
 }

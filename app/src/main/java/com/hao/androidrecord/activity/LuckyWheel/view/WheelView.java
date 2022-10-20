@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.LuckyWheel;
+package com.hao.androidrecord.activity.LuckyWheel.view;
 
 import android.animation.Animator;
 import android.content.Context;
@@ -17,13 +17,17 @@ import android.view.animation.DecelerateInterpolator;
 
 import androidx.annotation.Nullable;
 
+import com.hao.androidrecord.activity.LuckyWheel.OnLuckyWheelReachTheTarget;
+import com.hao.androidrecord.activity.LuckyWheel.OnRotationListener;
+import com.hao.androidrecord.activity.LuckyWheel.WheelItem;
+
 import java.util.List;
 
 /**
  * Created by mohamed on 22/04/17.
  */
 
-final class WheelView extends View {
+final public class WheelView extends View {
     private RectF range = new RectF();
     private Paint archPaint, textPaint;
     private int padding, radius, center, mWheelBackground, mImagePadding;

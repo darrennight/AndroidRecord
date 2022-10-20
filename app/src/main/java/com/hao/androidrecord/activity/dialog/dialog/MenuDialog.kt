@@ -1,16 +1,16 @@
-package com.hjq.demo.ui.dialog
+package com.hao.androidrecord.activity.dialog.dialog
 
 import android.content.*
 import android.view.*
 import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.recyclerview.widget.RecyclerView
-import com.hjq.base.BaseAdapter
-import com.hjq.base.BaseDialog
-import com.hjq.base.action.AnimAction
-import com.hjq.demo.R
-import com.hjq.demo.aop.SingleClick
-import com.hjq.demo.app.AppAdapter
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.bottomtab.AppAdapter
+import com.hao.androidrecord.activity.bottomtab.BaseAdapter
+import com.hao.androidrecord.custom.pickerads.AnimAction
+import com.hao.androidrecord.custom.pickerads.BaseDialog
+import com.hao.androidrecord.custom.pickerads.SingleClick
 import java.util.*
 
 /**

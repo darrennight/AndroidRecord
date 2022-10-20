@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bt_notify_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部刷新"
+                /><Button
+                android:id="@+id/bt_notify_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="移除刷新"
+                /><Button
+                android:id="@+id/bt_notify_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插入刷新"
+                /><Button
+                android:id="@+id/bt_notify_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="移动刷新"
+                /><Button
+                android:id="@+id/bt_notify_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="局部刷新"
+                /><Button
+                android:id="@+id/bt_notify_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="局部刷新2"
+                /><Button
+                android:id="@+id/bt_notify_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自己实现局部"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>

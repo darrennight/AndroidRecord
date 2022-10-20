@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.hao.androidrecord.R
 import com.hao.androidrecord.databinding.ActivityMainPhysicBinding
-import com.jawnnypoo.physicslayout.Physics
-import com.jawnnypoo.physicslayout.PhysicsConfig
-import com.jawnnypoo.physicslayout.Shape
-import org.jbox2d.dynamics.Body
-import org.jbox2d.dynamics.World
+//import com.jawnnypoo.physicslayout.Physics
+//import com.jawnnypoo.physicslayout.PhysicsConfig
+//import com.jawnnypoo.physicslayout.Shape
+//import org.jbox2d.dynamics.Body
+//import org.jbox2d.dynamics.World
 
+//https://github.com/Jawnnypoo/PhysicsLayout
+//https://github.com/jbox2d/jbox2d
 class MainPhysicActivity : AppCompatActivity() {
 
     companion object {
@@ -38,7 +40,7 @@ class MainPhysicActivity : AppCompatActivity() {
             }
             false
         })
-        binding.physicsLayout.physics.isFlingEnabled = true
+        /*binding.physicsLayout.physics.isFlingEnabled = true
         binding.physicsSwitch.isChecked = binding.physicsLayout.physics.isPhysicsEnabled
         binding.flingSwitch.isChecked = binding.physicsLayout.physics.isFlingEnabled
         binding.physicsSwitch.setOnCheckedChangeListener { _, isChecked ->
@@ -98,6 +100,6 @@ class MainPhysicActivity : AppCompatActivity() {
             override fun onBodyCreated(view: View, body: Body) {
                 Log.d(TAG, "Body created for view ${view.id}")
             }
-        })
+        })*/
     }
 }

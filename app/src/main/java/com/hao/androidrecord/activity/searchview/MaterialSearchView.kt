@@ -1,4 +1,4 @@
-package br.com.mauker.materialsearchview
+package com.hao.androidrecord.activity.searchview
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -30,12 +30,14 @@ import android.widget.AdapterView.OnItemLongClickListener
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
-import br.com.mauker.materialsearchview.adapters.CursorSearchAdapter
-import br.com.mauker.materialsearchview.db.HistoryContract
-import br.com.mauker.materialsearchview.utils.AnimationUtils.circleHideView
-import br.com.mauker.materialsearchview.utils.AnimationUtils.circleRevealView
-import br.com.mauker.materialsearchview.utils.AnimationUtils.fadeInView
-import br.com.mauker.materialsearchview.utils.AnimationUtils.fadeOutView
+import com.hao.androidrecord.BuildConfig
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.searchview.adapters.CursorSearchAdapter
+import com.hao.androidrecord.activity.searchview.db.HistoryContract
+import com.hao.androidrecord.activity.searchview.utils.AnimationUtils.circleHideView
+import com.hao.androidrecord.activity.searchview.utils.AnimationUtils.circleRevealView
+import com.hao.androidrecord.activity.searchview.utils.AnimationUtils.fadeInView
+import com.hao.androidrecord.activity.searchview.utils.AnimationUtils.fadeOutView
 import java.util.*
 import kotlin.math.roundToInt
 

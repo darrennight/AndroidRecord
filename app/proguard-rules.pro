@@ -19,3 +19,24 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class android.support.v8.renderscript.** { *; }
+-keep class androidx.renderscript.** { *; }
+
+#oaid
+-keep class repeackage.com.uodis.opendevice.aidl.** { *; }
+-keep interface repeackage.com.uodis.opendevice.aidl.** { *; }
+-keep class repeackage.com.asus.msa.SupplementaryDID.** { *; }
+-keep interface repeackage.com.asus.msa.SupplementaryDID.** { *; }
+-keep class repeackage.com.bun.lib.** { *; }
+-keep interface repeackage.com.bun.lib.** { *; }
+-keep class repeackage.com.heytap.openid.** { *; }
+-keep interface repeackage.com.heytap.openid.** { *; }
+-keep class repeackage.com.samsung.android.deviceidservice.** { *; }
+-keep interface repeackage.com.samsung.android.deviceidservice.** { *; }
+-keep class repeackage.com.zui.deviceidservice.** { *; }
+-keep interface repeackage.com.zui.deviceidservice.** { *; }
+-keep class repeackage.com.coolpad.deviceidsupport.** { *; }
+-keep interface repeackage.com.coolpad.deviceidsupport.** { *; }
+-keep class repeackage.com.android.creator.** { *; }
+-keep interface repeackage.com.android.creator.** { *; }

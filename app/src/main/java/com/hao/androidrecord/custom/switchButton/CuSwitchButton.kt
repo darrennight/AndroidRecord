@@ -1,4 +1,4 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom.switchButton
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -9,7 +9,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.animation.AccelerateInterpolator
-import com.hjq.widget.R
+import com.hao.androidrecord.R
 
 /**
  *    author : Android 轮子哥
@@ -17,7 +17,7 @@ import com.hjq.widget.R
  *    time   : 2019/02/20
  *    desc   : 高仿 ios 开关按钮
  */
-class SwitchButton @JvmOverloads constructor(
+class CuSwitchButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null,
     defStyleAttr: Int = 0, defStyleRes: Int = 0) :
     View(context, attrs, defStyleAttr, defStyleRes) {
@@ -92,9 +92,9 @@ class SwitchButton @JvmOverloads constructor(
 
     init {
         setLayerType(LAYER_TYPE_SOFTWARE, null)
-        val array: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.SwitchButton)
-        checked = array.getBoolean(R.styleable.SwitchButton_android_checked, checked)
-        isEnabled = array.getBoolean(R.styleable.SwitchButton_android_enabled, isEnabled)
+        val array: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.CuSwitchButton)
+        checked = array.getBoolean(R.styleable.CuSwitchButton_android_checked, checked)
+        isEnabled = array.getBoolean(R.styleable.CuSwitchButton_android_enabled, isEnabled)
         checkedState = if (checked) STATE_SWITCH_ON else STATE_SWITCH_OFF
         lastCheckedState = checkedState
         array.recycle()
@@ -444,7 +444,7 @@ class SwitchButton @JvmOverloads constructor(
          * @param button            切换按钮
          * @param checked           是否选中
          */
-        fun onCheckedChanged(button: SwitchButton, checked: Boolean)
+        fun onCheckedChanged(button: CuSwitchButton, checked: Boolean)
     }
 
     /**

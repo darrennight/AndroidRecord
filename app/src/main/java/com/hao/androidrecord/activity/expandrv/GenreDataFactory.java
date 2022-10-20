@@ -1,6 +1,8 @@
 package com.hao.androidrecord.activity.expandrv;
 
 import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.expandrv.Artist;
+import com.hao.androidrecord.activity.expandrv.Genre;
 import com.hao.androidrecord.activity.expandrv.check.MultiCheckGenre;
 
 import java.util.Arrays;
@@ -17,11 +19,13 @@ public class GenreDataFactory {
   }
 
   public static List<MultiCheckGenre> makeMultiCheckGenres() {
-    return Arrays.asList(makeMultiCheckRockGenre(),
-            makeMultiCheckJazzGenre(),
-            makeMultiCheckClassicGenre(),
-            makeMultiCheckSalsaGenre(),
-            makeMulitCheckBluegrassGenre());
+    return Arrays.asList(makeMultiCheckRockGenre()
+//            ,
+//            makeMultiCheckJazzGenre(),
+//            makeMultiCheckClassicGenre(),
+//            makeMultiCheckSalsaGenre(),
+//            makeMulitCheckBluegrassGenre()
+    );
   }
 
   public static MultiCheckGenre makeMultiCheckRockGenre() {
@@ -38,6 +42,11 @@ public class GenreDataFactory {
     return new MultiCheckGenre("Salsa", makeSalsaArtists(), R.drawable.ic_maracas);
   }
 
+  public static MultiCheckGenre makeMulitCheckBluegrassGenre() {
+    return new MultiCheckGenre("Bluegrass", makeBluegrassArtists(), R.drawable.ic_banjo);
+  }
+
+
   public static Genre makeRockGenre() {
     return new Genre("Rock", makeRockArtists(), R.drawable.ic_electric_guitar);
   }
@@ -49,8 +58,28 @@ public class GenreDataFactory {
     Artist styx = new Artist("Styx", false);
     Artist reoSpeedwagon = new Artist("REO Speedwagon", false);
     Artist boston = new Artist("Boston", true);
+    Artist boston2 = new Artist("Boston2", true);
+    Artist boston3 = new Artist("Bosto3", true);
+    Artist boston4 = new Artist("Bosto4", true);
+    Artist boston5 = new Artist("Bosto5", true);
+    Artist boston6 = new Artist("Bosto6", true);
+    Artist boston7 = new Artist("Bosto7", true);
+    Artist boston8 = new Artist("Bosto8", true);
+    Artist boston9 = new Artist("Bosto9", true);
+    Artist boston10 = new Artist("Bosto10", true);
+    Artist boston11 = new Artist("Boston11", true);
+    Artist boston12 = new Artist("Boston11", true);
+    Artist boston13 = new Artist("Boston11", true);
+    Artist boston14 = new Artist("Boston11", true);
+    Artist boston15 = new Artist("Boston11", true);
+    Artist boston16 = new Artist("Boston11", true);
+    Artist boston17 = new Artist("Boston11", true);
+    Artist boston18 = new Artist("Boston11", true);
 
-    return Arrays.asList(queen, styx, reoSpeedwagon, boston);
+    return Arrays.asList(queen, styx, reoSpeedwagon, boston,boston2,boston3,
+            boston4,boston5,boston6,boston7,boston8,boston9,boston10,boston11,
+            boston12,boston13,boston14,boston15,boston16,boston17,boston18
+            );
   }
 
   public static Genre makeJazzGenre() {

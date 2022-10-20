@@ -1,11 +1,11 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom
 
 import android.content.*
 import android.content.res.TypedArray
 import android.text.*
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
-import com.hjq.widget.R
+import com.hao.androidrecord.R
 import java.util.regex.Pattern
 
 /**

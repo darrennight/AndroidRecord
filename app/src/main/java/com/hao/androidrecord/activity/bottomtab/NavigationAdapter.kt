@@ -1,4 +1,4 @@
-package com.hjq.demo.ui.adapter
+package com.hao.androidrecord.activity.bottomtab
 
 import android.content.*
 import android.graphics.drawable.Drawable
@@ -6,9 +6,7 @@ import android.view.*
 import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hjq.base.BaseAdapter
-import com.hjq.demo.R
-import com.hjq.demo.app.AppAdapter
+import com.hao.androidrecord.R
 
 /**
  *    author : Android 轮子哥

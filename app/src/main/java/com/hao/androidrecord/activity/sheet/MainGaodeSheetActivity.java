@@ -10,12 +10,12 @@ import com.hao.androidrecord.R;
 import com.hao.androidrecord.activity.sheet.gaode.GaoDeDetailActivity;
 import com.hao.androidrecord.activity.sheet.gaode.GaoDeIndexActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainGaodeSheetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_gaode);
     }
 
     public void onGaodeIndoex(View view) {

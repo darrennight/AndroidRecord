@@ -16,6 +16,7 @@ import android.widget.ImageView
 import android.widget.AdapterView.OnItemSelectedListener
 import com.hao.androidrecord.R
 import com.hao.androidrecord.activity.ticket.lib.TicketView
+import com.thebluealliance.spectrum.SpectrumDialog
 import kotlinx.android.synthetic.main.bottomsheet_ticket_attributes.*
 import kotlinx.android.synthetic.main.content_ticket.*
 import kotlinx.android.synthetic.main.item_background_options.*
@@ -23,9 +24,10 @@ import kotlinx.android.synthetic.main.item_border_options.*
 import kotlinx.android.synthetic.main.item_corner_options.*
 import kotlinx.android.synthetic.main.item_divider_options.*
 import kotlinx.android.synthetic.main.item_scallop_options.*
+import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
 
-
-class MainActivity : BaseActivity() {
+//https://github.com/vipulasri/TicketView
+class TicketViewActivity : BaseActivity() {
 
     private lateinit var mBottomSheetBehavior: BottomSheetBehavior<View>
 
@@ -37,7 +39,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+        menuInflater.inflate(R.menu.menu_ticket, menu)
         return true
     }
 
@@ -253,7 +255,7 @@ class MainActivity : BaseActivity() {
 
         override fun onProgressChanged(discreteSeekBar: DiscreteSeekBar, value: Int, b: Boolean) {
 
-            val valueInDp = Utils.dpToPx(value.toFloat(), this@MainActivity)
+            val valueInDp = Utils.dpToPx(value.toFloat(), this@TicketViewActivity)
             Log.d("TAG", "->"+discreteSeekBar.id)
             when(discreteSeekBar.id) {
                 R.id.seekBar_elevation -> ticketView.setTicketElevation(valueInDp.toFloat())

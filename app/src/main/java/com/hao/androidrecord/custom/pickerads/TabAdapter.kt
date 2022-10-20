@@ -1,4 +1,4 @@
-package com.hjq.demo.ui.adapter
+package com.hao.androidrecord.custom.pickerads
 
 import android.animation.ValueAnimator
 import android.animation.ValueAnimator.AnimatorUpdateListener
@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
-import com.hjq.base.BaseAdapter
-import com.hjq.demo.R
-import com.hjq.demo.app.AppAdapter
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.bottomtab.AppAdapter
+import com.hao.androidrecord.activity.bottomtab.BaseAdapter
 
 /**
  *    author : Android 轮子哥

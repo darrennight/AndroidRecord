@@ -1,0 +1,201 @@
+package com.hao.androidrecord.activity.pinned;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemChildClickListener;
+import com.google.gson.Gson;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.pinned.adapter.StockAdapter;
+import com.hao.androidrecord.activity.pinned.entity.StockEntity;
+import com.hao.androidrecord.custom.pinned.PinnedHeaderItemDecoration;
+import com.hao.androidrecord.custom.pinned.callback.OnHeaderClickAdapter;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class StockActivity extends AppCompatActivity {
+
+    private RecyclerView mRecyclerView;
+    private StockAdapter mAdapter;
+    private PinnedHeaderItemDecoration mHeaderItemDecoration;
+
+    @SuppressLint("StaticFieldLeak")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_stock);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(StockActivity.this, LinearLayoutManager.VERTICAL, false));
+
+
+        OnHeaderClickAdapter clickAdapter = new OnHeaderClickAdapter() {
+
+            @Override
+            public void onHeaderClick(View view, int id, int position) {
+                switch (id) {
+                    case R.id.fl:
+                        // case OnItemTouchListener.HEADER_ID:
+                        Toast.makeText(StockActivity.this, "click, tag: " /*+ mAdapter.getData().get(position).pinnedHeaderName*/, Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.iv_more:
+                        Toast.makeText(StockActivity.this, "click " /*+ mAdapter.getData().get(position).pinnedHeaderName */+ "'s more button", Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+                    case R.id.checkbox:
+                        final CheckBox checkBox = (CheckBox) view;
+                        checkBox.setChecked(!checkBox.isChecked());
+                        // 刷新ItemDecorations，导致重绘刷新头部
+                        mRecyclerView.invalidateItemDecorations();
+
+//                        mAdapter.getData().get(position).check = checkBox.isChecked();
+//                        mAdapter.notifyItemChanged(position + mHeaderItemDecoration.getDataPositionOffset());
+
+                        break;
+                }
+            }
+
+        };
+
+        mHeaderItemDecoration = new PinnedHeaderItemDecoration.Builder(StockEntity.StockInfo.TYPE_HEADER).setDividerId(R.drawable.divider).enableDivider(true)
+                .setClickIds(R.id.iv_more, R.id.fl, R.id.checkbox).disableHeaderClick(false).setHeaderClickListener(clickAdapter).create();
+        mRecyclerView.addItemDecoration(mHeaderItemDecoration);
+
+        new AsyncTask<Void, Void, String>() {
+
+            @Override
+            protected void onPreExecute() {
+
+
+
+
+
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                return getStrFromAssets("rasking.json");
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+
+                Gson gson = new Gson();
+
+                final StockEntity stockEntity = gson.fromJson(result, StockEntity.class);
+
+                List<StockEntity.StockInfo> data = new ArrayList<>();
+
+                data.add(new StockEntity.StockInfo(StockEntity.StockInfo.TYPE_HEADER, "涨幅榜"));
+                for (StockEntity.StockInfo info : stockEntity.increase_list) {
+                    info.setItemType(StockEntity.StockInfo.TYPE_DATA);
+                    data.add(info);
+                }
+
+                data.add(new StockEntity.StockInfo(StockEntity.StockInfo.TYPE_HEADER, "跌幅榜"));
+                for (StockEntity.StockInfo info : stockEntity.down_list) {
+                    info.setItemType(StockEntity.StockInfo.TYPE_DATA);
+                    data.add(info);
+                }
+
+                data.add(new StockEntity.StockInfo(StockEntity.StockInfo.TYPE_HEADER, "换手率"));
+                for (StockEntity.StockInfo info : stockEntity.change_list) {
+                    info.setItemType(StockEntity.StockInfo.TYPE_DATA);
+                    data.add(info);
+                }
+
+                data.add(new StockEntity.StockInfo(StockEntity.StockInfo.TYPE_HEADER, "振幅榜"));
+                for (StockEntity.StockInfo info : stockEntity.amplitude_list) {
+                    info.setItemType(StockEntity.StockInfo.TYPE_DATA);
+                    data.add(info);
+                }
+
+                mAdapter = new StockAdapter(StockActivity.this,data);
+                mRecyclerView.setAdapter(mAdapter);
+
+                /*mRecyclerView.addOnItemTouchListener(new OnItemChildClickListener() {
+                    @Override
+                    public void onSimpleItemChildClick(BaseQuickAdapter adapter, final View view, final int i) {
+                        // Log.i("OnItemTouchListener", "onSimpleItemChildClick: " + view.toString());
+                        if (view instanceof CheckBox) {
+                            view.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    // CheckBox点击后先是触发点击事件，再触发改变选中状态，估计是代码更新了逻辑，这里延时200毫秒
+                                    CheckBox checkBox = (CheckBox) view;
+                                    boolean checked = checkBox.isChecked();
+                                    // Log.i("OnItemTouchListener", "1 onSimpleItemChildClick: " + checked);
+                                    mAdapter.getData().get(i).check = checked;
+                                    if (mHeaderItemDecoration.getPinnedHeaderView() != null && mHeaderItemDecoration.getPinnedHeaderPosition() >= i + mAdapter
+                                            .getHeaderLayoutCount()) {
+                                        ((CheckBox) mHeaderItemDecoration.getPinnedHeaderView().findViewById(view.getId())).setChecked(checked);
+                                    }
+                                }
+                            }, 200);
+                        }
+                    }
+                });*/
+
+
+//                mAdapter.addHeaderView(LayoutInflater.from(StockActivity.this).inflate(R.layout.item_data, mRecyclerView, false));
+                // 因为添加了1个头部，他是不在clickAdapter.getData这个数据里面的，所以这里要设置数据的偏移值告知ItemDecoration真正的数据索引
+//                mHeaderItemDecoration.setDataPositionOffset(mAdapter.getHeaderLayoutCount());
+
+            }
+
+        }.execute();
+
+
+    }
+
+    /**
+     * @return Json数据（String）
+     * @description 通过assets文件获取json数据，这里写的十分简单，没做循环判断。
+     */
+    private String getStrFromAssets(String name) {
+
+        AssetManager assetManager = getAssets();
+        try {
+            InputStream is = assetManager.open(name);
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            StringBuilder sb = new StringBuilder();
+            String str;
+            while ((str = br.readLine()) != null) {
+                sb.append(str);
+            }
+            return sb.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
+
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+}

@@ -1,10 +1,10 @@
-package com.hjq.demo.ui.adapter
+package com.hao.androidrecord.custom.pickerads
 
 import android.content.Context
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.hjq.demo.R
-import com.hjq.demo.app.AppAdapter
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.bottomtab.AppAdapter
 
 /**
  *    author : Android 轮子哥

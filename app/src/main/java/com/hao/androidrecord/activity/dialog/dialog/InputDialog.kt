@@ -1,4 +1,4 @@
-package com.hjq.demo.ui.dialog
+package com.hao.androidrecord.activity.dialog.dialog
 
 import android.content.Context
 import android.view.KeyEvent
@@ -7,10 +7,10 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.TextView.OnEditorActionListener
 import androidx.annotation.StringRes
-import com.hjq.base.BaseDialog
-import com.hjq.demo.R
-import com.hjq.demo.aop.SingleClick
-import com.hjq.widget.view.RegexEditText
+import com.hao.androidrecord.R
+import com.hao.androidrecord.custom.RegexEditText
+import com.hao.androidrecord.custom.pickerads.BaseDialog
+import com.hao.androidrecord.custom.pickerads.SingleClick
 
 /**
  *    author : Android 轮子哥

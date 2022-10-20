@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.chooser
+package com.hao.androidrecord.activity.chooser.lib
 
 import android.content.Context
 import android.util.AttributeSet

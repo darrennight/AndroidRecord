@@ -5,13 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.DialogActivity">
+    >
 
-    <com.hjq.bar.TitleBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:rightIcon="@drawable/add_ic"
-        app:title="对话框案例" />
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

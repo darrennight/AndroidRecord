@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<com.hao.androidrecord.custom.drapmenu.DropDownMenu
+    android:id="@+id/dropDownMenu"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ddmenuTextSize="13sp"
+    app:ddtextUnselectedColor="@color/drop_down_unselected"
+    app:ddtextSelectedColor="@color/drop_down_selected"
+    app:dddividerColor="@color/gray"
+    app:ddunderlineColor="@color/gray"
+    app:ddmenuMenuHeightPercent="0.5"
+    app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+    app:ddmaskColor="@color/mask_color"
+    app:ddmenuBackgroundColor="@color/white"
+    app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--tab-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+<!--container-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="内容显示区域"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_test_dec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+</com.hao.androidrecord.custom.drapmenu.DropDownMenu>

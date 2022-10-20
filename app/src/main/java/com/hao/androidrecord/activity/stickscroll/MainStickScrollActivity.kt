@@ -12,7 +12,7 @@ import com.amar.library.ui.StickyScrollView
 import com.amar.library.ui.interfaces.IScrollViewListener
 import com.hao.androidrecord.R
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainStickScrollActivity : AppCompatActivity(), View.OnClickListener {
     private var scrollView: StickyScrollView? = null
     private var mainShoeView: ImageView? = null
     private var redShoeVisible = true

@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.arclayout;
+package com.hao.androidrecord.activity.arclayout.lib;
 
 import android.graphics.Paint;
 import android.graphics.Path;

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-</selector>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_vip" android:duration="100"/>
+    <item android:drawable="@drawable/e1" android:duration="100"/>
+    <item android:drawable="@drawable/e2" android:duration="100"/>
+    <item android:drawable="@drawable/e3" android:duration="100"/>
+    <item android:drawable="@drawable/e4" android:duration="100"/>
+</animation-list>

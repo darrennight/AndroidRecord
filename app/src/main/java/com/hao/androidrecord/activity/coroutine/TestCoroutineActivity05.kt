@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity
+package com.hao.androidrecord.activity.coroutine
 
 import android.os.Bundle
 import android.util.Log
@@ -44,6 +44,7 @@ class TestCoroutineActivity05:AppCompatActivity() ,CoroutineScope by MainScope()
      * 是非阻塞式的不会阻塞线程
      */
     private suspend fun testSleep(){
+        //lifecycleScope默认主线程，可以通过withContext来指定线程。
         val tem = withContext(Dispatchers.IO){
             //通过此种方式让运行在主线程的协程里面也可以执行耗时操作
             var i=0

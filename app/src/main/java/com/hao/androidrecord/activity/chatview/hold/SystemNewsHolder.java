@@ -1,11 +1,11 @@
-package com.hao.androidrecord.activity.chatview.holder;
+package com.hao.androidrecord.activity.chatview.hold;
 
 import android.view.View;
 import android.widget.TextView;
 
-import com.ryan.chatlib.BaseChatViewHolder;
-import com.ryan.simplechatview.MyChatMsg;
-import com.ryan.simplechatview.R;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.chatview.MyChatMsg;
+import com.hao.androidrecord.activity.chatview.chatlib.BaseChatViewHolder;
 
 /**
  * 系统消息

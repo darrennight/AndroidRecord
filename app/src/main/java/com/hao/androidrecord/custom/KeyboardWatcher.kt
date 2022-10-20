@@ -1,4 +1,4 @@
-package com.hjq.demo.other
+package com.hao.androidrecord.custom
 
 import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks

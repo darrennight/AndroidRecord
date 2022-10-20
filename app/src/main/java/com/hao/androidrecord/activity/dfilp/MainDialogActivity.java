@@ -13,7 +13,7 @@ import com.hao.androidrecord.custom.dialogfilp.MyDialog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainDialogActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_login)
     Button btnLogin;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                startActivity(new Intent(MainDialogActivity.this, LoginActivity.class));
             }
         });
         btn3d.setOnClickListener(new View.OnClickListener() {

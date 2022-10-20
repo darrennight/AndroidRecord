@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.bnavigationbar
+package com.hao.androidrecord.activity.bnavigationbar.lib
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -33,13 +33,11 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.hao.androidrecord.BuildConfig
 import com.hao.androidrecord.R
@@ -471,8 +469,14 @@ class OneBottomNavigationBar : View {
             topLineColor = ta.getColor(R.styleable.One_StyleBottomLayout_oneItemTopLineColor, Color.TRANSPARENT)
             floatingEnable = ta.getBoolean(R.styleable.One_StyleBottomLayout_oneFloatingEnable, false)
             floatingUp = ta.getDimension(R.styleable.One_StyleBottomLayout_oneFloatingUp, 20f).toInt()
-            titleSize = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemTextSize, DensityUtils.spToPx(resources, 12f).toFloat()).toInt()
-            textTop = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemTextTopMargin, DensityUtils.dpToPx(resources, 3f).toFloat()).toInt()
+            titleSize = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemTextSize, DensityUtils.spToPx(
+                resources,
+                12f
+            ).toFloat()).toInt()
+            textTop = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemTextTopMargin, DensityUtils.dpToPx(
+                resources,
+                3f
+            ).toFloat()).toInt()
             itemIconWidth = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemIconWidth, 0f).toInt()
             itemIconHeight = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemIconHeight, 0f).toInt()
             itemPadding = ta.getDimension(R.styleable.One_StyleBottomLayout_oneItemPadding, 0f).toInt()
@@ -994,7 +998,10 @@ class OneBottomNavigationBar : View {
                         val height = mItemHeight - topPadding - bottomPadding
                         if (!TextUtils.isEmpty(item.title)) {
                             val color = if (item.isChecked) itemColorStateList!!.getColorForState(intArrayOf(android.R.attr.state_checked), itemColorStateList!!.defaultColor) else itemColorStateList!!.defaultColor
-                            setTextPaint(if (item.titleSize == 0) DensityUtils.dpToPx(resources, 14f) else item.titleSize, color)
+                            setTextPaint(if (item.titleSize == 0) DensityUtils.dpToPx(
+                                resources,
+                                14f
+                            ) else item.titleSize, color)
                             val textHeight = getTextHeight(item.title, mTextPaint!!)
                             val textY = startTop + height - textHeight / 4//上边距+图片文字内容高度
                             val w = textY - textHeight / 2 - topPadding

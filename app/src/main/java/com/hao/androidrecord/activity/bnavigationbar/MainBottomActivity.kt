@@ -4,17 +4,16 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hao.androidrecord.R
+import kotlinx.android.synthetic.main.activity_main_bottom.*
 
-import kotlinx.android.synthetic.main.activity_main.*
 
-
-class MainActivity : AppCompatActivity() {
+class MainBottomActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_bottom)
         oneBottomLayout.setMenu(R.menu.navigation_menu)
         oneBottomLayout.setFragmentManager(supportFragmentManager, mainFragment )
         oneBottomLayout.isReplace = false

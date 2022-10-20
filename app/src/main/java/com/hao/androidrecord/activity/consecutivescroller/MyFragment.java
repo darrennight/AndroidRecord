@@ -11,8 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.donkingliang.consecutivescrollerdemo.adapter.RecyclerViewAdapter;
-import com.scwang.smart.refresh.layout.SmartRefreshLayout;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.consecutivescroller.adapter.RecyclerViewAdapter;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+
 
 /**
  * @Author donkingliang
@@ -25,7 +27,7 @@ public class MyFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_my,container,false);
+        View view = inflater.inflate(R.layout.fragment_my_scroller,container,false);
 
         RecyclerView recyclerView1 = view.findViewById(R.id.recyclerView1);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -42,6 +44,7 @@ public class MyFragment extends Fragment {
 
     public void onLoadMore(final SmartRefreshLayout layout){
         // 模拟加载5秒钟
-        layout.finishLoadMore(5000);
+//        layout.finishLoadMore(5000);
+        layout.finishLoadmore(5000);
     }
 }

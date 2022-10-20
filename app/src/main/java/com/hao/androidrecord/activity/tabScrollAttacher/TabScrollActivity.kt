@@ -3,17 +3,18 @@ package com.hao.androidrecord.activity.tabScrollAttacher
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.iammert.tabscrollattacher.data.Category
-import com.iammert.tabscrollattacher.data.DataFetcher
-import com.iammert.tabscrollattacher.data.Item
-import com.iammert.tabscrollattacherlib.TabScrollAttacher
-import kotlinx.android.synthetic.main.activity_main.*
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.tabScrollAttacher.data.Category
+import com.hao.androidrecord.activity.tabScrollAttacher.data.DataFetcher
+import com.hao.androidrecord.activity.tabScrollAttacher.data.Item
+import kotlinx.android.synthetic.main.activity_tab_scroll_attache.*
 
-class MainActivity : AppCompatActivity() {
+//https://github.com/iammert/TabScrollAttacher
+class TabScrollActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_tab_scroll_attache)
 
         val categories = DataFetcher.fetchData(applicationContext)
 

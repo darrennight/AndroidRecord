@@ -1,10 +1,12 @@
-package com.hao.androidrecord.activity.expandrv;
+package com.hao.androidrecord.activity.expandrv.expand;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.expandrv.Artist;
+import com.hao.androidrecord.activity.expandrv.Genre;
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.List;

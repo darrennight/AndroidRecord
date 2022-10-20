@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.files.util
+package com.hao.androidrecord.util
 
 import android.widget.EditText
 

@@ -1,4 +1,4 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -11,7 +11,7 @@ import android.util.TypedValue
 import android.view.animation.AccelerateInterpolator
 import androidx.annotation.FloatRange
 import androidx.appcompat.widget.AppCompatButton
-import com.hjq.widget.R
+import com.hao.androidrecord.R
 import kotlin.math.sqrt
 
 /**

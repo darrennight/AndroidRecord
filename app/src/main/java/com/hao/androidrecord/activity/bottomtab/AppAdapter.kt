@@ -1,10 +1,9 @@
-package com.hjq.demo.app
+package com.hao.androidrecord.activity.bottomtab
 
 import android.content.Context
 import android.view.View
 import androidx.annotation.IntRange
 import androidx.annotation.LayoutRes
-import com.hjq.base.BaseAdapter
 import java.util.*
 
 /**

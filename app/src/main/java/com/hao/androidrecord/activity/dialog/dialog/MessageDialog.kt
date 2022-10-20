@@ -1,12 +1,12 @@
-package com.hjq.demo.ui.dialog
+package com.hao.androidrecord.activity.dialog.dialog
 
 import android.content.Context
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.StringRes
-import com.hjq.base.BaseDialog
-import com.hjq.demo.R
-import com.hjq.demo.aop.SingleClick
+import com.hao.androidrecord.R
+import com.hao.androidrecord.custom.pickerads.BaseDialog
+import com.hao.androidrecord.custom.pickerads.SingleClick
 
 /**
  *    author : Android 轮子哥

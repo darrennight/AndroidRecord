@@ -1,4 +1,4 @@
-package com.hao.androidrecord.custom.suspensionindexbar.indexbar;
+package com.hao.androidrecord.custom.suspensionindexbar.indexbar.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,6 +13,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.custom.suspensionindexbar.indexbar.bean.BaseIndexPinyinBean;
+import com.hao.androidrecord.custom.suspensionindexbar.indexbar.help.IIndexBarDataHelper;
+import com.hao.androidrecord.custom.suspensionindexbar.indexbar.help.IndexBarDataHelperImpl;
 
 import java.util.ArrayList;
 import java.util.Arrays;

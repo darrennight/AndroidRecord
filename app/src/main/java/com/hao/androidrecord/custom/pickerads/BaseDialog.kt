@@ -1,4 +1,4 @@
-package com.hjq.base
+package com.hao.androidrecord.custom.pickerads
 
 import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks
@@ -15,7 +15,10 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
-import com.hjq.base.action.*
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.bottomtab.ResourcesAction
+import com.hao.androidrecord.custom.HandlerAction
+import com.hao.androidrecord.custom.KeyboardAction
 import java.lang.ref.SoftReference
 import java.util.*
 

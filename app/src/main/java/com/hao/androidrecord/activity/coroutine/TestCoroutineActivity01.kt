@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity
+package com.hao.androidrecord.activity.coroutine
 
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +17,7 @@ class TestCoroutineActivity01:AppCompatActivity() ,CoroutineScope by MainScope()
         //launch 是mainscope 协程运行的线程是主线程
         Log.e("========","start")
 
+        //继承了CoroutineScope 可以直接使用
         launch {
 
             var i=0

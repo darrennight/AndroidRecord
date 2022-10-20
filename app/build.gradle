@@ -28,6 +28,15 @@ android {
         renderscriptSupportModeEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        kapt {
+            arguments {
+                arg("deepLink.incremental", "true")
+                arg("deepLink.customAnnotations", "com.hao.androidrecord.deeplink.AppDeepLink")
+            }
+        }
+
+        buildConfigField "int", "MAX_HISTORY", "10"
     }
 
     buildTypes {
@@ -44,12 +53,20 @@ android {
         jvmTarget = '1.8'
     }
 
-//    dataBinding {
-//        enabled = true
-//    }
+    dataBinding {
+        enabled = true
+    }
     kapt {
         generateStubs = true
     }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+
 }
 kapt {
     generateStubs = true
@@ -116,6 +133,13 @@ dependencies {
 
     implementation "androidx.paging:paging-runtime:$paging_version"
     implementation "androidx.paging:paging-compose:1.0.0-alpha05"
+
+
+    def nav_version = "2.3.5"
+     // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
 
 
     implementation 'androidx.appcompat:appcompat:1.3.0'
@@ -221,4 +245,109 @@ dependencies {
 
     implementation 'me.drakeet.multitype:multitype:3.5.0'
     implementation "com.makeramen:roundedimageview:2.3.0"
+
+    implementation 'com.airbnb:deeplinkdispatch:5.4.3'
+    kapt 'com.airbnb:deeplinkdispatch-processor:5.4.3'
+
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //图片加载
+    implementation("io.coil-kt:coil:1.4.0")
+    implementation("io.coil-kt:coil-gif:1.4.0")
+    implementation("io.coil-kt:coil-svg:1.4.0")
+    implementation("io.coil-kt:coil-video:1.4.0")
+
+
+    debugImplementation 'com.github.chuckerteam.chucker:library:3.5.2'
+    releaseImplementation 'com.github.chuckerteam.chucker:library-no-op:3.5.2'
+    implementation 'com.tencent.tbs:tbssdk:44136'
+
+
+    // Shape 框架：https://github.com/getActivity/ShapeView
+    implementation 'com.github.getActivity:ShapeView:6.0'
+// 吐司框架：https://github.com/getActivity/ToastUtils
+    implementation 'com.github.getActivity:ToastUtils:10.3'
+
+    // 指示器框架：https://github.com/ongakuer/CircleIndicator
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    //blur
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+
+    implementation 'com.github.promeg:tinypinyin:1.0.0' // ~80KB
+
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.2'
+
+    implementation 'com.github.donkingliang:GroupedRecyclerViewAdapter:2.4.1'
+
+
+    implementation 'com.github.donkingliang:ConsecutiveScroller:4.6.1'
+
+    //开源oaid
+    implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.4'
+
+    implementation("com.github.pokercc:ExpandableRecyclerView:0.9.3")
+    implementation 'com.thoughtbot:expandablerecyclerview:1.4'
+    implementation 'com.thoughtbot:expandablecheckrecyclerview:1.4'
+    implementation 'com.zaihuishou:expandablerecycleradapter:1.0.3'
+
+    implementation("com.github.pokercc:ExpandableRecyclerView:0.9.3")
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+
+    implementation 'com.nambimobile.widgets:expandable-fab:1.2.1'
+    implementation 'com.github.varunest:sparkbutton:1.0.6'
+
+
+//    implementation("com.jawnnypoo:physicslayout:3.0.1")
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+//    implementation("com.wefika:flowlayout:0.4.1") {
+//        exclude group: "com.intellij", module: "annotations"
+//    }
+
+    implementation("com.github.Commit451:Gimbal:3.0.0")
+
+
+    implementation 'com.github.liangjingkanji:Interval:1.0.0'
+
+    implementation 'com.github.amarjain07:StickyScrollView:1.0.3'
+
+    implementation 'com.github.rubensousa:gravitysnaphelper:2.2.2'
+
+    implementation("com.yarolegovich:discrete-scrollview:1.5.1")
+    implementation("com.yarolegovich:mp:1.1.6")
+
+    implementation 'com.github.evrencoskun:TableView:v0.8.9.4'
+
+    implementation 'com.github.Spikeysanju:ZoomRecylerLayout:1.0'
+
+    implementation 'io.moyuru:timetablelayout:1.0.0-alpha02'
+
+    implementation 'com.xwray:groupie:2.3.0'
+    implementation 'com.xwray:groupie-databinding:2.3.0'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.0'
+
+    implementation 'com.github.MackHartley:RoundedProgressBar:3.0.0'
+    implementation 'com.jaredrummler:colorpicker:1.1.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.github.sephiroth74:NumberSlidingPicker:1.0.3'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.dmitrymalkovich.android:material-design-dimens:1.4'
+
+    implementation ('org.adw.library:discrete-seekbar:1.0.1') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+    implementation ('com.thebluealliance:spectrum:0.7.1') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
 }

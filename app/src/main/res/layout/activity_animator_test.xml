@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_v_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ValueAnimator"/>
+
+    <Button
+        android:id="@+id/btn_object_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="object_位移"/>
+
+    <Button
+        android:id="@+id/btn_object_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="object_透明度"/>
+    <Button
+        android:id="@+id/btn_object_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="object_缩放"/>
+
+    <Button
+        android:id="@+id/btn_object_scale_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="object_缩放_set"/>
+
+    <Button
+        android:id="@+id/btn_object_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="object_旋转"/>
+
+    <Button
+        android:id="@+id/btn_view_pro_ani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewPropertyAnimator"/>
+
+
+
+    <Button
+        android:id="@+id/btn_time_ani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="timeAnimator"/>
+
+
 
 </LinearLayout>

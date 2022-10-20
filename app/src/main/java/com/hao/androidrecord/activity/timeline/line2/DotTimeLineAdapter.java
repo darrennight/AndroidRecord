@@ -1,14 +1,16 @@
-package com.hao.androidrecord.activity.timeline.line1;
+package com.hao.androidrecord.activity.timeline.line2;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.vivian.timeline.R;
-import com.vivian.timelineitemdecoration.util.Util;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.custom.timeline.Util;
 
 import java.util.List;
 

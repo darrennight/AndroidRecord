@@ -1,4 +1,4 @@
-package cn.bpking.app.helper
+package com.hao.androidrecord.deeplink
 
 import com.airbnb.deeplinkdispatch.DeepLinkModule
 

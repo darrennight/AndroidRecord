@@ -4,16 +4,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lmx.library.media.VideoPlayRecyclerView;
+import com.hao.androidrecord.R;
 
-public class MainActivity extends Activity {
+//https://github.com/lmxjw3/videoplay
+public class DYIndexMainActivity extends Activity {
     private VideoPlayRecyclerView mRvVideo;
     private MainAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dy_index);
         initView();
     }
 

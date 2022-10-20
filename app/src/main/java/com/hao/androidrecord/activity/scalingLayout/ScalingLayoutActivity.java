@@ -2,35 +2,38 @@ package com.hao.androidrecord.activity.scalingLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.hao.androidrecord.R;
+//https://github.com/iammert/ScalingLayout
+public class ScalingLayoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scaling_layout);
 
 
         findViewById(R.id.demo1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CollapsingDemoActivity.class));
+                startActivity(new Intent(ScalingLayoutActivity.this, CollapsingDemoActivity.class));
             }
         });
 
         findViewById(R.id.demo2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, FABDemo.class));
+                startActivity(new Intent(ScalingLayoutActivity.this, FABDemo.class));
             }
         });
 
         findViewById(R.id.demo3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SearchBarDemoActivity.class));
+                startActivity(new Intent(ScalingLayoutActivity.this, SearchBarDemoActivity.class));
             }
         });
     }

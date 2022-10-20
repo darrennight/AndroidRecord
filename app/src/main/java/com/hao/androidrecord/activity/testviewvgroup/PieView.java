@@ -17,7 +17,7 @@
  *
  */
 
-package com.gcssloop.view.pieview;
+package com.hao.androidrecord.activity.testviewvgroup;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -30,6 +30,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+//https://www.gcssloop.com/category/customview.html
 public class PieView extends View {
     // 颜色表
     private int[] mColors = {0xFFCCFF00, 0xFF6495ED, 0xFFE32636, 0xFF800000, 0xFF808000, 0xFFFF8C69, 0xFF808080,
@@ -62,21 +63,33 @@ public class PieView extends View {
     }
 
     @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        mWidth = w;
-        mHeight = h;
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        //没有设置 就是屏幕宽高
+        mWidth = w;
+        mHeight = h;
+
+        Log.e("======pie",""+w);
+        Log.e("======pie",""+h);
+    }
+
+    private RectF rect = new RectF();// 饼状图绘制区域
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (null == mData)
             return;
         float currentStartAngle = mStartAngle;                      // 当前起始角度
+
         canvas.translate(mWidth / 2, mHeight / 2);                  // 将画布坐标原点移动到中心位置
+
         float r = (float) (Math.min(mWidth, mHeight) / 2 * 0.8);    // 饼状图半径
-        RectF rect = new RectF(-r, -r, r, r);                       // 饼状图绘制区域
+        rect.set(-r, -r, r, r);
 
         for (int i = 0; i < mData.size(); i++) {
             PieData pie = mData.get(i);
@@ -84,12 +97,10 @@ public class PieView extends View {
             canvas.drawArc(rect, currentStartAngle, pie.getAngle(), true, mPaint);
             currentStartAngle += pie.getAngle();
 
-            canvas.save();
-            canvas.translate(-mWidth / 2, -mHeight / 2);
-            RectF colorRect = new RectF(mCurrentPoint.x, mCurrentPoint.y, mCurrentPoint.x + mColorRectSideLength, mCurrentPoint.y + mColorRectSideLength);
-
-
-            canvas.restore();
+            canvas.save();//保存当前画布状态
+            canvas.translate(-mWidth / 2, -mHeight / 2);//相对于当前位置位移
+            //RectF colorRect = new RectF(mCurrentPoint.x, mCurrentPoint.y, mCurrentPoint.x + mColorRectSideLength, mCurrentPoint.y + mColorRectSideLength);
+            canvas.restore();//回滚到上一次保存的状态
         }
 
     }

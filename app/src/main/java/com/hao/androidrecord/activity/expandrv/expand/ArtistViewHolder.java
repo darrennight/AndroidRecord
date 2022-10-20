@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.expandrv;
+package com.hao.androidrecord.activity.expandrv.expand;
 
 import android.view.View;
 import android.widget.TextView;

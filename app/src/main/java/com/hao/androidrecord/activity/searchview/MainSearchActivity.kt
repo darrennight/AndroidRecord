@@ -13,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.hao.androidrecord.R
 
-class MainActivity : AppCompatActivity() {
+/**
+ * https://github.com/Mauker1/MaterialSearchView
+ */
+class MainSearchActivity : AppCompatActivity() {
     private lateinit var searchView: MaterialSearchView
     private lateinit var btClearHistory: Button
     private lateinit var btClearSuggestions: Button

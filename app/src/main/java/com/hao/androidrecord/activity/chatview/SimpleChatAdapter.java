@@ -3,15 +3,16 @@ package com.hao.androidrecord.activity.chatview;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.ryan.baselib.util.AppUtils;
-import com.ryan.baselib.util.ListUtils;
-import com.ryan.chatlib.BaseChatAdapter;
-import com.ryan.chatlib.BaseChatViewHolder;
-import com.ryan.simplechatview.holder.ActivityNewsHolder;
-import com.ryan.simplechatview.holder.GiftNewsHolder;
-import com.ryan.simplechatview.holder.HeaderChatHolder;
-import com.ryan.simplechatview.holder.NormalChatHolder;
-import com.ryan.simplechatview.holder.SystemNewsHolder;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.chatview.chatlib.AppUtils;
+import com.hao.androidrecord.activity.chatview.chatlib.BaseChatAdapter;
+import com.hao.androidrecord.activity.chatview.chatlib.BaseChatViewHolder;
+import com.hao.androidrecord.activity.chatview.chatlib.ListUtils;
+import com.hao.androidrecord.activity.chatview.hold.ActivityNewsHolder;
+import com.hao.androidrecord.activity.chatview.hold.GiftNewsHolder;
+import com.hao.androidrecord.activity.chatview.hold.HeaderChatHolder;
+import com.hao.androidrecord.activity.chatview.hold.NormalChatHolder;
+import com.hao.androidrecord.activity.chatview.hold.SystemNewsHolder;
 
 import java.util.ArrayList;
 import java.util.List;

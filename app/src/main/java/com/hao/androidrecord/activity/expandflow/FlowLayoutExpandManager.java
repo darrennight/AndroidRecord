@@ -1,4 +1,4 @@
-package com.hao.androidrecord.custom.flow;
+package com.hao.androidrecord.activity.expandflow;
 
 import android.graphics.Rect;
 import android.util.Log;
@@ -16,10 +16,10 @@ import java.util.List;
  * 一种流式布局的LayoutManager
  */
 
-public class FlowLayoutManager extends RecyclerView.LayoutManager {
+public class FlowLayoutExpandManager extends RecyclerView.LayoutManager {
 
-    private static final String TAG = FlowLayoutManager.class.getSimpleName();
-    final FlowLayoutManager self = this;
+    private static final String TAG = FlowLayoutExpandManager.class.getSimpleName();
+    final FlowLayoutExpandManager self = this;
 
     protected int width, height;
     private int left, top, right;
@@ -31,6 +31,7 @@ public class FlowLayoutManager extends RecyclerView.LayoutManager {
     public int getTotalHeight() {
         return totalHeight;
     }
+    public CallbackTotalHeight onTotalHeightListener;
 
     //计算显示的内容的高度
     protected int totalHeight = 0;
@@ -40,7 +41,7 @@ public class FlowLayoutManager extends RecyclerView.LayoutManager {
     //保存所有的Item的上下左右的偏移量信息
     private SparseArray<Rect> allItemFrames = new SparseArray<>();
 
-    public FlowLayoutManager() {
+    public FlowLayoutExpandManager() {
         //设置主动测量规则,适应recyclerView高度为wrap_content
         setAutoMeasureEnabled(true);
     }
@@ -179,6 +180,9 @@ public class FlowLayoutManager extends RecyclerView.LayoutManager {
         }
         totalHeight = Math.max(totalHeight, getVerticalSpace());
         Log.d(TAG, "onLayoutChildren totalHeight:" + totalHeight);
+        if(onTotalHeightListener!=null){
+            onTotalHeightListener.onTotalHeight(totalHeight);
+        }
         fillLayout(recycler, state);
     }
 
@@ -257,7 +261,7 @@ public class FlowLayoutManager extends RecyclerView.LayoutManager {
      */
     @Override
     public boolean canScrollVertically() {
-        return true;
+        return false;
     }
 
     //监听竖直方向滑动的偏移量
@@ -293,4 +297,7 @@ public class FlowLayoutManager extends RecyclerView.LayoutManager {
         return self.getWidth() - self.getPaddingLeft() - self.getPaddingRight();
     }
 
+    interface CallbackTotalHeight{
+        void onTotalHeight(int height);
+    }
 }

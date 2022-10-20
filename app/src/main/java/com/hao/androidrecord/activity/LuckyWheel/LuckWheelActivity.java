@@ -14,8 +14,8 @@ import com.hao.androidrecord.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class MainActivity extends AppCompatActivity {
+//https://github.com/mmoamenn/LuckyWheel_Android
+public class LuckWheelActivity extends AppCompatActivity {
 
     private LuckyWheel lw;
     List<WheelItem> wheelItems ;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         lw.setLuckyWheelReachTheTarget(new OnLuckyWheelReachTheTarget() {
             @Override
             public void onReachTarget() {
-                Toast.makeText(MainActivity.this, "Target Reached", Toast.LENGTH_LONG).show();
+                Toast.makeText(LuckWheelActivity.this, "Target Reached", Toast.LENGTH_LONG).show();
             }
         });
 

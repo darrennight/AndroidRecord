@@ -12,8 +12,9 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hao.androidrecord.R;
+import com.hao.androidrecord.custom.switchButton.SwitchMultiButton;
 
-
+//https://github.com/kyleduo/SwitchButton
 public class SwitchButtonMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
 	@Override
@@ -99,6 +100,10 @@ public class SwitchButtonMainActivity extends AppCompatActivity implements Adapt
 				break;
 			case 5:
 				gotoLicense();
+				break;
+			case 6:
+				//https://github.com/KingJA/SwitchButton
+				startActivity(new Intent(SwitchButtonMainActivity.this, MutilSwtichActivity.class));
 				break;
 
 			default:

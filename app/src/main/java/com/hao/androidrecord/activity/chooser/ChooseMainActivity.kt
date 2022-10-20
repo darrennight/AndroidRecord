@@ -7,14 +7,15 @@ import com.hao.androidrecord.activity.chooser.lib.ChooserMode
 import com.hao.androidrecord.activity.chooser.lib.ChooserView
 import com.hao.androidrecord.activity.chooser.lib.ChooserViewGroupManager
 import com.hao.androidrecord.activity.chooser.lib.OnChooseChangeListener
-import com.hurryyu.bestchooser.simple.databinding.ActivityMainBinding
+import com.hao.androidrecord.databinding.ActivityChooseMainBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+//https://github.com/HurryYU/BestChooser
+class ChooseMainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityChooseMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityChooseMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         singleChoose()
         multipleChoose()
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun reachTheUpperLimit(groupTag: String, limit: Int) {
-                Toast.makeText(this@MainActivity, "您只能选择${limit}个荤菜", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ChooseMainActivity, "您只能选择${limit}个荤菜", Toast.LENGTH_SHORT).show()
             }
 
         })
@@ -91,12 +92,12 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     selectedList.remove(viewTag)
                 }
-                Toast.makeText(this@MainActivity, selectedList.toString(), Toast.LENGTH_SHORT)
+                Toast.makeText(this@ChooseMainActivity, selectedList.toString(), Toast.LENGTH_SHORT)
                     .show()
             }
 
             override fun reachTheUpperLimit(groupTag: String, limit: Int) {
-                Toast.makeText(this@MainActivity, "达到上限:$limit", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ChooseMainActivity, "达到上限:$limit", Toast.LENGTH_SHORT).show()
             }
 
         })
@@ -131,7 +132,7 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     selectedList.remove(viewTag)
                 }
-                Toast.makeText(this@MainActivity, selectedList.toString(), Toast.LENGTH_SHORT)
+                Toast.makeText(this@ChooseMainActivity, selectedList.toString(), Toast.LENGTH_SHORT)
                     .show()
             }
 
@@ -159,7 +160,7 @@ class MainActivity : AppCompatActivity() {
                 groupTag: String,
                 isSelected: Boolean
             ) {
-                Toast.makeText(this@MainActivity, viewTag, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ChooseMainActivity, viewTag, Toast.LENGTH_SHORT).show()
             }
         })
     }

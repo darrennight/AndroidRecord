@@ -215,6 +215,7 @@
 
     <color name="primary">#607D8B</color>
     <color name="primary_dark">#455A64</color>
+    <color name="primaryDark">#00796b</color>
     <color name="primary_light">#CFD8DC</color>
     <color name="accent">#FFC107</color>
     <color name="primary_text">#212121</color>
@@ -273,6 +274,290 @@
     <color name="cursor_handle_color">#0d7aff</color>
     <color name="selected_blue">#afe1f4</color>
 
+
+    <color name="search_layover_bg">@color/gray</color>
+    <color name="search_field_bg">@color/white_ish</color>
+
+    <color name="gray">#ff888888</color>
+
+    <color name="white_50">#88ffffff</color>
+    <color name="black_50">#88000000</color>
+    <color name="gray_50">#88888888</color>
+
+    <color name="white_ish">#fffefefe</color>
+
+    <color name="app_color_theme_alpha_1">#EF5362</color> <!-- Grapefruit -->
+    <color name="app_color_theme_alpha_2">#FE6D4B</color> <!-- Bittersweet -->
+    <color name="app_color_theme_alpha_3">#FFCF47</color> <!-- Sunflower -->
+    <color name="app_color_theme_alpha_8">#AC8FEF</color> <!-- Lavender -->
+    <color name="app_color_theme_alpha_9">#22AC8FEF</color> <!-- Lavender -->
+
+    <color name="light_gray">#808080</color>
+    <color name="light_gray2">#10808080</color>
+    <color name="light_gray1">#F3F3F3</color>
+    <color name="light_white">#33ffffff</color>
+    <color name="white_3A">#3A3A3A</color>
+
+    <color name="alpha_05_black">#0D000000</color>
+    <color name="alpha_10_black">#1A000000</color>
+    <color name="alpha_15_black">#26000000</color>
+    <color name="alpha_20_black">#33000000</color>
+    <color name="alpha_25_black">#40000000</color>
+    <color name="alpha_30_black">#4D000000</color>
+    <color name="alpha_35_black">#59000000</color>
+    <color name="alpha_40_black">#66000000</color>
+    <color name="alpha_45_black">#73000000</color>
+    <color name="alpha_50_black">#80000000</color>
+    <color name="alpha_55_black">#8C000000</color>
+    <color name="alpha_60_black">#99000000</color>
+    <color name="alpha_65_black">#A6000000</color>
+    <color name="alpha_70_black">#B3000000</color>
+    <color name="alpha_75_black">#BF000000</color>
+    <color name="alpha_80_black">#CC000000</color>
+    <color name="alpha_85_black">#D9000000</color>
+    <color name="alpha_90_black">#E6000000</color>
+    <color name="alpha_95_black">#F2000000</color>
+
+
+
+    <color name="common_text_color">#333333</color>
+    <color name="common_text_hint_color">@color/panda</color>
+
+    <!-- 按钮按压时的颜色 -->
+    <color name="common_button_pressed_color">#AA5A8DDF</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="common_button_disable_color">#BBBBBB</color>
+    <!-- 分割线的颜色 -->
+    <color name="common_line_color">#ECECEC</color>
+    <!-- 矢量图标的颜色 -->
+    <color name="common_icon_color">#7C7C7C</color>
+
+    <!-- 对话框确认按钮的文本颜色 -->
+    <color name="common_confirm_text_color">#007AFF</color>
+    <!-- 对话框取消按钮的文本颜色 -->
+    <color name="common_cancel_text_color">#F44336</color>
+    <color name="panda">#FF757575</color>
+    <color name="white90">#E6FFFFFF</color>
+    <color name="common_accent_color">#5A8DDF</color>
+    <color name="black50">#80000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black20">#33000000</color>
+    <color name="black25">#40000000</color>
+    <color name="black5">#0D000000</color>
+    <color name="black85">#D9000000</color>
+    <color name="dialog_bg">#ffe74c3c</color>
+
+    <color name="btn_press_color">#66000000</color>
+    <color name="btn_unpress_color">#22000000</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="divider_color">#11000000</color>
+    <color name="msg_color">#FFFFFFFF</color>
+
+    <color name="purple">#69415D</color>
+    <color name="purple_start_color">#6178f2</color>
+    <color name="purple_end_color">#925eff</color>
+
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
+
+    <color name="mask_color">#88888888</color>
+    <color name="check_bg">#f2f2f2</color>
+    <color name="un_press_color">#9C27B0</color>
+
+
+    <color name="cardFront">#434850</color>
+    <color name="cardBack">#bc4c4a</color>
+    <color name="item_pressed">#8f8f8f</color>
+
+    <color name="window_bg">#f8f8f8</color>
+
+    <color name="color999999">#999999</color>
+
+    <color name="color_title_text">#25252f</color>
+
+    <color name="color_chat_username">#cacaca</color>
+    <color name="color_chat_at_username">#80D640</color>
+
+    <color name="color_chat_news">#1296db</color>
+
+    <color name="randomColor1">#0000FF</color>
+    <color name="randomColor2">#9374DE</color>
+    <color name="randomColor3">#FF8800</color>
+    <color name="randomColor4">#7F007F</color>
+    <color name="randomColor5">#5283F5</color>
+    <color name="randomColor6">#7F7F00</color>
+    <color name="randomColor7">#007F00</color>
+    <color name="randomColor8">#58BFAB</color>
+
+    <color name="heart_primary_color">#da4439</color>
+    <color name="heart_secondary_color">#8a098c</color>
+    <color name="facebook_secondary_color">#3b5998</color>
+    <color name="facebook_primary_color">#dfe3ee</color>
+    <color name="twitter_primary_color">#667580</color>
+    <color name="twitter_secondary_color">#CCD6DD</color>
+
+    <color name="lightGrey">#d3d3d3</color>
+    <color name="errorColor">#FF4D4F</color>
+
+    <item name="background_normal_color" type="color">#bfbfbf</item>
+    <item name="background_selected_color" type="color">#5ab72e</item>
+
+
+    <item name="text_normal_color" type="color">#646464</item>
+    <item name="text_selected_color" type="color">#5bb434</item>
+
+    <color name="grayIconTint">#727272</color>
+
+    <color name="shopAccent">#84ceca</color>
+    <color name="shopSecondary">#727272</color>
+    <color name="shopRatedStar">#ffeb5a</color>
+    <color name="shopFabRipple">#51b2ac</color>
+
+    <color name="galleryBg">#212121</color>
+    <color name="galleryCurrentItemOverlay">@android:color/transparent</color>
+    <color name="galleryItemOverlay">#cc000000</color>
+    <color name="galleryEdgeEffect">#b4ffffff</color>
+    <color name="galleryAccent">#FFC107</color>
+
+    <color name="weatherAccent">#84ceca</color>
+
+    <color name="gradientPeriodicClouds_c1">#3453d1</color>
+    <color name="gradientPeriodicClouds_c2">#6d69ff</color>
+    <color name="gradientPeriodicClouds_c3">#cd47c6</color>
+
+    <array name="gradientPeriodicClouds">
+        <item>@color/gradientPeriodicClouds_c1</item>
+        <item>@color/gradientPeriodicClouds_c2</item>
+        <item>@color/gradientPeriodicClouds_c3</item>
+    </array>
+
+    <color name="gradientCloudy_c1">#62bff5</color>
+    <color name="gradientCloudy_c2">#61b3e5</color>
+    <color name="gradientCloudy_c3">#5d8fb2</color>
+
+    <array name="gradientCloudy">
+        <item>@color/gradientCloudy_c1</item>
+        <item>@color/gradientCloudy_c2</item>
+        <item>@color/gradientCloudy_c3</item>
+    </array>
+
+    <color name="gradientMostlyCloudy_c1">#51bbf5</color>
+    <color name="gradientMostlyCloudy_c2">#71c3ee</color>
+    <color name="gradientMostlyCloudy_c3">#f3e5d2</color>
+
+    <array name="gradientMostlyCloudy">
+        <item>@color/gradientMostlyCloudy_c1</item>
+        <item>@color/gradientMostlyCloudy_c2</item>
+        <item>@color/gradientMostlyCloudy_c3</item>
+    </array>
+
+    <color name="gradientPartlyCloudy_c1">#5b64be</color>
+    <color name="gradientPartlyCloudy_c2">#6084df</color>
+    <color name="gradientPartlyCloudy_c3">#64a2ff</color>
+
+    <array name="gradientPartlyCloudy">
+        <item>@color/gradientPartlyCloudy_c1</item>
+        <item>@color/gradientPartlyCloudy_c2</item>
+        <item>@color/gradientPartlyCloudy_c3</item>
+    </array>
+
+    <color name="gradientClear_c1">#6d4fbe</color>
+    <color name="gradientClear_c2">#6c56be</color>
+    <color name="gradientClear_c3">#a189f1</color>
+
+    <array name="gradientClear">
+        <item>@color/gradientClear_c1</item>
+        <item>@color/gradientClear_c2</item>
+        <item>@color/gradientClear_c3</item>
+    </array>
+    <color name="bg_line">#E7E7E7</color>
+
+    <color name="cell_background_color">#ffffff</color>
+    <color name="header_line_color">@android:color/holo_red_light</color>
+
+    <color name="table_view_default_text_color">#0a0a0a</color>
+
+    <!--Colors for simple bars-->
+    <color name="progress_color_s1">#3A0CA3</color>
+    <color name="progress_background_color_s1">#D59DFB</color>
+    <color name="text_color_s1">#FFFFFF</color>
+    <color name="bg_text_color_s1">#000000</color>
+
+    <color name="progress_color_s2">#5BC8AF</color>
+    <color name="progress_background_color_s2">#33000000</color>
+    <color name="text_color_s2">#FFFFFF</color>
+    <color name="bg_text_color_s2">#000000</color>
+
+    <color name="progress_color_s3">#EF5778</color>
+    <color name="progress_background_color_4">#1C3144</color>
+    <color name="text_color_s3">#1C3144</color>
+    <color name="bg_text_color_s3">#EF5778</color>
+
+    <!--Colors for advanced bars-->
+    <color name="progress_color_s4">#FF5E5B</color>
+    <color name="progress_background_color_s4">#FCDEBE</color>
+    <color name="text_color_s4">#FAF3DD</color>
+    <color name="bg_text_color_s4">#50FFB1</color>
+
+    <color name="progress_color_a1">#000000</color>
+    <color name="progress_background_color_a1">#FFFFFF</color>
+    <color name="text_color_a1">#FFFFFF</color>
+    <color name="bg_text_color_a1">#000000</color>
+
+    <color name="progress_color_a2">#360568</color>
+    <color name="progress_background_color_a2">#CEB1E7</color>
+    <color name="text_color_a2">@color/progress_background_color_a2</color>
+    <color name="bg_text_color_a2">@color/progress_color_a2</color>
+
+    <color name="progress_top_color_a3">#000000</color>
+    <color name="progress_mid_color_a3">#ff0000</color>
+    <color name="progress_bot_color_a3">#ffcc00</color>
+
+    <color name="progress_color_a4">#023E8A</color>
+    <color name="progress_background_color_a4">#48CAE4</color>
+    <color name="text_color_a4">#FFFFFF</color>
+    <color name="bg_text_color_a4">#000000</color>
+
+    <color name="progress_color_a6">#B33026</color>
+    <color name="progress_background_color_a6">#55000000</color>
+    <color name="text_color_a6">#FFFFFF</color>
+    <color name="bg_text_color_a6">#000000</color>
+
+    <color name="progress_color_a7">#0AFF91</color>
+    <color name="progress_background_color_a7">#BBBBBB</color>
+    <color name="text_color_a7">#000000</color>
+    <color name="bg_text_color_a7">#000000</color>
+
+    <color name="colorBackground">#1FE71844</color>
+    <color name="ic_launcher_background">#E71844</color>
+
+    <array name="colors">
+        <item>@color/material_red_500</item>
+        <item>@color/material_pink_500</item>
+        <item>@color/material_purple_500</item>
+        <item>@color/material_deep_purple_500</item>
+        <item>@color/material_indigo_500</item>
+        <item>@color/material_blue_500</item>
+        <item>@color/material_light_blue_500</item>
+        <item>@color/material_cyan_500</item>
+        <item>@color/material_teal_500</item>
+        <item>@color/material_green_500</item>
+        <item>@color/material_light_green_500</item>
+        <item>@color/material_lime_500</item>
+        <item>@color/material_yellow_500</item>
+        <item>@color/material_amber_500</item>
+        <item>@color/material_orange_500</item>
+        <item>@color/material_deep_orange_500</item>
+        <item>@color/material_brown_500</item>
+        <item>@color/material_grey_500</item>
+        <item>@color/material_blue_grey_500</item>
+        <item>@color/material_light_white</item>
+    </array>
+
+    <color name="colorGrayLight">#444444</color>
+    <color name="colorGrayDark">#121212</color>
+
+    <color name="lightGray">#999999</color>
 
 
 </resources>

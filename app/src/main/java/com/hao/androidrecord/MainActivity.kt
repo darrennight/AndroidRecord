@@ -14,39 +14,82 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
-import com.google.gson.JsonArray
 import com.hao.androidrecord.activity.*
 import com.hao.androidrecord.activity.AdvancedTextView.SelectMainActivity
 import com.hao.androidrecord.activity.ArcSelectList.StartActivity
 import com.hao.androidrecord.activity.CardScrool.MainImpActivity
 import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
 import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
+import com.hao.androidrecord.activity.KeyboardLayout.KeyboardActivity
+import com.hao.androidrecord.activity.LuckyWheel.LuckWheelActivity
 import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
 import com.hao.androidrecord.activity.SelectableTextHelper.SelectHelpMainActivity
 import com.hao.androidrecord.activity.SelectableTextView.SelectTextActivity
 import com.hao.androidrecord.activity.StickyHeaderViewPager.TestActivity
+import com.hao.androidrecord.activity.TableView.TableViewActivity
+import com.hao.androidrecord.activity.ZoomRecylerLayout.ZoomRecycleActivity
 import com.hao.androidrecord.activity.alihome.AliHomeMainActivity
+import com.hao.androidrecord.activity.animatorx.AnimatorXActivity
+import com.hao.androidrecord.activity.arclayout.ArcLayoutMainActivity
 import com.hao.androidrecord.activity.autoscroll.AutoScrollRecycleActivity
+import com.hao.androidrecord.activity.autoscrollview.AutoScrollActivity
 import com.hao.androidrecord.activity.blur.BlurActivity
+import com.hao.androidrecord.activity.blur.BlurTitleActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity
 import com.hao.androidrecord.activity.bookpage.BookPageActivity00
 import com.hao.androidrecord.activity.bottom.MainBottomActivity
 import com.hao.androidrecord.activity.bottom.MainBottomActivity01
 import com.hao.androidrecord.activity.bottom.MainBottomActivity02
+import com.hao.androidrecord.activity.bottomsheet.BottomBarActivity
+import com.hao.androidrecord.activity.bottomsheet.BottomSheetActivity
+import com.hao.androidrecord.activity.bottomsheet.CoordinatorActivity
+import com.hao.androidrecord.activity.bottomtab.RVBottomActivity
+import com.hao.androidrecord.activity.chatview.SimpleChatViewActivity
+import com.hao.androidrecord.activity.chooser.ChooseMainActivity
+import com.hao.androidrecord.activity.consecutivescroller.MainScrollerActivity
+import com.hao.androidrecord.activity.coroutine.*
 import com.hao.androidrecord.activity.cusTab.TabMainActivity
 import com.hao.androidrecord.activity.datetime.DateTimePicerActivity
+import com.hao.androidrecord.activity.dfilp.MainDialogActivity
+import com.hao.androidrecord.activity.dialog.DialogActivity
+import com.hao.androidrecord.activity.drag.DragCardActivity
+import com.hao.androidrecord.activity.dyindex.DYIndexMainActivity
+import com.hao.androidrecord.activity.expandable.ExpandableRecycleActivity
+import com.hao.androidrecord.activity.expandable.two.TwoExpandableActivity
+import com.hao.androidrecord.activity.expandablecardview.ExpandCardMainActivity
+import com.hao.androidrecord.activity.expandflow.ExpandFlowActivity
+import com.hao.androidrecord.activity.expandrv.ExpandMenuActivity
+import com.hao.androidrecord.activity.fabpop.FabPopMainActivity
+import com.hao.androidrecord.activity.flexbox.FlexBoxRecycleActivity
+import com.hao.androidrecord.activity.flip.FlipMainActivity
 import com.hao.androidrecord.activity.flowRecycle.LanuchActivity
 import com.hao.androidrecord.activity.halfScreen.HalfMainActivity
 import com.hao.androidrecord.activity.halfScreen.MainHalf2Activity
 import com.hao.androidrecord.activity.hilt.TestHiltActivity
 import com.hao.androidrecord.activity.indexBar.CountryChooseActivity
+import com.hao.androidrecord.activity.indexbar2.LauncherActivity
+import com.hao.androidrecord.activity.interval.IntervalActivity
+import com.hao.androidrecord.activity.keyboard.MainKeyboardActivity
+import com.hao.androidrecord.activity.keyboardbottom.KeyboardMainActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.nine.CustomGirdActivity
 import com.hao.androidrecord.activity.nine.NineGridActivity
 import com.hao.androidrecord.activity.nine.NineGridNewActivity
 import com.hao.androidrecord.activity.paing3.TestPaging3Activity
 import com.hao.androidrecord.activity.parallaxdecoration.ParallaxMainActivity
+import com.hao.androidrecord.activity.physicslayout.MainPhysicActivity
+import com.hao.androidrecord.activity.pinned.StockActivity
+import com.hao.androidrecord.activity.pinned2.MainPinned2Activity
+import com.hao.androidrecord.activity.pinned3.ui.DemoActivity
+import com.hao.androidrecord.activity.progress.RoundProgressActivity
+import com.hao.androidrecord.activity.recycleState.RecycleStateActivity
+import com.hao.androidrecord.activity.recycleState.custom.RecycleStateActivity01
+import com.hao.androidrecord.activity.recyclegroup.MainGroupStickyActivity
 import com.hao.androidrecord.activity.richeditor.RichEditorActivity
+import com.hao.androidrecord.activity.robustwebview.WebViewActivity
+import com.hao.androidrecord.activity.rv_vp.Rv2VpMainActivity
+import com.hao.androidrecord.activity.rvnotify.RVNotifyActivity
+import com.hao.androidrecord.activity.scalingLayout.ScalingLayoutActivity
 import com.hao.androidrecord.activity.scrollMove.MainScrollActivity
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV
 import com.hao.androidrecord.activity.scrollable.HeaderAndTablayoutRV02
@@ -57,23 +100,49 @@ import com.hao.androidrecord.activity.scrollable04.Demo4Activity
 import com.hao.androidrecord.activity.scrollable06.Scroll06MainActivity
 import com.hao.androidrecord.activity.scrollable07.Scroll07MainActivity
 import com.hao.androidrecord.activity.scrool.ScrollChangeTitleActivity
+import com.hao.androidrecord.activity.search.MainSearch2Activity
+import com.hao.androidrecord.activity.searchview.MainSearchActivity
+import com.hao.androidrecord.activity.seemore.MainSeeMoreActivity
+import com.hao.androidrecord.activity.separatededittext.PayPsdViewActivity
+import com.hao.androidrecord.activity.separatededittext.PayPwdMainActivity
 import com.hao.androidrecord.activity.shadow.MainShadowActivity
+import com.hao.androidrecord.activity.sheet.MainGaodeSheetActivity
+import com.hao.androidrecord.activity.slidingTab.MainSlidingActivity
+import com.hao.androidrecord.activity.snaphelper.SnapHelperActivity
+import com.hao.androidrecord.activity.stickscroll.MainStickScrollActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
+import com.hao.androidrecord.activity.tabScrollAttacher.TabScrollActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
+import com.hao.androidrecord.activity.tableview01.TableView01Activity
+import com.hao.androidrecord.activity.taskaffinity.TaskAffinityActivity
+import com.hao.androidrecord.activity.testviewvgroup.PieMainActivity
+import com.hao.androidrecord.activity.testviewvgroup.TestViewVGroupActivity
+import com.hao.androidrecord.activity.ticket.TicketViewActivity
 import com.hao.androidrecord.activity.tiger.SlotMachineActivity
 import com.hao.androidrecord.activity.tiger2.LuckyMainActivity
 import com.hao.androidrecord.activity.tiger3.FortuneActivity
 import com.hao.androidrecord.activity.tiktokComments.CommentMultiActivity
+import com.hao.androidrecord.activity.timeline.line1.MainTimeLineActivity
+import com.hao.androidrecord.activity.timeline.line2.DotTimeLineActivity
+import com.hao.androidrecord.activity.viewcacheext.DemoRvActivity
+import com.hao.androidrecord.activity.webviewOptimize.H5WebViewActivity
 import com.hao.androidrecord.adapter.CityData
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.adapter.JsonBean
+import com.hao.androidrecord.animtest.AnimationTestMainActivity
+import com.hao.androidrecord.custom.drapmenu.DropMenuActivity
+import com.hao.androidrecord.custom.pickerads.AddressDialog
+import com.hao.androidrecord.custom.pickerads.BaseDialog
 import com.hao.androidrecord.custom.selector.Matisse
 import com.hao.androidrecord.custom.selector.MimeType
 import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import com.hao.androidrecord.indexable.IndexableCityActivity
+import com.hao.androidrecord.service.MusicPlayerService
+import com.hao.androidrecord.threestateswitch.ThreeStateActivity
 import com.hao.androidrecord.util.AliBase64
 import com.hao.androidrecord.util.MBase64
+import com.hjq.toast.ToastUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONArray
 import permissions.dispatcher.NeedsPermission
@@ -117,7 +186,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        ToastUtils.show("toast框架")
         initCity()
 
         val manager = LinearLayoutManager(this)
@@ -406,6 +475,307 @@ class MainActivity : AppCompatActivity() {
                     68 -> {
                         startActivity(Intent(this@MainActivity, AutoScrollRecycleActivity::class.java))
                     }
+                    69 -> {
+                        startActivity(Intent(this@MainActivity, MeasureTextActivity::class.java))
+                    }
+                    70 -> {
+                        startActivity(Intent(this@MainActivity, MainSearchActivity::class.java))
+                    }
+                    71 -> {
+                        startActivity(Intent(this@MainActivity, MainSearch2Activity::class.java))
+                    }
+                    72 -> {
+                        startActivity(Intent(this@MainActivity, ArcLayoutMainActivity::class.java))
+                    }
+                    73 -> {
+                        startActivity(Intent(this@MainActivity, AutoScrollActivity::class.java))
+                    }
+
+                    74 -> {
+                        startActivity(Intent(this@MainActivity, MainKeyboardActivity::class.java))
+                    }
+                    75 -> {
+                        startActivity(Intent(this@MainActivity, CheckNotchActivity::class.java))
+                    }
+                    76 -> {
+                        startActivity(Intent(this@MainActivity, TestFLowActivity::class.java))
+                    }
+                    77 -> {
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.bnavigationbar.MainBottomActivity::class.java))
+                    }
+                    78 -> {
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.bnavigationbar.MainViewPagerActivity::class.java))
+                    }
+                    79 -> {
+                        startActivity(Intent(this@MainActivity, CoilLoadActivity::class.java))
+                    }
+                    80 -> {
+                        startActivity(Intent(this@MainActivity, KeyboardMainActivity::class.java))
+                    }
+                    81 -> {
+                        startActivity(Intent(this@MainActivity, WebViewActivity::class.java))
+                    }
+                    82 -> {
+                        startActivity(Intent(this@MainActivity, RVBottomActivity::class.java))
+                    }
+                    83 -> {
+                        startActivity(Intent(this@MainActivity, ShapeActivity::class.java))
+                    }
+                    84 -> {
+                        startActivity(Intent(this@MainActivity, CuSwitchButtonActivity::class.java))
+                    }
+                    85 -> {
+                        startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                    }
+                    86 -> {
+                        startActivity(Intent(this@MainActivity, RegisterActivity::class.java))
+                    }
+                    87 -> {
+                        AddressDialog.Builder(this@MainActivity)
+                            //.setTitle("选择地区")
+                            // 设置默认省份
+//                            .setProvince(province) // 设置默认城市（必须要先设置默认省份）
+//                            .setCity(city) // 不选择县级区域
+                            //.setIgnoreArea()
+                            .setListener(object : AddressDialog.OnListener {
+
+                                override fun onSelected(dialog: BaseDialog?, province: String, city: String, area: String) {
+
+                                }
+                            })
+                            .show()
+                    }
+
+                    88 -> {
+                        startActivity(Intent(this@MainActivity, GuideActivity::class.java))
+                    }
+                    89 -> {
+                        startActivity(Intent(this@MainActivity, DialogActivity::class.java))
+                    }
+                    90 -> {
+                        startActivity(Intent(this@MainActivity, TextViewPressAlphaActivity::class.java))
+                    }
+                    91 -> {
+                        startActivity(Intent(this@MainActivity, EditTextCusorActivity::class.java))
+                    }
+                    92 -> {
+                        startActivity(Intent(this@MainActivity, BlurTitleActivity::class.java))
+                    }
+
+                    93 -> {
+                        startActivity(Intent(this@MainActivity, NiftyDialogActivity::class.java))
+                    }
+
+                    94 -> {
+                        startActivity(Intent(this@MainActivity, MainDialogActivity::class.java))
+                    }
+
+                    95 -> {
+                        startActivity(Intent(this@MainActivity, MainTimeLineActivity::class.java))
+                    }
+                    96 -> {
+                        startActivity(Intent(this@MainActivity, DotTimeLineActivity::class.java))
+                    }
+                    97 -> {
+                        startActivity(Intent(this@MainActivity, MainSeeMoreActivity::class.java))
+                    }
+                    98 -> {
+                        startActivity(Intent(this@MainActivity, MainSlidingActivity::class.java))
+                    }
+                    99 -> {
+                        startActivity(Intent(this@MainActivity, BottomSheetActivity::class.java))
+                    }
+
+                    100 -> {
+                        startActivity(Intent(this@MainActivity, CoordinatorActivity::class.java))
+                    }
+                    101 -> {
+                        startActivity(Intent(this@MainActivity, BottomBarActivity::class.java))
+                    }
+
+                    102 -> {
+                        startActivity(Intent(this@MainActivity, LauncherActivity::class.java))
+                    }
+                    103 -> {
+                        startActivity(Intent(this@MainActivity, MainGroupStickyActivity::class.java))
+                    }
+                    104 -> {
+                        startActivity(Intent(this@MainActivity, MainScrollerActivity::class.java))
+                    }
+                    105 -> {
+                        startActivity(Intent(this@MainActivity, StockActivity::class.java))
+                    }
+                    106 -> {
+                        startActivity(Intent(this@MainActivity, MainPinned2Activity::class.java))
+                    }
+                    107 -> {
+                        startActivity(Intent(this@MainActivity, DemoActivity::class.java))
+                    }
+                    108 -> {
+                        startActivity(Intent(this@MainActivity, MainGaodeSheetActivity::class.java))
+                    }
+                    109 -> {
+                        startActivity(Intent(this@MainActivity, DropMenuActivity::class.java))
+                    }
+                    110 -> {
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.observable.MainActivity::class.java))
+                    }
+                    111 -> {
+                        startActivity(Intent(this@MainActivity, ExpandFlowActivity::class.java))
+                    }
+                    112 -> {
+                        startActivity(Intent(this@MainActivity, OAIDActivity::class.java))
+                    }
+                    113 -> {
+                        startActivity(Intent(this@MainActivity, ExpandMenuActivity::class.java))
+                    }
+                    114 -> {
+                        startActivity(Intent(this@MainActivity, FlipMainActivity::class.java))
+                    }
+                    115 -> {
+                        startActivity(Intent(this@MainActivity, ExpandableRecycleActivity::class.java))
+                    }
+                    116 -> {
+                        startActivity(Intent(this@MainActivity, TwoExpandableActivity::class.java))
+                    }
+                    117 -> {
+                        startActivity(Intent(this@MainActivity, SimpleChatViewActivity::class.java))
+                    }
+
+                    118 -> {
+                        startActivity(Intent(this@MainActivity, ScrollTextViewActivity::class.java))
+                    }
+                    119 -> {
+                        startActivity(Intent(this@MainActivity, com.hao.androidrecord.activity.expandable.expand01.ExpandMenuActivity::class.java))
+                    }
+
+                    120 -> {
+                        startActivity(Intent(this@MainActivity,AnimatorXActivity::class.java))
+                    }
+                    121 -> {
+                        startActivity(Intent(this@MainActivity,FabPopMainActivity::class.java))
+                    }
+                    122 -> {
+                        startActivity(Intent(this@MainActivity,SparkButtonActivity::class.java))
+                    }
+                    123 -> {
+                        startActivity(Intent(this@MainActivity,DYIndexMainActivity::class.java))
+                    }
+                    124 -> {
+                        startActivity(Intent(this@MainActivity,MainPhysicActivity::class.java))
+                    }
+                    125 -> {
+                        startActivity(Intent(this@MainActivity,AnimationTestMainActivity::class.java))
+                    }
+                    126 -> {
+                        startActivity(Intent(this@MainActivity,PayPwdMainActivity::class.java))
+                    }
+                    127 -> {
+                        startActivity(Intent(this@MainActivity,PayPsdViewActivity::class.java))
+                    }
+                    128 -> {
+                        startActivity(Intent(this@MainActivity,IntervalActivity::class.java))
+                    }
+                    129 -> {
+                        startActivity(Intent(this@MainActivity,MainStickScrollActivity::class.java))
+                    }
+                    130 -> {
+                        startActivity(Intent(this@MainActivity,ChooseMainActivity::class.java))
+                    }
+                    131 -> {
+                        startActivity(Intent(this@MainActivity,ThreeStateActivity::class.java))
+                    }
+                    132 -> {
+                        startActivity(Intent(this@MainActivity,ExpandCardMainActivity::class.java))
+                    }
+                    133 -> {
+                        startActivity(Intent(this@MainActivity,TestViewVGroupActivity::class.java))
+                    }
+                    134 -> {
+                        startActivity(Intent(this@MainActivity,DemoRvActivity::class.java))
+                    }
+                    135 -> {
+                        startActivity(Intent(this@MainActivity,RVNotifyActivity::class.java))
+                    }
+                    136 -> {
+                        startActivity(Intent(this@MainActivity,TaskAffinityActivity::class.java))
+                    }
+
+                    137 -> {
+                        startForegroundService(Intent(this@MainActivity,MusicPlayerService::class.java))
+                    }
+                    138 -> {
+                        startActivity(Intent(this@MainActivity,com.hao.androidrecord.activity.WebViewActivity::class.java))
+                    }
+                    139 -> {
+                        startActivity(Intent(this@MainActivity,SnapHelperActivity::class.java))
+                    }
+                    140 -> {
+                        startActivity(Intent(this@MainActivity,RecycleStateActivity::class.java))
+                    }
+                    141 -> {
+                        startActivity(Intent(this@MainActivity,RecycleStateActivity01::class.java))
+                    }
+                    142 -> {
+                        startActivity(Intent(this@MainActivity,
+                            PieMainActivity::class.java))
+                    }
+                    143 -> {
+                        startActivity(Intent(this@MainActivity,
+                            AlphaActivity::class.java))
+                    }
+                    144 -> {
+                        startActivity(Intent(this@MainActivity,
+                            H5WebViewActivity::class.java))
+                    }
+                    145 -> {
+                        startActivity(Intent(this@MainActivity,
+                            Rv2VpMainActivity::class.java))
+                    }
+                    146 -> {
+                        startActivity(Intent(this@MainActivity,
+                            TableViewActivity::class.java))
+                    }
+                    147 -> {
+                        startActivity(Intent(this@MainActivity,
+                            ZoomRecycleActivity::class.java))
+                    }
+                    148 -> {
+                        startActivity(Intent(this@MainActivity,
+                            TableView01Activity::class.java))
+                    }
+                    149 -> {
+                        startActivity(Intent(this@MainActivity,
+                            RoundProgressActivity::class.java))
+                    }
+                    150 -> {
+                        startActivity(Intent(this@MainActivity,
+                            FlexBoxRecycleActivity::class.java))
+                    }
+                    151 -> {
+                        startActivity(Intent(this@MainActivity,
+                            DragCardActivity::class.java))
+                    }
+                    152 -> {
+                        startActivity(Intent(this@MainActivity,
+                            TicketViewActivity::class.java))
+                    }
+                    153 -> {
+                        startActivity(Intent(this@MainActivity,
+                            LuckWheelActivity::class.java))
+                    }
+                    154 -> {
+                        startActivity(Intent(this@MainActivity,
+                            KeyboardActivity::class.java))
+                    }
+                    155 -> {
+                        startActivity(Intent(this@MainActivity,
+                            ScalingLayoutActivity::class.java))
+                    }
+                    156 -> {
+                        startActivity(Intent(this@MainActivity,
+                            TabScrollActivity::class.java))
+                    }
                 }
             }
         }
@@ -443,7 +813,7 @@ class MainActivity : AppCompatActivity() {
         list.add("17RecyclerView和头部layout仿支付宝首页")
         list.add("18RecyclerView和头部layout即刻出品")
         list.add("19RecyclerView和头部layout支付宝首页")
-        list.add("20滑动按钮")
+        list.add("20滑动按钮&tab单选")
         list.add("21RecyclerView和头部layout仿京东,淘宝商品展示")
         list.add("22吸顶效果实现的五种方式")
         list.add("23虚线")
@@ -491,7 +861,95 @@ class MainActivity : AppCompatActivity() {
         list.add("65TextView 选择内容 弹出复制等操作")
         list.add("66半屏类似sheet webview")
         list.add("67半屏类似sheet webview")
-        list.add("67RecyclerView实现垂直自动无限滚动，类似于中奖信息，跑马灯")
+        list.add("68RecyclerView实现垂直自动无限滚动，类似于中奖信息，跑马灯")
+        list.add("69 测量textView设置文字后的宽度--测量文字宽度")
+        list.add("70 material效果展示搜索")
+        list.add("71 material效果展示搜索 仿哔哩哔哩")
+        list.add("72 View进行弧度处理")
+        list.add("73跑马灯 可以嵌套viewgroup作为整体移动")
+        list.add("74 键盘输入数字移动到输入框")
+        list.add("75 检测是否刘海屏水滴屏")
+        list.add("76 协程flow相关")
+        list.add("77 底部tab导航 中间凸出")
+        list.add("78 底部tab导航 中间凸出")
+        list.add("79 coil图片加载")
+        list.add("80解决软键盘弹出和收缩时表情面板切换跳闪的问题")
+        list.add("81Android WebView H5 秒开方案")
+        list.add("82RecycleView作为bottomtab")
+        list.add("83shape的一些")
+        list.add("84滑动按钮")
+        list.add("85登陆界面整体item动画layoutAnimation")
+        list.add("86注册界面整体item动画layoutAnimation")
+        list.add("87城市选择器")
+        list.add("88引导界面")
+        list.add("89dialog的一些")
+        list.add("90textview长按透明度")
+        list.add("91EditText首次点击光标最右边显示，其他次正常点击位置")
+        list.add("92title毛玻璃模糊底部内容")
+        list.add("93dialog动画弹出动画")
+        list.add("94dialog_3D旋转切换")
+        list.add("95timeline时间线")
+        list.add("96timeline时间线")
+        list.add("97recycle横向滑动加载更多")
+        list.add("98可以交叉tab和文字的SlidingTab，支持设置渐变色")
+        list.add("99bottomsheet固定底部拖动")
+        list.add("100bottomsheet固定底部拖动")
+        list.add("101bottomsheet固定底部拖动")
+        list.add("102 recycleIndexbar,分组 section sticky pinned 悬浮吸顶")
+        list.add("103 recycleIndexbar,分组 展开 expand section sticky pinned 悬浮吸顶")
+        list.add("104 滑动布局 连贯滑动的容器,scroll")
+        list.add("105 不用太关注 -- 重复绘制header-recycleIndexbar,分组 section sticky pinned 悬浮吸顶")
+        list.add("106recycleIndexbar,分组 section sticky pinned 悬浮吸顶")
+        list.add("107recycleIndexbar,分组 section sticky pinned 悬浮吸顶")
+        list.add("108bottomsheet固定底部拖动 两层移动")
+        list.add("109DropMenu筛选菜单")
+        list.add("110滚动模式滚动监听")
+        list.add("111搜索历史记录设置显示行数 折叠展开")
+        list.add("112开源的oaid")
+        list.add("113RecycleExpand")
+        list.add("114flip卡片翻转")
+        list.add("115RecycleExpand")
+        list.add("116两级expand---RecycleExpand")
+        list.add("117直播公屏---左边滚动的留言")
+        list.add("118跑马灯--滚动一次都某位暂停")
+        list.add("119expandRecycle 展开")
+        list.add("120协程+属性动画==power")
+        list.add("121fab 弹窗fab 面包旅行弹窗的游记故事集按钮")
+        list.add("122sparkBUtton")
+        list.add("123抖音首页垂直滚动")
+        list.add("124 2D物理引擎 碰撞")
+        list.add("125动画相关testdemo")
+        list.add("126微信支付宝密码界面自定义")
+        list.add("127微信支付宝密码界面自定义")
+        list.add("128定时器")
+        list.add("129stick_scroll")
+        list.add("130 自定义单选")
+        list.add("131 三种状态滑动按钮")
+        list.add("132 expand--收缩cardview")
+        list.add("133自定义view viewgroup")
+        list.add("134RecycleView自定义缓存")
+        list.add("135RecycleView刷新Notif相关")
+        list.add("136taskAffinity")
+        list.add("137前台service")
+        list.add("138webview--settings相关设置")
+        list.add("139RecycleView--snaphelp相关--滑动设置item位置--可以设置成viewpager滑动模式")
+        list.add("140Recycleview--嵌套水平滚动Recycleview--回收保持位置")
+        list.add("141Recycleview--嵌套水平滚动Recycleview--回收保持位置")
+        list.add("142自定义饼状图pie")
+        list.add("143activity窗口变暗 类似弹出dialog")
+        list.add("144Android WebView H5 秒开方案")
+        list.add("145RecycleView 类似 viewpager效果")
+        list.add("146tableview 表格")
+        list.add("147滑动是 recycleview item 缩放")
+        list.add("148tableview 表格")
+        list.add("149roundprogress 圆角进度条")
+        list.add("150Flexbox+Recyclerview----flowlayout")
+        list.add("151drag--拖动卡片--拖动答题")
+        list.add("152ticket_票据--电影票")
+        list.add("153幸运转盘，luck wheel")
+        list.add("154弹出键盘自动上移")
+        list.add("155 滚动 动态缩放 layout")
+        list.add("156 列表滚动，上面tab切换")
         adapter.notifyDataSetChanged()
 
 

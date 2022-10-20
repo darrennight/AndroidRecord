@@ -1,12 +1,13 @@
 package com.hao.androidrecord.activity.chatview;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.ryan.chatlib.SimpleChatView;
-import com.ryan.simplechatview.testdata.TestUtils;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.chatview.chatlib.SimpleChatView;
 
 /**
  * @author RyanLee
@@ -17,7 +18,7 @@ public class SimpleChatViewActivity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_simple_chat);
 
         initView();
     }

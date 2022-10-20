@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.chooser
+package com.hao.androidrecord.activity.chooser.lib
 
 /**
  * ===================================================================

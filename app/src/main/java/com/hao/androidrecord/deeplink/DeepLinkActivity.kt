@@ -1,9 +1,7 @@
-package cn.bpking.app.activity
+package com.hao.androidrecord.deeplink
 
 import android.app.Activity
 import android.os.Bundle
-import cn.bpking.app.helper.AppDeepLinkModule
-import cn.bpking.app.helper.AppDeepLinkModuleRegistry
 import com.airbnb.deeplinkdispatch.DeepLinkHandler
 
 @DeepLinkHandler(AppDeepLinkModule::class)

@@ -3,23 +3,25 @@ package com.hao.androidrecord.activity.tableview01
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.tableview01.decoration.ProgramTimeLabelDecoration
+import com.hao.androidrecord.activity.tableview01.decoration.StageNameDecoration
+import com.hao.androidrecord.activity.tableview01.item.ProgramItem
+import com.hao.androidrecord.activity.tableview01.item.SpaceItem
+import com.hao.androidrecord.activity.tableview01.model.EmptyPeriod
+import com.hao.androidrecord.activity.tableview01.model.Period
+import com.hao.androidrecord.activity.tableview01.model.Program
+import com.hao.androidrecord.activity.tableview01.model.createPrograms
+import com.hao.androidrecord.databinding.ActivityMainTableViewBinding
 import com.jakewharton.threetenabp.AndroidThreeTen
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import io.moyuru.timetablelayout.layoutmanager.TimetableLayoutManager
-import io.moyuru.timetablelayoutsample.databinding.ActivityMainBinding
-import io.moyuru.timetablelayoutsample.decoration.ProgramTimeLabelDecoration
-import io.moyuru.timetablelayoutsample.decoration.StageNameDecoration
-import io.moyuru.timetablelayoutsample.item.ProgramItem
-import io.moyuru.timetablelayoutsample.item.SpaceItem
-import io.moyuru.timetablelayoutsample.model.EmptyPeriod
-import io.moyuru.timetablelayoutsample.model.Period
-import io.moyuru.timetablelayoutsample.model.Program
-import io.moyuru.timetablelayoutsample.model.createPrograms
 
-class MainActivity : AppCompatActivity() {
+//https://github.com/MoyuruAizawa/TimetableLayout
+class TableView01Activity : AppCompatActivity() {
 
-  private val binding by lazy { DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main) }
+  private val binding by lazy { DataBindingUtil.setContentView<ActivityMainTableViewBinding>(this, R.layout.activity_main_table_view) }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -58,7 +60,9 @@ class MainActivity : AppCompatActivity() {
 
     val sortedPrograms = programs.sortedBy { it.startAt }
     val firstProgramStartAt = sortedPrograms.first().startAt
-    val lastProgramEndAt = sortedPrograms.maxBy { it.endAt }?.endAt ?: return programs
+
+    val lastProgramEndAt = sortedPrograms.maxByOrNull{ it: Program -> it.endAt }?.endAt ?: return programs
+
     val stageNumbers = sortedPrograms.map { it.stageNumber }.distinct()
 
     val filledPeriod = ArrayList<Period>()

@@ -1,4 +1,4 @@
-package com.hjq.demo.ui.dialog
+package com.hao.androidrecord.custom.pickerads
 
 import android.content.*
 import android.graphics.Color
@@ -11,14 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
-import com.hjq.base.BaseDialog
-import com.hjq.demo.R
-import com.hjq.demo.aop.SingleClick
-import com.hjq.demo.app.AppAdapter
-import com.hjq.demo.ui.adapter.*
-import com.hjq.demo.ui.adapter.TabAdapter.OnTabListener
-import com.hjq.demo.ui.dialog.AddressDialog.RecyclerViewAdapter.OnSelectListener
-import com.tencent.bugly.crashreport.CrashReport
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.bottomtab.AppAdapter
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -36,8 +30,9 @@ import java.util.*
  */
 class AddressDialog {
 
-    class Builder(context: Context) : BaseDialog.Builder<Builder>(context), OnTabListener,
-        Runnable, OnSelectListener, BaseDialog.OnShowListener, BaseDialog.OnDismissListener {
+    class Builder(context: Context) : BaseDialog.Builder<Builder>(context),
+        TabAdapter.OnTabListener,
+        Runnable, RecyclerViewAdapter.OnSelectListener, BaseDialog.OnShowListener, BaseDialog.OnDismissListener {
 
         private val titleView: TextView? by lazy { findViewById(R.id.tv_address_title) }
         private val closeView: ImageView? by lazy { findViewById(R.id.iv_address_close) }
@@ -177,9 +172,11 @@ class AddressDialog {
                 0 -> {
                     // 记录当前选择的省份
                     province = adapter.getItem(type)!![position]!!.getName()!!
+
                     tabAdapter.setItem(type, province)
                     tabAdapter.addItem(getString(R.string.address_hint))
                     tabAdapter.setSelectedPosition(type + 1)
+
                     adapter.addItem(AddressManager.getCityList(adapter.getItem(type)!![position]!!.getNext()!!))
                     viewPager2?.setCurrentItem(type + 1, smoothScroll)
 
@@ -395,7 +392,7 @@ class AddressDialog {
                 }
                 return list
             } catch (e: JSONException) {
-                CrashReport.postCatchedException(e)
+
             }
             return null
         }
@@ -420,7 +417,7 @@ class AddressDialog {
                 }
                 list
             } catch (e: JSONException) {
-                CrashReport.postCatchedException(e)
+
                 null
             }
         }
@@ -441,7 +438,6 @@ class AddressDialog {
                 }
                 list
             } catch (e: JSONException) {
-                CrashReport.postCatchedException(e)
                 null
             }
         }
@@ -463,9 +459,7 @@ class AddressDialog {
                 inputStream.close()
                 return JSONArray(outStream.toString())
             } catch (e: IOException) {
-                CrashReport.postCatchedException(e)
             } catch (e: JSONException) {
-                CrashReport.postCatchedException(e)
             }
             return null
         }

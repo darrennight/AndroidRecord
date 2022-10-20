@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity
+package com.hao.androidrecord.activity.coroutine
 
 import android.os.Bundle
 import android.util.Log
@@ -10,11 +10,16 @@ import kotlinx.coroutines.*
  *
  * SupervisorJob()
  * 为了解决上述问题，可以使用SupervisorJob替代Job，SupervisorJob与Job基本类似，区别在于不会被子协程的异常所影响。
- */
+ *
+ * GloalScope 生命周期 整个app
+ * MainScope 在activity中使用 需要onDestroy需要手动取消的，否则会有内存泄露的风险。
+ * viewmodelScope 绑定viewmodel生命周期
+ * lifecycleScope 绑定activity fragment生命周期
+ * */
 class TestCoroutineActivity:AppCompatActivity() {
-    //主线程
+    //主线程 MainScope是需要手动取消的，否则会有内存泄露的风险。
     private val mainScope: CoroutineScope by lazy {
-        MainScope()
+        MainScope()//就是 ContextScope(SupervisorJob() + Dispatchers.Main)和下面的async只是线程不一样
     }
     //io线程
     private val asyncScope: CoroutineScope by lazy {
@@ -35,8 +40,15 @@ class TestCoroutineActivity:AppCompatActivity() {
                 //切换到主线程
                 Log.e("========","mainScope")
             }
+            Log.e("========","mainScope下面的代码")
         }
         Log.e("========","end")
+
+//        01-20 11:06:53.690 12618 12618 E ========: start
+//        01-20 11:06:53.725 12618 12618 E ========: end
+//        01-20 11:06:58.736 12618 12731 E ========: delay
+//        01-20 11:06:58.746 12618 12731 E ========: mainScope下面的代码
+//        01-20 11:06:58.746 12618 12618 E ========: mainScope
     }
 
     override fun onDestroy() {

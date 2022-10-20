@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity
+package com.hao.androidrecord.activity.coroutine
 
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_coroutine02.*
 import kotlinx.coroutines.*
 
 class TestCoroutineActivity02:AppCompatActivity(){
+    //MainScope是需要手动取消的，否则会有内存泄露的风险。
     private val mainScope: CoroutineScope by lazy {
         MainScope()
     }

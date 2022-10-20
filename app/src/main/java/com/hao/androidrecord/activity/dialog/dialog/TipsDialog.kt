@@ -1,4 +1,4 @@
-package com.hjq.demo.ui.dialog
+package com.hao.androidrecord.activity.dialog.dialog
 
 import android.content.Context
 import android.text.TextUtils
@@ -6,9 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.hjq.base.BaseDialog
-import com.hjq.base.action.AnimAction
-import com.hjq.demo.R
+import com.hao.androidrecord.R
+import com.hao.androidrecord.custom.pickerads.AnimAction
+import com.hao.androidrecord.custom.pickerads.BaseDialog
 
 /**
  *    author : Android 轮子哥

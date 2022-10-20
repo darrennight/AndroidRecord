@@ -1,10 +1,10 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom
 
 import android.content.*
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
-import com.hjq.widget.R
+import com.hao.androidrecord.R
 
 /**
  *    author : Android 轮子哥

@@ -1,4 +1,4 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.activity.dialog
 
 import android.content.*
 import android.graphics.drawable.Drawable

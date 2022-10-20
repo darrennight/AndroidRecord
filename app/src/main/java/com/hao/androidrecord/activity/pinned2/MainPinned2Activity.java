@@ -43,7 +43,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainPinned2Activity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private StockAdapter mAdapter;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_pinned2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
 
         new AsyncTask<Void, Void, String>() {
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected String doInBackground(Void... voids) {
-                return getStrFromAssets(MainActivity.this, "rasking.json");
+                return getStrFromAssets(MainPinned2Activity.this, "rasking.json");
             }
 
             @Override
@@ -103,18 +103,18 @@ public class MainActivity extends AppCompatActivity {
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "点击了粘性头部的更多", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainPinned2Activity.this, "点击了粘性头部的更多", Toast.LENGTH_SHORT).show();
             }
         });
         container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "点击了粘性头部：" + tvStockName.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainPinned2Activity.this, "点击了粘性头部：" + tvStockName.getText(), Toast.LENGTH_SHORT).show();
             }
         });
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(MainPinned2Activity.this, LinearLayoutManager.VERTICAL, false));
         StickyItemDecoration stickyItemDecoration = new StickyItemDecoration(container, RecyclerViewAdapter.TYPE_STICKY_HEAD);
         stickyItemDecoration.setOnStickyChangeListener(new OnStickyChangeListener() {
             @Override
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.setItemClickListener(new OnItemClickListener<StockEntity.StockInfo>() {
             @Override
             public void onItemClick(View view, StockEntity.StockInfo data, int position) {
-                Toast.makeText(MainActivity.this, "点击了Item", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainPinned2Activity.this, "点击了Item", Toast.LENGTH_SHORT).show();
             }
         });
     }

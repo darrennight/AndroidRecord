@@ -9,4 +9,7 @@
 
     <item name="kdpl_draggable_panel" type="id"/>
     <item name="kdpl_content" type="id"/>
+
+    <item name="fixed_pin_id" type="id"/>
+    <item name="chat_news_id" type="id" />
 </resources>

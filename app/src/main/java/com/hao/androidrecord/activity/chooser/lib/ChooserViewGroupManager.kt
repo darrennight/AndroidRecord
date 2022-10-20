@@ -1,8 +1,8 @@
-package com.hao.androidrecord.activity.chooser
+package com.hao.androidrecord.activity.chooser.lib
 
-import com.hao.androidrecord.activity.chooser.action.IChooseAction
-import com.hao.androidrecord.activity.chooser.action.MultipleChooseAction
-import com.hao.androidrecord.activity.chooser.action.SingleChooseAction
+import com.hao.androidrecord.activity.chooser.lib.action.IChooseAction
+import com.hao.androidrecord.activity.chooser.lib.action.MultipleChooseAction
+import com.hao.androidrecord.activity.chooser.lib.action.SingleChooseAction
 
 
 /**

@@ -1,4 +1,4 @@
-package com.hjq.base.action
+package com.hao.androidrecord.activity.bottomtab
 
 import android.content.Context
 import android.content.res.Resources

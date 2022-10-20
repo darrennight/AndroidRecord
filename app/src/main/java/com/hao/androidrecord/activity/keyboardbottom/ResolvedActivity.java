@@ -1,16 +1,19 @@
 package com.hao.androidrecord.activity.keyboardbottom;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import leavesc.hello.keyboard.common.Message;
-import leavesc.hello.keyboard.common.MessageAdapter;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.keyboardbottom.common.Message;
+import com.hao.androidrecord.activity.keyboardbottom.common.MessageAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,12 +27,12 @@ public class ResolvedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(leavesc.hello.keyboard.R.layout.activity_resolved);
+        setContentView(R.layout.activity_resolved);
         initView();
     }
 
     private void initView() {
-        RecyclerView rv_messageList = (RecyclerView) findViewById(leavesc.hello.keyboard.R.id.rv_messageList);
+        RecyclerView rv_messageList = (RecyclerView) findViewById(R.id.rv_messageList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         rv_messageList.setLayoutManager(linearLayoutManager);
@@ -54,12 +57,12 @@ public class ResolvedActivity extends AppCompatActivity {
         messageList.add(new Message("18"));
         messageList.add(new Message("19"));
         messageList.add(new Message("20"));
-        MessageAdapter messageAdapter = new MessageAdapter(this, messageList, leavesc.hello.keyboard.R.layout.item_message);
+        MessageAdapter messageAdapter = new MessageAdapter(this, messageList, R.layout.item_message_key);
         rv_messageList.setAdapter(messageAdapter);
 
-        EditText et_inputMessage = (EditText) findViewById(leavesc.hello.keyboard.R.id.et_inputMessage);
-        ImageView iv_more = (ImageView) findViewById(leavesc.hello.keyboard.R.id.iv_more);
-        LinearLayout ll_rootEmojiPanel = (LinearLayout) findViewById(leavesc.hello.keyboard.R.id.ll_rootEmojiPanel);
+        EditText et_inputMessage = (EditText) findViewById(R.id.et_inputMessage);
+        ImageView iv_more = (ImageView) findViewById(R.id.iv_more);
+        LinearLayout ll_rootEmojiPanel = (LinearLayout) findViewById(R.id.ll_rootEmojiPanel);
         emojiKeyboard = new EmojiKeyboard(this, et_inputMessage, ll_rootEmojiPanel, iv_more, rv_messageList);
         emojiKeyboard.setEmoticonPanelVisibilityChangeListener(new EmojiKeyboard.OnEmojiPanelVisibilityChangeListener() {
             @Override

@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-public class MainActivity extends AppCompatActivity {
+import com.hao.androidrecord.R;
+
+public class MainSlidingActivity extends AppCompatActivity {
     SlidingTab slidingTab;
     ViewPager viewPager;
     Adapter mAdapter;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_sliding);
 
         viewPager = findViewById(R.id.viewpager);
         slidingTab = findViewById(R.id.sliding_tab);

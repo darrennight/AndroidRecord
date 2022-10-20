@@ -1,6 +1,5 @@
-package com.hao.androidrecord.activity.chatview.holder;
+package com.hao.androidrecord.activity.chatview.hold;
 
-import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -9,13 +8,15 @@ import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ryan.baselib.util.AppUtils;
-import com.ryan.baselib.util.BitmapUtils;
-import com.ryan.baselib.util.DensityUtils;
-import com.ryan.baselib.widget.CenteredImageSpan;
-import com.ryan.chatlib.BaseChatViewHolder;
-import com.ryan.simplechatview.MyChatMsg;
-import com.ryan.simplechatview.R;
+import androidx.core.content.ContextCompat;
+
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.chatview.MyChatMsg;
+import com.hao.androidrecord.activity.chatview.chatlib.AppUtils;
+import com.hao.androidrecord.activity.chatview.chatlib.BaseChatViewHolder;
+import com.hao.androidrecord.activity.chatview.chatlib.BitmapUtils;
+import com.hao.androidrecord.activity.chatview.chatlib.CenteredImageSpan;
+import com.hao.androidrecord.activity.chatview.chatlib.DensityUtils;
 
 /**
  * 普通消息
@@ -46,7 +47,7 @@ public class NormalChatHolder extends BaseChatViewHolder {
                     return;
             }
             builder.append(" ");
-            int imageNewSize = DensityUtils.dp2px(AppUtils.getContext(), 24);
+            int imageNewSize = DensityUtils.dp2px(24);
             CenteredImageSpan vipSpan = new CenteredImageSpan(AppUtils.getContext(), BitmapUtils.decodeResToBitmap(resId, imageNewSize, imageNewSize));
             builder.setSpan(vipSpan, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }

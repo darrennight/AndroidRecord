@@ -77,7 +77,7 @@ public class TextFlowActivity extends AppCompatActivity {
         }, 2000);
     }
 
-    class FlowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    public class FlowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         private List<ShowItem> list;
 

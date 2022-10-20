@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.expandrv
+package com.hao.androidrecord.activity.expandrv.expand
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +24,7 @@ class ExpandRecycleActivity:AppCompatActivity() {
         }
 
        val  adapter = GenreAdapter(makeGenres());
+        adapter.toggleGroup(0)
         recycler_view.adapter = adapter
     }
 }

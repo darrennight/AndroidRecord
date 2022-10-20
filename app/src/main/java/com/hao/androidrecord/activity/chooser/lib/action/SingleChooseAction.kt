@@ -1,8 +1,8 @@
-package com.hao.androidrecord.activity.chooser.action
+package com.hao.androidrecord.activity.chooser.lib.action
 
-import com.hao.androidrecord.activity.chooser.ChooserView
-import com.hao.androidrecord.activity.chooser.IGroupManagerContext
-import com.hao.androidrecord.activity.chooser.OnChooseChangeListener
+import com.hao.androidrecord.activity.chooser.lib.ChooserView
+import com.hao.androidrecord.activity.chooser.lib.IGroupManagerContext
+import com.hao.androidrecord.activity.chooser.lib.OnChooseChangeListener
 
 
 /**

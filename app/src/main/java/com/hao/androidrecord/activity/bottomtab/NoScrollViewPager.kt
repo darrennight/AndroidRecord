@@ -1,4 +1,4 @@
-package com.hjq.widget.layout
+package com.hao.androidrecord.activity.bottomtab
 
 import android.content.Context
 import android.util.AttributeSet

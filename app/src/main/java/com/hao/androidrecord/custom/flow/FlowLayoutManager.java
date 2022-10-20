@@ -136,6 +136,7 @@ public class FlowLayoutManager extends RecyclerView.LayoutManager {
             int childUseWidth = childWidth;
             int childUseHeight = childHeight;
             //如果加上当前的item还小于最大的宽度的话
+            //判断title 换行 测试item宽度为什么一样
             if (cuLineWidth + childUseWidth <= usedMaxWidth) {
                 itemLeft = left + cuLineWidth;
                 itemTop = cuLineTop;

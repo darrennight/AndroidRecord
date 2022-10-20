@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.ticket;
+package com.hao.androidrecord.activity.ticket.lib;
 
 import android.content.Context;
 import android.content.res.TypedArray;

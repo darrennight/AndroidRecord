@@ -1,6 +1,7 @@
 package com.hao.androidrecord.activity.chatview;
 
-import com.ryan.chatlib.BaseChatMsg;
+
+import com.hao.androidrecord.activity.chatview.chatlib.BaseChatMsg;
 
 /**
  * @author RyanLee

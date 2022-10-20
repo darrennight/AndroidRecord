@@ -1,4 +1,4 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -15,7 +15,7 @@ import android.view.View.OnFocusChangeListener
 import android.view.View.OnTouchListener
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
-import com.hjq.widget.R
+import com.hao.androidrecord.R
 
 /**
  *    author : Android 轮子哥

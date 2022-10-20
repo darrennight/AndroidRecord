@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     >
 
-    <com.hao.androidrecord.activity.richedittext.view.SpXEditText
+    <!--<com.hao.androidrecord.activity.richedittext.view.SpXEditText
         android:id="@+id/spEdt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -124,6 +124,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-    </com.hao.androidrecord.activity.richedittext.app.emoji.EmojiconMenu>
+    </com.hao.androidrecord.activity.richedittext.app.emoji.EmojiconMenu>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

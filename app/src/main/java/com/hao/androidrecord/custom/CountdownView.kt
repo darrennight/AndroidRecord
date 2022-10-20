@@ -1,4 +1,4 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom
 
 import android.content.Context
 import android.util.AttributeSet

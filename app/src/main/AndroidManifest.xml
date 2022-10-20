@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
         android:name=".application.MyApplication"
@@ -18,7 +20,8 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:theme"
         android:theme="@style/Theme.AndroidRecord">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,176 +29,407 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.table.ChangeTableColorActivity"/>
-        <activity android:name=".activity.blur.BlurActivity"/>
-        <activity android:name=".activity.KeyBoardPageScroll"/>
-        <activity android:name=".activity.KeyBoardPopDialog"/>
-        <activity android:name=".custom.selector.ui.MatisseActivity"/>
-        <activity android:name=".custom.selector.ui.MatisseCustomActivity"/>
+        <activity android:name=".activity.table.ChangeTableColorActivity"
+            android:exported="false" />
+        <activity android:name=".activity.blur.BlurActivity"
+            android:exported="false" />
+        <activity android:name=".activity.KeyBoardPageScroll"
+            android:exported="false" />
+        <activity android:name=".activity.KeyBoardPopDialog"
+            android:exported="false" />
+        <activity android:name=".custom.selector.ui.MatisseActivity"
+            android:exported="false" />
+        <activity android:name=".custom.selector.ui.MatisseCustomActivity"
+            android:exported="false" />
 
-        <activity android:name=".activity.parallaxdecoration.ParallaxMainActivity"/>
-        <activity android:name=".activity.parallaxdecoration.HorizontalActivity"/>
-        <activity android:name=".activity.parallaxdecoration.VerticalActivity"/>
-        <activity android:name=".activity.AnimlogoActivity"/>
+        <activity android:name=".activity.parallaxdecoration.ParallaxMainActivity"
+            android:exported="false" />
+        <activity android:name=".activity.parallaxdecoration.HorizontalActivity"
+            android:exported="false" />
+        <activity android:name=".activity.parallaxdecoration.VerticalActivity"
+            android:exported="false" />
+        <activity android:name=".activity.AnimlogoActivity" android:exported="false" />
 
-        <activity android:name=".activity.nestedscrolling.NestedMainActivity"/>
-        <activity android:name=".activity.nestedscrolling.NestedScrollTestActivity"/>
-        <activity android:name=".activity.nestedscrolling.RecyclerViewAndRecyclerViewActivity"/>
-        <activity android:name=".activity.nestedscrolling.ScrollViewAndRecyclerViewActivity"/>
-        <activity android:name=".activity.nestedscrolling.NestedScrollTestRefreshActivity"/>
+        <activity android:name=".activity.nestedscrolling.NestedMainActivity" android:exported="false" />
+        <activity android:name=".activity.nestedscrolling.NestedScrollTestActivity" android:exported="false" />
+        <activity android:name=".activity.nestedscrolling.RecyclerViewAndRecyclerViewActivity" android:exported="false" />
+        <activity android:name=".activity.nestedscrolling.ScrollViewAndRecyclerViewActivity" android:exported="false" />
+        <activity android:name=".activity.nestedscrolling.NestedScrollTestRefreshActivity" android:exported="false" />
 
-        <activity android:name=".activity.scrollable.HeaderAndTablayoutRV"/>
-        <activity android:name=".activity.scrollable.HeaderAndTablayoutRV02"/>
-        <activity android:name=".activity.scrollable01.ScrollableMainActivity"/>
-        <activity android:name=".activity.scrollable02.MainActivity"/>
-        <activity android:name=".activity.scrollable02.TestActivity"/>
-        <activity android:name=".activity.shadow.MainShadowActivity"/>
+        <activity android:name=".activity.scrollable.HeaderAndTablayoutRV" android:exported="false" />
+        <activity android:name=".activity.scrollable.HeaderAndTablayoutRV02" android:exported="false" />
+        <activity android:name=".activity.scrollable01.ScrollableMainActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable02.MainActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable02.TestActivity" android:exported="false" />
+        <activity android:name=".activity.shadow.MainShadowActivity" android:exported="false" />
 
-        <activity android:name=".activity.StickyHeaderViewPager.TestActivity"/>
-        <activity android:name=".activity.StickyHeaderViewPager.SimpleActivity"/>
-        <activity android:name=".activity.MultiScroll.activity.MainActivity"/>
-        <activity android:name=".activity.datetime.DateTimePicerActivity"/>
-        <activity android:name=".activity.scrollable03.MainActivityScrollable03"/>
-        <activity android:name=".activity.scrollable04.Demo4Activity"/>
-        <activity android:name=".activity.scrollable05.MainActivity"/>
-        <activity android:name=".activity.scrollable05.DebugSlideActivity"/>
-        <activity android:name=".activity.alihome.AliHomeMainActivity"/>
-        <activity android:name=".activity.switchButton.RecyclerActivity"/>
-        <activity android:name=".activity.switchButton.StyleActivity"/>
-        <activity android:name=".activity.switchButton.StyleInCodeActivity"/>
-        <activity android:name=".activity.switchButton.SwitchButtonMainActivity"/>
-        <activity android:name=".activity.switchButton.UseActivity"/>
+        <activity android:name=".activity.StickyHeaderViewPager.TestActivity" android:exported="false" />
+        <activity android:name=".activity.StickyHeaderViewPager.SimpleActivity" android:exported="false" />
+        <activity android:name=".activity.MultiScroll.activity.MainActivity" android:exported="false" />
+        <activity android:name=".activity.datetime.DateTimePicerActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable03.MainActivityScrollable03" android:exported="false" />
+        <activity android:name=".activity.scrollable04.Demo4Activity" android:exported="false" />
+        <activity android:name=".activity.scrollable05.MainActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable05.DebugSlideActivity" android:exported="false" />
+        <activity android:name=".activity.alihome.AliHomeMainActivity" android:exported="false" />
+        <activity android:name=".activity.switchButton.RecyclerActivity" android:exported="false" />
+        <activity android:name=".activity.switchButton.StyleActivity" android:exported="false" />
+        <activity android:name=".activity.switchButton.StyleInCodeActivity" android:exported="false" />
+        <activity android:name=".activity.switchButton.SwitchButtonMainActivity" android:exported="false" />
+        <activity android:name=".activity.switchButton.UseActivity" android:exported="false" />
         
-        <activity android:name=".activity.scrollable06.Scroll06MainActivity"/>
+        <activity android:name=".activity.scrollable06.Scroll06MainActivity" android:exported="false" />
 
-        <activity android:name=".activity.scrollable07.DecorationActivity"/>
-        <activity android:name=".activity.scrollable07.GroupAndDecorationActivity"/>
-        <activity android:name=".activity.scrollable07.ListViewAddHeaderActivity"/>
-        <activity android:name=".activity.scrollable07.MaterialDesignTopBarActivity"/>
-        <activity android:name=".activity.scrollable07.OneTopBarActivity"/>
-        <activity android:name=".activity.scrollable07.Scroll07MainActivity"/>
-        <activity android:name=".activity.scrollable07.ScrollViewActivity"/>
-        <activity android:name=".activity.scrollable07.TwoSameTopBarActivity"/>
+        <activity android:name=".activity.scrollable07.DecorationActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.GroupAndDecorationActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.ListViewAddHeaderActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.MaterialDesignTopBarActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.OneTopBarActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.Scroll07MainActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.ScrollViewActivity" android:exported="false" />
+        <activity android:name=".activity.scrollable07.TwoSameTopBarActivity" android:exported="false" />
 
-        <activity android:name=".activity.DashedLineDivider.DashedLineMainActivity"/>
-        <activity android:name=".activity.DragPanelLayout.DragMainActivity"/>
+        <activity android:name=".activity.DashedLineDivider.DashedLineMainActivity" android:exported="false" />
+        <activity android:name=".activity.DragPanelLayout.DragMainActivity" android:exported="false" />
 
-        <activity android:name=".activity.NotchTools.NotchToolsMainActivity"/>
+        <activity android:name=".activity.NotchTools.NotchToolsMainActivity" android:exported="false" />
         <activity android:name=".activity.NotchTools.FullScreenNoUseNotchActivity"
             android:theme="@style/AppTheme"
-            />
+             android:exported="false" />
         <activity android:name=".activity.NotchTools.FullScreenUseNotchActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" android:exported="false" />
 
-        <activity android:name=".activity.WhellViewActivity"/>
-        <activity android:name=".activity.TestCoroutineActivity"/>
-        <activity android:name=".activity.TestCoroutineActivity01"/>
-        <activity android:name=".activity.TestCoroutineActivity02"/>
-        <activity android:name=".activity.TestCoroutineActivity03"/>
-        <activity android:name=".activity.TestCoroutineActivity04"/>
-        <activity android:name=".activity.TestCoroutineActivity05"/>
-        <activity android:name=".activity.TestCoroutineActivity06"/>
-        <activity android:name=".activity.TestCoroutineActivity07"/>
+        <activity android:name=".activity.WhellViewActivity" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity01" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity02" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity03" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity04" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity05" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity06" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestCoroutineActivity07" android:exported="false" />
 
-        <activity android:name=".activity.hilt.TestHiltActivity"/>
-        <activity android:name=".activity.bookpage.BookPageActivity"/>
-        <activity android:name=".activity.bookpage.BookPageActivity00"/>
-        <activity android:name=".activity.paing3.TestPaging3Activity"/>
-        <activity android:name=".activity.tiktokComments.CommentMultiActivity"/>
+        <activity android:name=".activity.hilt.TestHiltActivity" android:exported="false" />
+        <activity android:name=".activity.bookpage.BookPageActivity" android:exported="false" />
+        <activity android:name=".activity.bookpage.BookPageActivity00" android:exported="false" />
+        <activity android:name=".activity.paing3.TestPaging3Activity" android:exported="false" />
+        <activity android:name=".activity.tiktokComments.CommentMultiActivity" android:exported="false" />
 
-        <activity android:name=".activity.nine.NineGridActivity"/>
-        <activity android:name=".activity.nine.CustomGirdActivity"/>
-        <activity android:name=".activity.nine.NineGridNewActivity"/>
+        <activity android:name=".activity.nine.NineGridActivity" android:exported="false" />
+        <activity android:name=".activity.nine.CustomGirdActivity" android:exported="false" />
+        <activity android:name=".activity.nine.NineGridNewActivity" android:exported="false" />
 
-        <activity android:name=".activity.flowRecycle.LanuchActivity"/>
-        <activity android:name=".activity.flowRecycle.DiffHeightTextFlowActivity"/>
-        <activity android:name=".activity.flowRecycle.PhotoFlowActivity"/>
-        <activity android:name=".activity.flowRecycle.ProductActivity"/>
-        <activity android:name=".activity.flowRecycle.SuspensionProductActivity"/>
-        <activity android:name=".activity.flowRecycle.TextFlowActivity"/>
+        <activity android:name=".activity.flowRecycle.LanuchActivity" android:exported="false" />
+        <activity android:name=".activity.flowRecycle.DiffHeightTextFlowActivity" android:exported="false" />
+        <activity android:name=".activity.flowRecycle.PhotoFlowActivity" android:exported="false" />
+        <activity android:name=".activity.flowRecycle.ProductActivity" android:exported="false" />
+        <activity android:name=".activity.flowRecycle.SuspensionProductActivity" android:exported="false" />
+        <activity android:name=".activity.flowRecycle.TextFlowActivity" android:exported="false" />
 
-        <activity android:name=".activity.indexBar.CountryChooseActivity"/>
-        <activity android:name=".activity.indexBar.ProvinceChooseActivity"/>
-        <activity android:name=".activity.indexBar.CityChooseActivity"/>
+        <activity android:name=".activity.indexBar.CountryChooseActivity" android:exported="false" />
+        <activity android:name=".activity.indexBar.ProvinceChooseActivity" android:exported="false" />
+        <activity android:name=".activity.indexBar.CityChooseActivity" android:exported="false" />
 
-        <activity android:name=".indexable.IndexableCityActivity"/>
-        <activity android:name=".activity.ClickSpanActivity"/>
+        <activity android:name=".indexable.IndexableCityActivity" android:exported="false" />
+        <activity android:name=".activity.ClickSpanActivity" android:exported="false" />
 
         <activity android:name=".activity.cusTab.TabMainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.basic.DemoBasicActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.autoselect.DemoAutoSelectActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.customview01.DemoCustomView01Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.customview02.DemoCustomView02Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.years.DemoYearsActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.imitationloop.DemoImitationLoopActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.rtl.DemoRtlActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.tabscrolldisabled.DemoTabScrollDisabledActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
         <activity android:name=".activity.cusTab.tabonscreenlimit.DemoTabOnScreenLimitActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" android:exported="false" />
 
 
         <activity android:name=".activity.scrool.ScrollChangeTitleActivity"
-            android:theme="@style/ImageTranslucentTheme"/>
+            android:theme="@style/ImageTranslucentTheme" android:exported="false" />
 
 
-        <activity android:name=".activity.RichEdit.MainActivity"/>
-        <activity android:name=".activity.RichEdit.TopicListActivity"/>
-        <activity android:name=".activity.RichEdit.UserListActivity"/>
+        <activity android:name=".activity.RichEdit.MainActivity" android:exported="false" />
+        <activity android:name=".activity.RichEdit.TopicListActivity" android:exported="false" />
+        <activity android:name=".activity.RichEdit.UserListActivity" android:exported="false" />
 
-        <activity android:name=".activity.richeditor.RichEditorActivity"/>
-        <activity android:name=".activity.richeditor.StockListActivity"/>
-        <activity android:name=".activity.richeditor.UserListActivity"/>
-        <activity android:name=".activity.SwitchActivity"/>
+        <activity android:name=".activity.richeditor.RichEditorActivity" android:exported="false" />
+        <activity android:name=".activity.richeditor.StockListActivity" android:exported="false" />
+        <activity android:name=".activity.richeditor.UserListActivity" android:exported="false" />
+        <activity android:name=".activity.SwitchActivity" android:exported="false" />
 
-        <activity android:name=".activity.bottom.MainBottomActivity"/>
-        <activity android:name=".activity.bottom.MainBottomActivity01"/>
-        <activity android:name=".activity.bottom.MainBottomActivity02"/>
+        <activity android:name=".activity.bottom.MainBottomActivity" android:exported="false" />
+        <activity android:name=".activity.bottom.MainBottomActivity01" android:exported="false" />
+        <activity android:name=".activity.bottom.MainBottomActivity02" android:exported="false" />
 
-        <activity android:name=".activity.ArcSelectList.StartActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.ArcActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.ArcSelectActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.ArcSelectRotateActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.AutoSelectActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.BottomArcActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.CircleArcActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.HorizontalSelectActivity"/>
-        <activity android:name=".activity.ArcSelectList.ui.PadingArcActivity"/>
+        <activity android:name=".activity.ArcSelectList.StartActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.ArcActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.ArcSelectActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.ArcSelectRotateActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.AutoSelectActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.BottomArcActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.CircleArcActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.HorizontalSelectActivity" android:exported="false" />
+        <activity android:name=".activity.ArcSelectList.ui.PadingArcActivity" android:exported="false" />
 
-        <activity android:name=".activity.RelationActivity"/>
-        <activity android:name=".custom.AirRelationView.release.ReleaseActivity"/>
-        <activity android:name=".custom.AirRelationView.release.ShowActivity"/>
+        <activity android:name=".activity.RelationActivity" android:exported="false" />
+        <activity android:name=".custom.AirRelationView.release.ReleaseActivity" android:exported="false" />
+        <activity android:name=".custom.AirRelationView.release.ShowActivity" android:exported="false" />
 
-        <activity android:name=".activity.CardScrool.MainImpActivity"/>
-        <activity android:name=".activity.CardScrool.DetailActivity"/>
+        <activity android:name=".activity.CardScrool.MainImpActivity" android:exported="false" />
+        <activity android:name=".activity.CardScrool.DetailActivity" android:exported="false" />
 
         <activity android:name=".activity.scrollMove.MainScrollActivity"
             android:theme="@style/WhiteFront_green_AppTheme"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" android:exported="false" />
 
-        <activity android:name=".activity.live.MainActivity"/>
-        <activity android:name=".activity.tiger.SlotMachineActivity"/>
-        <activity android:name=".activity.tiger2.LuckyMainActivity"/>
-        <activity android:name=".activity.tiger3.FortuneActivity"/>
+        <activity android:name=".activity.live.MainActivity" android:exported="false" />
+        <activity android:name=".activity.tiger.SlotMachineActivity" android:exported="false" />
+        <activity android:name=".activity.tiger2.LuckyMainActivity" android:exported="false" />
+        <activity android:name=".activity.tiger3.FortuneActivity" android:exported="false" />
 
-        <activity android:name=".activity.AdvancedTextView.SelectMainActivity"/>
-        <activity android:name=".activity.AdvancedTextView.HoriActivity"/>
-        <activity android:name=".activity.AdvancedTextView.VertActivity"/>
-        <activity android:name=".activity.SelectableTextView.SelectTextActivity"/>
+        <activity android:name=".activity.AdvancedTextView.SelectMainActivity" android:exported="false" />
+        <activity android:name=".activity.AdvancedTextView.HoriActivity" android:exported="false" />
+        <activity android:name=".activity.AdvancedTextView.VertActivity" android:exported="false" />
+        <activity android:name=".activity.SelectableTextView.SelectTextActivity" android:exported="false" />
 
-        <activity android:name=".activity.SelectableTextHelper.SelectHelpMainActivity"/>
-        <activity android:name=".activity.halfScreen.HalfMainActivity"/>
-        <activity android:name=".activity.halfScreen.MainHalf2Activity"/>
-        <activity android:name=".activity.autoscroll.AutoScrollRecycleActivity"/>
+        <activity android:name=".activity.SelectableTextHelper.SelectHelpMainActivity" android:exported="false" />
+        <activity android:name=".activity.halfScreen.HalfMainActivity" android:exported="false" />
+        <activity android:name=".activity.halfScreen.MainHalf2Activity" android:exported="false" />
+        <activity android:name=".activity.autoscroll.AutoScrollRecycleActivity" android:exported="false" />
 
+        <activity android:name=".activity.MeasureTextActivity" android:exported="false" />
+
+
+        <activity
+            android:name=".deeplink.DeepLinkActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"  />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--不能有下划线-->
+                <data android:scheme="recordlink" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".deeplink.MainDeepLinkActivity" android:exported="false" />
+        <activity android:name=".activity.searchview.MainSearchActivity"
+            android:theme="@style/AppSearchTheme" android:exported="false" />
+
+
+        <provider
+            android:name=".activity.searchview.db.HistoryProvider"
+            android:authorities="br.com.mauker.materialsearchview.searchhistorydatabase"
+            android:exported="false"
+            android:protectionLevel="signature"
+            android:syncable="true"/>
+
+        <activity android:name=".activity.search.MainSearch2Activity" android:exported="false" />
+
+        <activity android:name=".activity.arclayout.ArcLayoutMainActivity" android:exported="false" />
+        <activity android:name=".activity.arclayout.BannerActivity" android:exported="false" />
+        <activity android:name=".activity.autoscrollview.AutoScrollActivity" android:exported="false" />
+        <activity android:name=".activity.keyboard.MainKeyboardActivity" android:exported="false" />
+        <activity android:name=".activity.CheckNotchActivity" android:exported="false" />
+        <activity android:name=".activity.coroutine.TestFLowActivity" android:exported="false" />
+        <activity android:name=".activity.bnavigationbar.MainBottomActivity" android:exported="false" />
+        <activity android:name=".activity.bnavigationbar.MainViewPagerActivity" android:exported="false" />
+
+        <activity android:name=".activity.CoilLoadActivity" android:exported="false" />
+
+        <activity android:name=".activity.keyboardbottom.KeyboardMainActivity" android:exported="false" />
+        <activity android:name=".activity.keyboardbottom.ResolvedActivity" android:exported="false" />
+        <activity android:name=".activity.keyboardbottom.UnresolvedActivity" android:exported="false" />
+
+        <activity android:name=".activity.robustwebview.WebViewActivity" android:exported="false" />
+
+        <activity android:name=".activity.bottomtab.RVBottomActivity" android:exported="false" />
+        <activity android:name=".activity.ShapeActivity" android:exported="false" />
+        <activity android:name=".activity.CuSwitchButtonActivity" android:exported="false" />
+        <activity android:name=".activity.LoginActivity" android:exported="false" />
+        <activity android:name=".activity.RegisterActivity" android:exported="false" />
+        <activity android:name=".activity.GuideActivity" android:exported="false" />
+        <activity android:name=".activity.dialog.DialogActivity" android:exported="false" />
+        <activity android:name=".activity.TextViewPressAlphaActivity" android:exported="false" />
+        <activity android:name=".activity.EditTextCusorActivity" android:exported="false" />
+        <activity android:name=".activity.blur.BlurTitleActivity" android:exported="false" />
+        <activity android:name=".activity.NiftyDialogActivity" android:exported="false" />
+
+        <activity android:name=".activity.dfilp.DActivity" android:exported="false" />
+        <activity android:name=".activity.dfilp.LoginActivity" android:exported="false" />
+        <activity android:name=".activity.dfilp.MainDialogActivity" android:exported="false" />
+
+        <activity android:name=".activity.timeline.line1.MainTimeLineActivity" android:exported="false" />
+        <activity android:name=".activity.timeline.line2.DotTimeLineActivity" android:exported="false" />
+        <activity android:name=".activity.seemore.MainSeeMoreActivity" android:exported="false" />
+        <activity android:name=".activity.slidingTab.MainSlidingActivity" android:exported="false" />
+        <activity android:name=".activity.bottomsheet.BottomSheetActivity" android:exported="false" />
+        <activity android:name=".activity.bottomsheet.CoordinatorActivity" android:exported="false" />
+        <activity android:name=".activity.bottomsheet.BottomBarActivity" android:exported="false" />
+
+        <activity android:name=".activity.indexbar2.LauncherActivity" android:exported="false" />
+        <activity android:name=".activity.indexbar2.MainIndexBarActivity" android:exported="false" />
+        <activity android:name=".activity.indexbar2.MeituanSelectCityActivity" android:exported="false" />
+        <activity android:name=".activity.indexbar2.SwipeDelMenuActivity" android:exported="false" />
+        <activity android:name=".activity.indexbar2.WeChatActivity" android:exported="false" />
+
+        <activity android:name=".activity.recyclegroup.BindingActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.EmptyActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.ExpandableActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.Grid1Activity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.Grid2Activity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.GroupedListActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.MainGroupStickyActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.NoFooterActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.NoHeaderActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.StickyActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.VariousActivity" android:exported="false" />
+        <activity android:name=".activity.recyclegroup.VariousChildActivity" android:exported="false" />
+
+        <activity android:name=".activity.consecutivescroller.ConsecutiveActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.FragmentActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.MainScrollerActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.PermanentStickyActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.SampleActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.ScrollChildActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.SinkStickyActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.StickyActivity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.ViewPager2Activity" android:exported="false" />
+        <activity android:name=".activity.consecutivescroller.ViewPagerActivity" android:exported="false" />
+
+        <activity android:name=".activity.pinned.StockActivity" android:exported="false" />
+
+        <activity android:name=".activity.pinned2.MainPinned2Activity" android:exported="false" />
+        <activity android:name=".activity.pinned2.SecondActivity" android:exported="false" />
+
+        <activity android:name=".activity.pinned3.ui.DemoActivity" android:exported="false" />
+        <activity android:name=".activity.pinned3.ui.DemoTextActivity" android:exported="false" />
+        <activity android:name=".activity.pinned3.ui.DemoImageActivity" android:exported="false" />
+
+        <activity android:name=".activity.sheet.MainGaodeSheetActivity" android:exported="false" />
+        <activity android:name=".activity.sheet.gaode.GaoDeDetailActivity" android:exported="false" />
+        <activity android:name=".activity.sheet.gaode.GaoDeIndexActivity" android:exported="false" />
+        <activity android:name=".custom.drapmenu.DropMenuActivity" android:exported="false" />
+
+        <activity android:name=".activity.observable.MainActivity"
+            >
+
+        </activity>
+        <activity android:name=".activity.observable.AboutActivity" android:exported="false" />
+        <activity android:name=".activity.observable.FlexibleSpaceWithImageRecyclerViewActivity"
+            android:theme="@style/AppTheme" android:exported="false" />
+
+        <activity android:name=".activity.expandflow.ExpandFlowActivity" android:exported="false" />
+
+        <activity android:name=".activity.OAIDActivity" android:exported="false" />
+
+        <activity android:name=".activity.expandrv.ExpandMenuActivity" android:exported="false" />
+        <activity android:name=".activity.expandrv.expand.ExpandRecycleActivity" android:exported="false" />
+        <activity android:name=".activity.expandrv.check.MultiCheckActivity" android:exported="false" />
+
+        <activity android:name=".activity.recyclegroup.ExpandableGridActivity" android:exported="false" />
+        <activity android:name=".activity.flip.FlipMainActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.ExpandableRecycleActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.two.TwoExpandableActivity" android:exported="false" />
+
+        <activity android:name=".activity.chatview.SimpleChatViewActivity" android:exported="false" />
+        <activity android:name=".activity.ScrollTextViewActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.ExpandMenuActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.changeadapter.ChangeAdapterActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.childsticky.ChildStickyHeaderActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.college.CollegeActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.markets.MarketsActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.slection.SelectionActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.textbook.TextBookListActivity" android:exported="false" />
+        <activity android:name=".activity.expandable.expand01.yuanfudao.YuanfudaoActivity" android:exported="false" />
+        <activity android:name=".activity.animatorx.AnimatorXActivity" android:exported="false" />
+        <activity android:name=".activity.fabpop.FabPopMainActivity" android:exported="false" />
+
+        <activity android:name=".activity.SparkButtonActivity" android:exported="false" />
+        <activity android:name=".activity.dyindex.DYIndexMainActivity" android:exported="false" />
+        <activity android:name=".activity.physicslayout.MainPhysicActivity" android:exported="false" />
+        <activity android:name=".animtest.AnimationTestMainActivity"/>
+        <activity android:name=".animtest.FrameAnimationActivity"/>
+        <activity android:name=".activity.separatededittext.PayPwdMainActivity" android:exported="false"/>
+        <activity android:name=".activity.separatededittext.PayPsdViewActivity" android:exported="false"/>
+        <activity android:name=".activity.interval.IntervalActivity" android:exported="false"/>
+        <activity android:name=".activity.stickscroll.MainStickScrollActivity" android:exported="false"/>
+        <activity android:name=".activity.switchButton.MutilSwtichActivity" android:exported="false"/>
+        <activity android:name=".activity.chooser.ChooseMainActivity" android:exported="false"/>
+        <activity android:name=".threestateswitch.ThreeStateActivity" android:exported="false"/>
+        <activity android:name=".activity.expandablecardview.ExpandCardMainActivity" android:exported="false"/>
+        <activity android:name=".activity.testviewvgroup.TestViewVGroupActivity" android:exported="false"/>
+        <activity android:name=".activity.viewcacheext.DemoRvActivity" android:exported="false"/>
+        <activity android:name=".activity.rvnotify.RVNotifyActivity" android:exported="false"/>
+        <activity android:name=".animtest.TweenAnimtionActivity" android:exported="false"/>
+        <activity android:name=".animtest.AnimatorActivity" android:exported="false"/>
+        <activity android:name=".activity.taskaffinity.TaskAffinityActivity"
+            android:taskAffinity="com.zejian.singleTask.affinity"
+            android:launchMode="singleTask">
+
+        </activity>
+
+
+        <service android:name=".service.MusicPlayerService"/>
+        <activity android:name=".activity.WebViewActivity"/>
+        <activity android:name=".activity.snaphelper.SnapHelperActivity"/>
+        <activity android:name=".activity.snaphelper.LinearSnapVerActivity"/>
+        <activity android:name=".activity.snaphelper.LinearSnapHoriActivity"/>
+        <activity android:name=".activity.snaphelper.PageSnapActivity"/>
+        <activity android:name=".activity.snaphelper.GravitySnapHelperActivity"/>
+        <activity android:name=".activity.snaphelper.GridActivity"/>
+        <activity android:name=".activity.recycleState.RecycleStateActivity"/>
+        <activity android:name=".activity.recycleState.custom.RecycleStateActivity01"/>
+        <activity android:name=".activity.testviewvgroup.PieMainActivity"/>
+        <activity android:name=".activity.AlphaActivity"/>
+
+        <activity android:name=".activity.webviewOptimize.H5WebViewActivity"/>
+        <activity android:name=".activity.webviewOptimize.WebActivity"/>
+
+        <activity android:name=".activity.rv_vp.gallery.GalleryActivity"/>
+        <activity android:name=".activity.rv_vp.shop.ShopActivity"
+            />
+        <activity android:name=".activity.rv_vp.weather.WeatherActivity"
+            android:theme="@style/WeatherTheme" />
+        <activity android:name=".activity.rv_vp.Rv2VpMainActivity"
+            android:theme="@style/GalleryTheme"/>
+        <activity android:name=".activity.TableView.TableViewActivity"/>
+        <activity android:name=".activity.ZoomRecylerLayout.ZoomRecycleActivity"/>
+        <activity android:name=".activity.tableview01.TableView01Activity"/>
+        <activity android:name=".activity.progress.RoundProgressActivity"/>
+        <activity android:name=".activity.flexbox.FlexBoxRecycleActivity"/>
+        <activity android:name=".activity.drag.DragCardActivity"/>
+
+        <activity android:name=".activity.ticket.ExampleActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".activity.ticket.TicketViewActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+
+        <activity android:name=".activity.LuckyWheel.LuckWheelActivity"/>
+        <activity android:name=".activity.KeyboardLayout.KeyboardActivity"/>
+
+
+        <activity android:name=".activity.scalingLayout.CollapsingDemoActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".activity.scalingLayout.FABDemo"/>
+        <activity android:name=".activity.scalingLayout.ScalingLayoutActivity"/>
+        <activity android:name=".activity.scalingLayout.SearchBarDemoActivity"/>
+
+        <activity android:name=".activity.tabScrollAttacher.TabScrollActivity"/>
     </application>
 
 </manifest>

@@ -12,12 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.yarolegovich.discretescrollview.sample.gallery.GalleryActivity;
-import com.yarolegovich.discretescrollview.sample.shop.ShopActivity;
-import com.yarolegovich.discretescrollview.sample.weather.WeatherActivity;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.rv_vp.gallery.GalleryActivity;
+import com.hao.androidrecord.activity.rv_vp.shop.ShopActivity;
+import com.hao.androidrecord.activity.rv_vp.weather.WeatherActivity;
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+//https://github.com/yarolegovich/DiscreteScrollView
+public class Rv2VpMainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final Uri URL_TAYA_BEHANCE = Uri.parse("https://www.behance.net/yurkivt");
     private static final Uri URL_SHOP_PHOTOS = Uri.parse("https://herriottgrace.com/collections/all");
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_rv_vp);
 
         root = findViewById(R.id.screen);
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.rv_vp_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

@@ -247,7 +247,7 @@ class SlideBarLayout @JvmOverloads constructor(context: Context, attrs: Attribut
                     onFlingFinished()
                 } else {
                     flingRunnable = FlingRunnable(this@SlideBarLayout, this)
-                    ViewCompat.postOnAnimation(this@SlideBarLayout, flingRunnable)
+                    ViewCompat.postOnAnimation(this@SlideBarLayout, flingRunnable as FlingRunnable)
                 }
                 true
             } else {

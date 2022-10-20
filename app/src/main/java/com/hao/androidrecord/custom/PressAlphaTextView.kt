@@ -1,4 +1,4 @@
-package com.hjq.widget.view
+package com.hao.androidrecord.custom
 
 import android.content.Context
 import android.util.AttributeSet
@@ -9,6 +9,8 @@ import androidx.appcompat.widget.AppCompatTextView
  *    github : https://github.com/getActivity/AndroidProject-Kotlin
  *    time   : 2021/09/12
  *    desc   : 长按半透明松手恢复的 TextView
+ *
+ *    layout也可以用这种整体改变透明度
  */
 class PressAlphaTextView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :

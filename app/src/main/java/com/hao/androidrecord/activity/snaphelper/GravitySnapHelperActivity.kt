@@ -8,13 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.rubensousa.gravitysnaphelper.GravitySnapRecyclerView
-import com.github.rubensousa.recyclerviewsnap.adapter.AppAdapter
-import com.github.rubensousa.recyclerviewsnap.adapter.SnapListAdapter
-import com.github.rubensousa.recyclerviewsnap.model.App
-import com.github.rubensousa.recyclerviewsnap.model.SnapList
+import com.hao.androidrecord.R
+import com.hao.androidrecord.activity.snaphelper.adapter.AppAdapter
+import com.hao.androidrecord.activity.snaphelper.adapter.SnapListAdapter
+import com.hao.androidrecord.activity.snaphelper.model.App
+import com.hao.androidrecord.activity.snaphelper.model.SnapList
 import java.util.*
 
-class MainActivity : AppCompatActivity(), Toolbar.OnMenuItemClickListener {
+//https://github.com/rubensousa/GravitySnapHelper
+class GravitySnapHelperActivity : AppCompatActivity(), Toolbar.OnMenuItemClickListener {
 
     companion object {
         const val STATE_ORIENTATION = "orientation"
@@ -43,10 +45,10 @@ class MainActivity : AppCompatActivity(), Toolbar.OnMenuItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_gravity_snap)
         recyclerView = findViewById(R.id.recyclerView)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        toolbar.inflateMenu(R.menu.main)
+        toolbar.inflateMenu(R.menu.menu_snap)
         toolbar.setOnMenuItemClickListener(this)
 
         recyclerView.layoutManager = LinearLayoutManager(this)

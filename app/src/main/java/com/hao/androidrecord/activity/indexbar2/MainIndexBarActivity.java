@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends Activity {
+public class MainIndexBarActivity extends Activity {
     private static final String TAG = "zxt";
     private RecyclerView mRv;
     private CityAdapter mAdapter;
@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
         mRv.addItemDecoration(mDecoration = new SuspensionDecoration(this, mDatas).setHeaderViewCount(mHeaderAdapter.getHeaderViewCount()));
 
         //如果add两个，那么按照先后顺序，依次渲染。
-        mRv.addItemDecoration(new DividerItemDecoration(MainActivity.this, DividerItemDecoration.VERTICAL_LIST));
+        mRv.addItemDecoration(new DividerItemDecoration(MainIndexBarActivity.this, DividerItemDecoration.VERTICAL_LIST));
 
         //使用indexBar
         mTvSideBarHint = (TextView) findViewById(R.id.tvSideBarHint);//HintTextView

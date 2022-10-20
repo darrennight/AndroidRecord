@@ -9,7 +9,8 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 
-import com.zwl.mybehaviordemo.R;
+import com.hao.androidrecord.R;
+
 
 /**
  * 高德首页按钮处理

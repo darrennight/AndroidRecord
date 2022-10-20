@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.arclayout;
+package com.hao.androidrecord.activity.arclayout.lib;
 
 import android.annotation.TargetApi;
 import android.content.Context;

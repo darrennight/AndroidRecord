@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.pinned2;
+package com.hao.androidrecord.activity.pinned2.lib;
 
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;

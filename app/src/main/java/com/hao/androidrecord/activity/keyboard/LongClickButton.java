@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.interestingkeyboard;
+package com.hao.androidrecord.activity.keyboard;
 
 import java.lang.ref.WeakReference;
 

@@ -14,7 +14,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_location"
+        android:src="@drawable/ic_expand_location"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         />

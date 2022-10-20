@@ -1,7 +1,3 @@
-package com.yarolegovich.discretescrollview.sample.weather;
-
-import com.yarolegovich.discretescrollview.sample.R;
-
 package com.hao.androidrecord.activity.rv_vp.weather;
 
 /**

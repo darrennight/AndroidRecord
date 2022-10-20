@@ -5,15 +5,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.hao.androidrecord.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class RVNotifyActivity extends AppCompatActivity implements View.OnClickListener {
 
 private RecyclerView mRvList;
 private List<RVData> mDataList=new ArrayList<>();
@@ -33,7 +38,7 @@ private GridLayoutManager mGridLayoutManager;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    setContentView(R.layout.activity_rv_notify);
     initView();
     initListener();
 }
@@ -98,10 +103,12 @@ private void initListener() {
 public void onClick(View v) {
     switch (v.getId()){
         case R.id.bt_notify_1:
+            //全部刷新
             mDataList.addAll(addData());
             mRvAdapter.notifyDataSetChanged();
             break;
         case R.id.bt_notify_2:
+            //移除刷新
             mDataList.remove(1);
             mRvAdapter.notifyItemRemoved(1);
             //受影响的item都刷新position
@@ -110,6 +117,7 @@ public void onClick(View v) {
             //mRvAdapter.notifyItemRangeRemoved(int positionStart, int itemCount)
             break;
         case R.id.bt_notify_3:
+            //插入刷新
             RVData data=new RVData();
             data.setName("name:"+"插入");
             data.setDesc("des:"+"插入");
@@ -119,6 +127,7 @@ public void onClick(View v) {
             mRvAdapter.notifyItemRangeChanged(1, mDataList.size() + 1);
             break;
         case R.id.bt_notify_4:
+            //移动刷新
             //注意位置的变换 1 和 4 交换
             RVData remove4 = mDataList.remove(4);
             RVData remove1 = mDataList.remove(1);
@@ -129,16 +138,22 @@ public void onClick(View v) {
             mRvAdapter.notifyItemRangeChanged(Math.min(4, 1), Math.abs(4 - 1) +1);//受影响的item都刷新position
             break;
         case R.id.bt_notify_5:
-            RVData data1=new RVData();
+            //局部刷新
+//            RVData data1=new RVData();
+//            data1.setImage(refreshImage);
+            RVData data1 = mDataList.get(1);
+            data1.setName("name局部payload");
+            data1.setDesc("des局部payload");
             data1.setImage(refreshImage);
-            mDataList.get(1).setImage(refreshImage);
             mRvAdapter.notifyItemChanged(1,data1);
             break;
         case R.id.bt_notify_6:
+            //局部刷新2
             mDataList.get(1).setImage(refreshImage);
             mRvAdapter.notifyItemChanged(1);
             break;
         case R.id.bt_notify_7:
+            //自己实现局部
             //获取到viewholder的view
             View viewHolder = mGridLayoutManager.findViewByPosition(3);
             mDataList.get(3).setImage(notifyImage);

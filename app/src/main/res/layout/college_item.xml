@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#f4f4f4"
+    android:layout_height="wrap_content"
+    tool:ignore="MissingDefaultResource">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.hao.androidrecord.activity.expandable.expand01.HeavyTextView
+        android:id="@+id/title_text"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        tool:text="标题"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

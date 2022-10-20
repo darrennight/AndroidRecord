@@ -1,4 +1,4 @@
-package com.hjq.base
+package com.hao.androidrecord.activity.bottomtab
 
 import android.content.*
 import android.util.SparseArray
@@ -8,7 +8,6 @@ import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hjq.base.action.ResourcesAction
 
 /**
  *    author : Android 轮子哥

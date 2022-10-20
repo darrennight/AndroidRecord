@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.MaterialSearchView.utils
+package com.hao.androidrecord.activity.searchview.utils
 
 import android.animation.AnimatorListenerAdapter
 import android.annotation.TargetApi

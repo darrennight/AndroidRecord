@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.hao.androidrecord.activity.testviewvgroup.MNView
+        android:id="@+id/view_mnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mn_text="哈哈"
+        android:background="@color/color_4abdcc"
+        android:padding="10dp"
+
+        />
+
+    <com.hao.androidrecord.activity.testviewvgroup.MNViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
+
+        <com.hao.androidrecord.activity.testviewvgroup.MNView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mn_text="哈哈"
+            android:background="@color/color_4abdcc"
+            android:padding="10dp"
+            />
+        <com.hao.androidrecord.activity.testviewvgroup.MNView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mn_text="哈哈"
+            android:background="@color/color_4abdcc"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            />
+        <com.hao.androidrecord.activity.testviewvgroup.MNView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mn_text="哈哈"
+            android:background="@color/color_4abdcc"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            />
+    </com.hao.androidrecord.activity.testviewvgroup.MNViewGroup>
+
+
+</LinearLayout>

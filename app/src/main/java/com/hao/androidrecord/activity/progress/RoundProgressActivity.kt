@@ -7,10 +7,13 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.hao.androidrecord.R
+import com.jaredrummler.android.colorpicker.ColorPickerDialog
+import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import com.mackhartley.roundedprogressbar.CornerRadius
 import com.mackhartley.roundedprogressbar.ProgressTextFormatter
 import com.mackhartley.roundedprogressbar.RoundedProgressBar
-import kotlinx.android.synthetic.main.activity_main.*
+import it.sephiroth.android.library.numberpicker.doOnProgressChanged
+import kotlinx.android.synthetic.main.activity_round_progress.*
 import kotlin.math.roundToInt
 
 /**
@@ -18,7 +21,8 @@ import kotlin.math.roundToInt
  * the RoundedProgressBar library. It may not follow best design practices in all areas. Please do
  * not use it as a judge of good design/architecture.
  */
-class MainActivity : AppCompatActivity(), ColorPickerDialogListener {
+//https://github.com/MackHartley/RoundedProgressBar
+class RoundProgressActivity : AppCompatActivity(), ColorPickerDialogListener {
 
     private val viewModel by lazy { ViewModelProvider(this).get(MainActivityViewModel::class.java) }
 

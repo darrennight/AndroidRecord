@@ -1,16 +1,18 @@
-package com.hao.androidrecord.activity.timeline.line1;
+package com.hao.androidrecord.activity.timeline.line2;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
 
-import com.vivian.timeline.R;
-import com.vivian.timelineitemdecoration.itemdecoration.DotItemDecoration;
-import com.vivian.timelineitemdecoration.itemdecoration.SpanIndexListener;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.custom.timeline.DotItemDecoration;
+import com.hao.androidrecord.custom.timeline.SpanIndexListener;
 
 import java.util.ArrayList;
 import java.util.List;

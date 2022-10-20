@@ -660,4 +660,367 @@
         <attr name="textHeightLightColor" format="color"/>
         <attr name="showActionMenu" format="boolean"/>
     </declare-styleable>
+
+
+    <declare-styleable name="MaterialSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="historyIcon" format="integer" />
+        <attr name="suggestionIcon" format="integer" />
+        <attr name="listTextColor" format="integer" />
+        <attr name="searchBarHeight" format="dimension" />
+        <attr name="voiceHintPrompt" format="string" />
+        <attr name="voiceIconEnabled" format="boolean" />
+        <attr name="android:fitsSystemWindows" />
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcLayout">
+        <attr name="arc_height" format="dimension" />
+        <attr name="arc_position">
+            <enum name="bottom" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="4"/>
+        </attr>
+        <attr name="arc_cropDirection" format="enum">
+            <enum name="cropInside" value="1"/>
+            <enum name="cropOutside" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AutoScrollView">
+
+        <attr name="singleScrollWidth" format="float" />
+        <attr name="singleDuration" format="integer" />
+        <attr name="startDuration" format="integer" />
+        <attr name="endDuration" format="integer" />
+        <attr name="finishState">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+        <attr name="repeatAble" format="boolean"/>
+
+
+    </declare-styleable>
+
+    <attr name="icon" format="reference" />
+    <attr name="title" format="string" />
+    <attr name="floating" format="boolean"/>
+    <attr name="showFragment" format="boolean" />
+    <declare-styleable name="One_StyleBottomLayout">
+        <attr name="oneItemPadding" format="dimension"/>
+        <attr name="oneItemIconTint" format="color|reference"/>
+        <attr name="oneItemIconWidth" format="dimension"/>
+        <attr name="oneItemIconHeight" format="dimension"/>
+        <attr name="oneItemTextColor" format="color|reference"/>
+        <attr name="oneItemTopLineColor" format="color|reference"/>
+        <attr name="oneItemTextSize" format="dimension"/>
+        <attr name="oneItemTextTopMargin" format="dimension"/>
+        <attr name="oneFloatingEnable" format="boolean"/>
+        <attr name="oneFloatingPadding" format="dimension"/>
+        <attr name="oneFloatingUp" format="dimension"/>
+        <attr name="oneMenu" format="reference"/>
+    </declare-styleable>
+
+
+
+    <!-- 仿 ios 开关按钮 -->
+    <declare-styleable name="CuSwitchButton">
+        <!-- 是否选中 -->
+        <attr name="android:checked" />
+        <!-- 是否禁用 -->
+        <attr name="android:enabled" />
+    </declare-styleable>
+    <!-- 正则表达式编辑框 -->
+    <declare-styleable name="RegexEditText">
+        <!-- 正则输入限制 -->
+        <attr name="inputRegex" format="string" />
+        <!-- 常用正则类型 -->
+        <attr name="regexType" >
+            <!-- 手机号（只能以 1 开头）-->
+            <enum name="mobile" value="0x01" />
+            <!-- 中文（普通的中文字符）-->
+            <enum name="chinese" value="0x02" />
+            <!-- 英文（大写和小写的英文）-->
+            <enum name="english" value="0x03" />
+            <!-- 数字（只允许输入纯数字）-->
+            <enum name="number" value="0x04" />
+            <!-- 整数（非 0 开头的数字）-->
+            <enum name="count" value="0x05" />
+            <!-- 用户名（中文、英文、数字）-->
+            <enum name="name" value="0x06" />
+            <!-- 非空格字符 -->
+            <enum name="nonnull" value="0x07" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 带提交动画按钮 -->
+    <declare-styleable name="SubmitButton">
+        <!-- 进度按钮颜色 -->
+        <attr name="progressColor" format="color" />
+        <!-- 成功按钮颜色 -->
+        <attr name="succeedColor" format="color" />
+        <!-- 出错按钮颜色 -->
+        <attr name="errorColor" format="color" />
+        <!-- 进度条样式 -->
+        <attr name="progressStyle" format="enum">
+            <!-- 无进度 -->
+            <enum name="loading" value="0x00" />
+            <!-- 带进度 -->
+            <enum name="progress" value="0x01" />
+        </attr>
+    </declare-styleable>
+    <!-- 缩放的 ImageView -->
+    <declare-styleable name="ScaleImageView">
+        <!-- 缩放比例 -->
+        <attr name="scaleRatio" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SlidingTab">
+        <attr name="tabTextSize" format="dimension" />
+        <attr name="tab_radius" format="dimension" />
+        <attr name="tabHeight" format="dimension" />
+        <attr name="mainColor" format="color" />
+        <attr name="mainColorRes" format="reference" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomSheetLayout">
+        <attr name="collapsedHeight" format="dimension"/>
+    </declare-styleable>
+
+    <attr name="indexBarTextSize" format="dimension" />
+
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarTextSize" />
+        <attr name="indexBarPressBackground" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PinnedListLayout">
+        <attr name="pinnedtype" format="enum">
+            <enum name="text" value="0"/>
+            <enum name="image" value="1"/>
+        </attr>
+        <attr name="layout_pin_width" format="dimension">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="layout_pin_height" format="dimension">
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="pin_vertical_position" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+        <attr name="pin_margin" format="dimension"/>
+        <attr name="pin_margin_left" format="dimension"/>
+        <attr name="pin_margin_right" format="dimension"/>
+        <attr name="pin_margin_top" format="dimension"/>
+        <attr name="pin_margin_bottom" format="dimension"/>
+
+        <attr name="pin_text_size" format="dimension"/>
+        <attr name="fade_effect" format="boolean"/>
+        <attr name="pin_text_color" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="BottomSheetBehavior_Layout">
+        <attr name="behavior_peekHeight" format="dimension" />
+        <attr name="behavior_hideAble" format="boolean" />
+        <attr name="behavior_skipCollapse" format="dimension" />
+        <attr name="behavior_middleHeight" format="dimension" />
+        <attr name="behavior_fitToContents" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DropDownMenu">
+
+        <attr name="ddunderlineColor" format="color"/>
+        <attr name="dddividerColor" format="color"/>
+        <attr name="ddtextSelectedColor" format="color"/>
+        <attr name="ddtextUnselectedColor" format="color"/>
+        <attr name="ddmenuBackgroundColor" format="color"/>
+        <attr name="ddmaskColor" format="color"/>
+        <attr name="ddmenuTextSize" format="dimension"/>
+        <attr name="ddmenuSelectedIcon" format="reference"/>
+        <attr name="ddmenuUnselectedIcon" format="reference"/>
+        <attr name="ddmenuMenuHeightPercent" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableItemStyle">
+        <attr name="expandableItemStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableItem">
+        <attr name="duration" format="integer" />
+        <attr name="layoutHeader" format="reference" />
+        <attr name="layoutContent" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FrescoAvatar">
+        <attr name="default_img" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageViewChat">
+        <attr name="chat_border_width" format="dimension" />
+        <attr name="chat_border_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SeparatedEditText">
+        <attr name="password" format="boolean" />
+        <attr name="showCursor" format="boolean" />
+        <attr name="highLightEnable" format="boolean" />
+        <attr name="highLightBefore" format="boolean" />
+        <attr name="separateType" format="reference|integer" />
+        <attr name="maxLength" format="integer" />
+        <attr name="corner" format="dimension" />
+        <attr name="borderColor" format="color|reference" />
+        <attr name="blockColor" format="color|reference" />
+        <attr name="pay_textColor" format="color|reference" />
+        <attr name="highlightColor" format="color|reference" />
+        <attr name="highlightStyle" format="reference|integer" />
+        <attr name="blockSpacing" format="dimension" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="showKeyboard" format="boolean" />
+        <attr name="payerrorColor" format="color|reference" />
+    </declare-styleable>
+
+    <integer name="type_hollow">1</integer>
+    <integer name="type_solid">2</integer>
+    <integer name="type_underline">3</integer>
+
+    <integer name="style_solid">1</integer>
+    <integer name="style_border">2</integer>
+
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="payradius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchMultiButton">
+        <attr name="strokeRadius" format="dimension" />
+        <attr name="smb_strokeWidth" format="dimension" />
+        <attr name="smb_textSize" format="dimension" />
+        <attr name="selectedTab" format="integer" />
+        <attr name="smb_selectedColor" format="color|reference" />
+        <attr name="smb_background_color" format="color|reference" />
+        <attr name="switchTabs" format="reference" />
+        <attr name="typeface" format="string" />
+        <attr name="disableColor" format="color|reference" />
+        <attr name="mid_round" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ChooserView">
+        <attr name="viewTag" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="PayChooseView">
+        <attr name="payment_image_src" format="reference" />
+        <attr name="payment_name" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SchoolChooseView">
+        <attr name="school_name" format="string" />
+        <attr name="school_level" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="MenuChooseView">
+        <attr name="food_name" format="string" />
+        <attr name="food_img" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ThreeStateSwitch">
+        <attr name="background_selected_color" format="color" />
+        <attr name="background_normal_color" format="color" />
+
+        <attr name="text_normal_color" format="color" />
+        <attr name="text_selected_color" format="color" />
+
+        <attr name="text_left" format="string"/>
+        <attr name="text_right" format="string"/>
+
+        <attr name="text_normal_size" format="dimension" />
+        <attr name="text_selected_size" format="dimension" />
+
+        <attr name="two_state_after_init" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableCardView">
+        <attr name="ex_card_title" format="string"/>
+        <attr name="ex_card_icon" format="reference"/>
+        <attr name="inner_view" format="reference"/>
+        <attr name="expandOnClick" format="boolean"/>
+        <attr name="animationDuration" format="integer"/>
+        <attr name="startExpanded" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MNView">
+        <attr name="mn_text" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="TicketView">
+        <attr name="ticketOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="ticketBackgroundColor" format="color" />
+        <attr name="ticketScallopRadius" format="dimension" />
+        <attr name="ticketScallopPositionPercent" format="float" />
+        <attr name="ticketShowBorder" format="boolean" />
+        <attr name="ticketBorderWidth" format="dimension" />
+        <attr name="ticketBorderColor" format="color" />
+        <attr name="ticketShowDivider" format="boolean" />
+        <attr name="ticketDividerWidth" format="dimension" />
+        <attr name="ticketDividerPadding" format="dimension" />
+        <attr name="ticketDividerColor" format="color" />
+        <attr name="ticketDividerType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dash" value="1" />
+        </attr>
+        <attr name="ticketDividerDashGap" format="dimension" />
+        <attr name="ticketDividerDashLength" format="dimension" />
+        <attr name="ticketCornerType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="rounded" value="1" />
+            <enum name="scallop" value="2" />
+        </attr>
+        <attr name="ticketCornerRadius" format="dimension" />
+        <attr name="android:elevation" />
+        <attr name="ticketElevation" format="dimension" />
+        <attr name="ticketBackgroundBeforeDivider" format="reference" />
+        <attr name="ticketBackgroundAfterDivider" format="reference" />
+        <attr name="ticketShadowColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LuckyWheel">
+
+        <attr name="wheel_background_color" format="color"/>
+        <attr name="arrow_image" format="reference"/>
+        <attr name="square_layout" format="boolean"/>
+        <attr name="image_padding" format="dimension"/>
+    </declare-styleable>
 </resources>

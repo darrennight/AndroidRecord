@@ -1,7 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        app:smb_selectedColor="#1c7626"
+        app:selectedTab="1"
+        app:strokeRadius="0dp"
+        app:smb_strokeWidth="1dp"
+        app:smb_textSize="14sp"/>
+
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        app:smb_selectedColor="#eb7b00"
+        app:selectedTab="1"
+        app:strokeRadius="5dp"
+        app:smb_strokeWidth="1dp"
+        app:smb_textSize="14sp"/>
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:padding="8dp"
+        app:smb_selectedColor="#86389c"
+        app:selectedTab="0"
+        app:strokeRadius="5dp"
+        app:smb_strokeWidth="1dp"
+        app:switchTabs="@array/switch_tabs"
+        app:typeface="tielanti.ttf"
+        app:smb_textSize="14sp"/>
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        app:smb_selectedColor="#e12251"
+        app:strokeRadius="14dp"
+        app:smb_strokeWidth="2dp"
+        app:smb_textSize="14sp"/>
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:padding="8dp"
+        app:smb_selectedColor="#223273"
+        app:selectedTab="0"
+        app:smb_strokeWidth="1dp"
+        app:switchTabs="@array/switch_country"
+        app:smb_textSize="14sp"
+        app:typeface="DeVinneTxtBT.ttf"/>
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:padding="8dp"
+        app:smb_selectedColor="#cf9c1a"
+        app:disableColor="#999999"
+        app:selectedTab="0"
+        app:smb_strokeWidth="1dp"
+        app:switchTabs="@array/switch_yn"
+        app:strokeRadius="4dp"
+        app:smb_textSize="14sp"/>
+
+
+    <com.hao.androidrecord.custom.switchButton.SwitchMultiButton
+        android:id="@+id/switchmultibutton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:padding="8dp"
+
+        app:smb_selectedColor="#223273"
+        app:selectedTab="0"
+        app:smb_strokeWidth="1dp"
+        app:strokeRadius="20dp"
+
+        app:smb_textSize="14sp"
+        app:switchTabs="@array/switch_country"
+        app:typeface="DeVinneTxtBT.ttf"/>
+
+    <!--没有边框的-->
+    <com.hao.androidrecord.custom.switchButton.MySwitchMultiButton
+        android:id="@+id/switchmultibutton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:padding="8dp"
+
+        app:smb_selectedColor="#F08484"
+        app:smb_background_color="#EAEAEA"
+        app:mid_round="false"
+
+
+        app:selectedTab="1"
+        app:smb_strokeWidth="1dp"
+        app:strokeRadius="20dp"
+
+        app:smb_textSize="14sp"
+        app:switchTabs="@array/switch_tabs"
+        app:typeface="DeVinneTxtBT.ttf"/>
+    <com.hao.androidrecord.custom.switchButton.MySwitchMultiButton
+        android:id="@+id/switchmultibutton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:padding="5dp"
+
+        app:smb_selectedColor="#F08484"
+        app:smb_background_color="#EAEAEA"
+        app:mid_round="true"
+
+
+        app:selectedTab="1"
+        app:smb_strokeWidth="1dp"
+        app:strokeRadius="20dp"
+
+        app:smb_textSize="14sp"
+        app:switchTabs="@array/switch_tabs"
+        app:typeface="DeVinneTxtBT.ttf"/>
 
 </LinearLayout>

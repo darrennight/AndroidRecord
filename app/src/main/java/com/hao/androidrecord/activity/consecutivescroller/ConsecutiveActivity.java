@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.donkingliang.consecutivescrollerdemo.adapter.RecyclerViewAdapter;
+import com.hao.androidrecord.R;
+import com.hao.androidrecord.activity.consecutivescroller.adapter.RecyclerViewAdapter;
+
 
 public class ConsecutiveActivity extends AppCompatActivity {
 

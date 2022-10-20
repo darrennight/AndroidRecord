@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity
+package com.hao.androidrecord.activity.coroutine
 
 import android.os.Bundle
 import android.util.Log
@@ -29,13 +29,61 @@ class TestCoroutineActivity06:AppCompatActivity(){
             val time = measureTimeMillis{
                 val one = async { one() }
                 val two = async { two() }
-                one.await() + two.await()
-                Log.e("======","${one.await() + two.await()}")
+                val result = one.await() + two.await()
+//                Log.e("======Time","${one.await() + two.await()}")
+                Log.e("======Time","$result")
+
+                async { Log.e("======Time","async后面打代码11111") }
+                Log.e("======Time","async后面打代码22222")
+
+
             }
             Log.e("========Time","${time}")
         }
         Log.e("========","end")
+        //执行结果：async上面会同时异步执行 然后串行执行 await 和 log，然后asyncLog挂起到异步，挂起后面的代码继续执行，下面到log开始执行
+        //await等待上面的执行后再执行
 
+//        01-19 17:30:36.592 19527 19835 E ======Time: 3
+//        01-19 17:30:36.593 19527 19835 E ======Time: async后面打代码22222
+//        01-19 17:30:36.593 19527 19835 E ========Time: 1515
+//        01-19 17:30:36.593 19527 19840 E ======Time: async后面打代码11111
+
+
+        asyncScope.launch{
+            val job = asyncScope.launch {
+                delay(1000L)
+                println("World!")
+                delay(1000L)
+            }
+            println("Hello,")
+            //join 等待job里面延时执行完才打应good
+            job.join()
+            println("Good！")
+        }
+
+
+
+
+        asyncScope.launch {
+            val time = measureTimeMillis{
+                Log.e("======async","111111111")
+                val one = async { one() }
+                Log.e("======async","22222")
+                delay(5000L)
+                val two = async { two() }
+                val result = one.await() + two.await()
+                Log.e("======async","$result")
+                //await执行完了才能执行下面到代码
+                Log.e("======async","33333333")
+
+
+            }
+            //delay 阻塞下面的代码执行包括下面的async 但是 one和delay同时执行 async是异步出去执行
+            //协程里面的代码块也是串行执行的 但是async是可以让两个连续async同时异步执行
+            //但是执行到async时 async下面到代码可以同时执行
+            Log.e("========async","${time}")//=====async: 6513
+        }
 
     }
 

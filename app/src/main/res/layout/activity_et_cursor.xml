@@ -3,12 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hao.androidrecord.custom.PressAlphaTextView
-        android:id="@+id/tv_alpha"
-        android:layout_width="50dp"
+
+    <com.hao.androidrecord.custom.AutoRightEditText
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="长按点击有透明度"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_centerInParent="true"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="哈哈哈哈哈哈"/>
 </RelativeLayout>

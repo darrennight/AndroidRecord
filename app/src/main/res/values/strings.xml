@@ -116,6 +116,7 @@
         <item>@string/title_activity_recycler_view</item>
         <item>@string/copyright</item>
         <item>@string/license</item>
+        <item>多状态选择</item>
     </string-array>
 
     <string name="title_activity_style">Style in xml</string>
@@ -231,4 +232,497 @@
         Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。尚未有统一中文名称，中国大陆地区较多人使用“安卓”或“安致”。Android操作系统最初由Andy Rubin开发，主要支持手机。2005年8月由Google收购注资。2007年11月，Google与84家硬件制造商、软件开发商及电信营运商组建开放手机联盟共同研发改良Android系统。随后Google以Apache开源许可证的授权方式，发布了Android的源代码。第一部Android智能手机发布于2008年10月。Android逐渐扩展到平板电脑及其他领域上，如电视、数码相机、游戏机等。2011年第一季度，Android在全球的市场份额首次超过塞班系统，跃居全球第一。 2013年的第四季度，Android平台手机的全球市场份额已经达到78.1%。2013年09月24日谷歌开发的操作系统Android在迎来了5岁生日，全世界采用这款系统的设备数量已经达到10亿台。
         Android在正式发行之前，最开始拥有两个内部测试版本，并且以著名的机器人名称来对其进行命名，它们分别是：阿童木（AndroidBeta），发条机器人（Android 1.0）。后来由于涉及到版权问题，谷歌将其命名规则变更为用甜点作为它们系统版本的代号的命名方法。甜点命名法开始于Android 1.5发布的时候。作为每个版本代表的甜点的尺寸越变越大，然后按照26个字母数序：纸杯蛋糕（Android 1.5），甜甜圈（Android 1.6），松饼（Android 2.0/2.1），冻酸奶（Android 2.2），姜饼（Android 2.3），蜂巢（Android 3.0），冰激凌三明治（Android 4.0），果冻豆（Jelly Bean，Android4.1和Android 4.2），奇巧（KitKat，Android 4.4），棒棒糖（Lollipop，Android 5.0），棉花糖（Marshmallow，Android 6.0），牛轧糖（Nougat，Android 7.0）。
     </string>
+
+
+    <string name="search_hint">Search&#8230;</string>
+    <string name="hint_prompt">Speak an item name or a number</string>
+
+    <string name="cd_up_button">Up navigation button</string>
+    <string name="cd_voice_search">Voice search</string>
+    <string name="cd_clear_button">Clear field</string>
+    <string name="cd_suggestion_icon">List item icon</string>
+
+
+    <string name="bt_clearHistory">Clear history</string>
+    <string name="bt_clearSuggestions">Clear suggestions</string>
+    <string name="bt_clearAll">Clear all</string>
+
+    <string-array name="suggestions">
+        <item>Apple</item>
+        <item>Apricot</item>
+        <item>Avocado</item>
+        <item>Banana</item>
+        <item>Blueberry</item>
+        <item>Blackberry</item>
+        <item>Carrot</item>
+        <item>Cherry</item>
+        <item>Orange</item>
+        <item>Potato</item>
+        <item>Peach</item>
+        <item>Passion fruit</item>
+        <item>Pear</item>
+        <item>Strawberry</item>
+    </string-array>
+
+
+    <string name="arclayout_description">After the formation of the Galactic Empire, the Rebel Alliance recruits Jyn Erso (Felicity Jones) to work with a team including Cassian Andor (Diego Luna) to steal the design schematics of the Empire\'s new superweapon, the Death Star.\n\n银河帝国形成后，叛军联盟招募Jyn Erso（费利西蒂·琼斯饰）与包括卡西安·安道尔（Diego Luna饰）在内的团队合作，窃取帝国新超级武器“死亡之星”的设计原理图。</string>
+    <string name="arclayout_development">In February 2013, The Walt Disney Company CEO Bob Iger confirmed the development of two stand-alone films, each individually written by Lawrence Kasdan and Simon Kinberg. On February 6, Entertainment Weekly reported that Lucasfilm is working on two films featuring Han Solo and Boba Fett. Disney CFO Jay Rasulo has described the stand-alone films as origin stories. Kathleen Kennedy explained that the stand-alone films will not crossover with the films of the sequel trilogy…\n\n2013年2月，华特迪士尼公司首席执行官鲍勃伊格（Bob Iger）证实了两部独立电影的开发，分别由劳伦斯卡丹（Lawrence Kasdan）和西蒙金伯格（Simon Kinberg）执笔。2月6日，《娱乐周刊》报道说，卢卡斯电影公司正在制作两部以汉·索洛和波巴·费特为主角的电影。迪士尼首席财务官杰伊·拉苏洛（Jay Rasulo）将这些独立电影描述为原创故事。凯瑟琳·肯尼迪解释说，独立电影不会与续集三部曲的电影交叉…</string>
+    <string name="arclayout_ct_en">Superbody is a B-level science fiction film, both in budget and aesthetic sense. There is a long-standing myth that the development efficiency of human brain potential is only 10%. What kind of situation would it be if human brain potential is used to 100%? This is the starting point of the concept of superbod\n\n
+影片认为，随着人对大脑的利用率逐步提高，人可以获得更多的能力，比如掌握之前没有学过的知识，随心所欲地控制自己的身体，读懂旁人的内心，甚至操控磁场等等。从纯粹科学的角度，这些理论存在明显的荒谬之处，尤其是到最后100%的开发率实现后，露西的肉身消失，变得无所不在（I’m everywhere），这和神有什么区别？\n\n\n</string>
+    <string name="arclayout_ct_development">     Richard Dawkins believes that:\n
+"The core element of all life is not fire, not warm breath, not" spark of life ", but information, words and instructions....\n\nRichard Dawkins认为:\n“所有生命的核心要素不是火，不是温暖的吐息，不是什么‘生命的火花’，而是信息、词语、指令。</string>
+
+
+
+    <string name="setting">设置</string>
+    <string name="photo">拍照</string>
+    <string name="home">首页</string>
+
+    <string name="home_exit_hint">再按一次退出</string>
+    <string name="home_nav_index">首页</string>
+    <string name="home_nav_found">发现</string>
+    <string name="home_nav_message">消息</string>
+    <string name="home_nav_me">我的</string>
+
+    <string name="register_title">注册</string>
+    <string name="register_hint">手机号仅用于登录和保护账号安全</string>
+    <string name="register_password_hint1">设置6&#8211;18位登录密码</string>
+    <string name="register_password_hint2">请再次输入一次密码</string>
+    <string name="common_phone_input_hint">请输入手机号码</string>
+    <string name="common_code_send">发送验证码</string>
+    <string name="common_code_input_hint">请输入验证码</string>
+    <string name="common_code_send_hint">验证码已发送，请注意查收</string>
+    <string name="common_code_error_hint">验证码错误，请检查输入</string>
+    <!-- 地区对话框 -->
+    <string name="address_title">请选择地区</string>
+    <string name="address_hint">请选择</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+
+    <string name="costomview">im custom view</string>
+
+    <string name="user_name_placeholder">Please text your username</string>
+    <string name="password_placeholder">Please test your password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="auto_login">Auto Login</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="send">Send</string>
+    <string name="back">Back</string>
+    <string name="retrieve_password">Retrieve Password</string>
+    <string name="email_placeholder">Please text your email</string>
+    <string name="tip_forget_password">Please text your Email,we will send a link to your mail box.</string>
+    <string name="bottom_sheet_title">My layout</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <string name="sticky_list">头部吸顶的列表</string>
+    <string name="group_list">分组的列表</string>
+    <string name="no_header">不带组头的列表</string>
+    <string name="no_footer">不带组尾的列表</string>
+    <string name="grid_children_1">子项为Grid的列表</string>
+    <string name="grid_children_2">子项为Grid的列表(各组子项的Span不同)</string>
+    <string name="expandable">可展开收起的列表</string>
+    <string name="various">头、尾和子项都支持多种类型的列表</string>
+    <string name="various_child">多种子项类型的列表</string>
+    <string name="binding_adapter">使用DataBinding的列表</string>
+    <string name="empty_list">空布局</string>
+    <string name="empty_view">这是个空布局</string>
+    <string name="load_data">加载数据</string>
+
+    <string name="title_activity_gao_de_index">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_main">AOSV-Demos</string>
+    <string name="title_activity_about">About this app</string>
+
+    <string name="title_activity_actionbarcontrolgridview">GridView &amp; Action Bar</string>
+    <string name="title_activity_actionbarcontrollistview">ListView &amp; Action Bar</string>
+    <string name="title_activity_actionbarcontrolrecyclerview">RecyclerView &amp; Action Bar</string>
+    <string name="title_activity_actionbarcontrolscrollview">ScrollView &amp; Action Bar</string>
+    <string name="title_activity_actionbarcontrolwebview">WebView &amp; Action Bar</string>
+    <string name="title_activity_flexiblespacetoolbarscrollview">Flexible Space</string>
+    <string name="title_activity_flexiblespacewithimagewithviewpagertab">Flexible Space</string>
+    <string name="title_activity_flexiblespacewithimagewithviewpagertab2">Flexible Space</string>
+    <string name="title_activity_flexiblespacewithimagegridview">Flexible Space</string>
+    <string name="title_activity_flexiblespacewithimagescrollview">Flexible Space</string>
+    <string name="title_activity_fillgap3listview">Another implementation of Fill Gap &amp; ListView</string>
+    <string name="title_activity_fillgap3recyclerview">Another implementation of Fill Gap &amp; RecyclerView</string>
+    <string name="title_activity_fillgap3scrollview">Another implementation of Fill Gap &amp; ScrollView</string>
+    <string name="title_activity_fillgaplistview">Fill Gap &amp; ListView</string>
+    <string name="title_activity_fillgaprecyclerview">Fill Gap &amp; RecyclerView</string>
+    <string name="title_activity_fillgapscrollview">Fill Gap &amp; ScrollView</string>
+    <string name="title_activity_flexiblespacewithimageRecyclerview">Flexible Space</string>
+    <string name="title_activity_flexiblespacewithimagelistview">Flexible Space</string>
+    <string name="title_activity_flexiblespacewithwebview">Flexible Space</string>
+    <string name="title_activity_fragmentactionbarcontrollistview">ListView on Fragment &amp; Action Bar</string>
+    <string name="title_activity_fragmenttransition">ActionBar &amp; Toolbar manipulation with Fragment</string>
+    <string name="title_activity_handletouchgridview">Handling touch with GridView</string>
+    <string name="title_activity_handletouchlistview">Handling touch with ListView</string>
+    <string name="title_activity_handletouchrecyclerview">Handling touch with RecyclerView</string>
+    <string name="title_activity_handletouchscrollview">Handling touch with ScrollView</string>
+    <string name="title_activity_handletouchwebview">Handling touch with WebView</string>
+    <string name="title_activity_parallaxtoolbargridview">Parallax gridView &amp; toolbar</string>
+    <string name="title_activity_parallaxtoolbarlistview">Parallax listView &amp; toolbar</string>
+    <string name="title_activity_parallaxtoolbarscrollview">Parallax scrollView &amp; toolbar</string>
+    <string name="title_activity_scrollfrombottomlistview">ListView, scrolling from bottom</string>
+    <string name="title_activity_scrollfrombottomrecyclerview">RecyclerView, scrolling from bottom</string>
+    <string name="title_activity_slidingupgridview">Sliding up effect with GridView</string>
+    <string name="title_activity_slidinguplistview">Sliding up effect with ListView</string>
+    <string name="title_activity_slidinguprecyclerview">Sliding up effect with RecyclerView</string>
+    <string name="title_activity_slidingupscrollview">Sliding up effect with ScrollView</string>
+    <string name="title_activity_slidingupwebview">Sliding up effect with WebView</string>
+    <string name="title_activity_stickyheaderlistview">ListView &amp; Quick return toolbar &amp; Sticky view</string>
+    <string name="title_activity_stickyheaderrecyclerview">RecyclerView &amp; Quick return toolbar &amp; Sticky view</string>
+    <string name="title_activity_stickyheaderscrollview">ScrollView &amp; Quick return toolbar &amp; Sticky view</string>
+    <string name="title_activity_stickyheaderwebview">WebView &amp; Quick return toolbar &amp; Sticky view</string>
+    <string name="title_activity_toolbarcontrolgridview">GridView &amp; Toolbar</string>
+    <string name="title_activity_toolbarcontrollistview">ListView &amp; Toolbar</string>
+    <string name="title_activity_toolbarcontrolrecyclerview">RecyclerView &amp; Toolbar</string>
+    <string name="title_activity_toolbarcontrolscrollview">ScrollView &amp; Toolbar</string>
+    <string name="title_activity_toolbarcontrolwebview">WebView &amp; Toolbar</string>
+    <string name="title_activity_viewpagertabfragment">ViewPager &amp; Tab on Fragment</string>
+    <string name="title_activity_viewpagertab2">Another implementation of ViewPagerTabActivity</string>
+    <string name="title_activity_viewpagertab">ViewPager &amp; Tab &amp; Different fragments</string>
+    <string name="title_activity_viewpagertablistview">ViewPager &amp; Tab &amp; ListView</string>
+    <string name="title_activity_viewpagertabscrollview">ViewPager &amp; Tab &amp; ScrollView</string>
+    <string name="title_activity_viewpagertabscrollviewwithfab">ViewPager &amp; Tab &amp; ScrollView &amp; FAB</string>
+
+    <string name="lipsum">Lorem ipsum dolor sit amet, ut duis lorem provident sed felis blandit, condimentum donec lectus ipsum et mauris, morbi porttitor interdum feugiat nulla donec sodales, vestibulum nisl primis a molestie vestibulum quam, sapien mauris metus risus suspendisse magnis. Augue viverra nulla faucibus egestas eu, a etiam id congue rutrum ante, arcu tincidunt donec quam felis at ornare, iaculis ligula sodales venenatis commodo volutpat neque, suspendisse elit praesent tellus felis mi amet. Inceptos amet tempor lectus lorem est non, ac donec ac libero neque mauris, tellus ante metus eget leo consequat. Scelerisque dolor curabitur pretium blandit ut feugiat, amet lacus pulvinar justo convallis ut, sed natoque ipsum urna posuere nibh eu. Sed at sed vulputate sit orci, facilisis a aliquam tellus quam aliquam, eu aliquam donec at molestie ante, pellentesque mauris lorem ultrices libero faucibus porta, imperdiet adipiscing sit hac diam ut nulla. Lacus enim elit pulvinar donec vehicula dapibus, accumsan purus officia cursus dolor sapien, eu amet dis mauris mi nulla ut. Non accusamus etiam pede non urna tempus, vestibulum aliquam tortor eget pharetra sodales, in vestibulum ut justo orci nulla, lobortis purus sem semper consectetuer magni purus. Dolor a leo vestibulum amet ut sit, arcu ut eaque urna fusce aliquet turpis, sed fermentum sed vestibulum nisl pede, tristique enim lorem posuere in laborum ut. Vestibulum id id justo leo nulla, magna lobortis ullamcorper et dignissim pellentesque, duis suspendisse quis id lorem ante. Vivamus a nullam ante adipiscing amet, mi vel consectetuer nunc aenean pede quisque, eget rhoncus dis porttitor habitant nunc vivamus, duis cubilia blandit non donec justo dictumst, praesent vitae nulla nam pulvinar urna. Adipiscing adipiscing justo urna pulvinar imperdiet nullam, vitae fusce rhoncus proin nonummy suscipit, ullamcorper amet et non potenti platea ultrices, mauris nullam sapien nunc justo vel, eu semper pellentesque arcu fusce augue. Malesuada mauris nibh sit a a scelerisque, velit sem lectus tellus convallis consectetuer, ultricies auctor a ante eros amet sed.\n\n
+Risus lacus duis leo platea wisi, felis maecenas rutrum in id in donec, non id a potenti libero eget, posuere elit ea sed pellentesque quis. Sunt lacus urna lorem elit duis, nibh donec purus quisque consectetuer dolor, neque vestibulum proin ornare eros nonummy phasellus. Iaculis cras eu at egestas dolor montes, viverra quisque malesuada consectetuer semper maecenas, a sed vitae donec tempor aliqua metus, ornare mollis suscipit et erat fusce, sit orci aut auctor elementum fames aliquam. Platea dui integer magnis non metus, minus dignissimos ante massa nostra et, rutrum sapien egestas quis sapien donec donec. Erat sit a eros aenean natoque, quam libero id lorem enim proin, lorem ipsum fermentum mattis metus et. Aliquam aliquet suscipit purus conubia at neque, platea vivamus vestibulum nulla quibusdam senectus, et morbi lectus malesuada gravida donec, elementum sit convallis pellentesque velit amet. Et eveniet viverra vehicula consectetuer justo, provident sed commodo non lacinia velit, tempor phasellus vel leo nisl cras, vivamus et arcu interdum dui eu amet. Volutpat wisi rhoncus vel turpis diam quibusdam, dapibus elit est quisque cubilia mauris, nulla elit magna tempor accumsan bibendum, lorem varius sed interdum eget mattis, scelerisque egestas feugiat donec dui molestie. Leo facilisis nisl sit montes ligula sed, enim commodo consectetuer nunc est et, ut sed vehicula dolor luctus elit. Fermentum cras donec eget nibh est vel, sed justo risus et pharetra diam, eu vivamus egestas ligula risus diam, sed justo eget hac ut mauris. Vestibulum diam nec vitae mi eget suspendisse, aenean arcu purus facilisis purus class in, id aliquam sit id scelerisque sapien etiam. Ut nullam sit sed at mauris lobortis, consequat dolor autem ipsum euismod nulla, elit quis proin eget conubia varius, erat arcu massa mus in mauris, scelerisque ut eu sollicitudin libero leo urna.\n\n
+Consectetuer luctus tempor elit ut dolor ligula, quis dui per dui hendrerit ante sagittis, in quisque pretium in eleifend enim. Condimentum iaculis vitae feugiat dis tellus vel, lectus dolor nec dui nulla nascetur, et pellentesque curabitur lorem leo velit eget. Id nascetur arcu lobortis suspendisse imperdiet urna, natoque nascetur ante in porta a, interdum hendrerit mi bibendum platea tellus, urna in enim ornare vestibulum faucibus enim. Leo fusce egestas ante nec volutpat, in tempor vel facilisis potenti ut, pede at non lorem a commodo, nulla dolor orci interdum vestibulum nulla. Dui nulla vestibulum quisque a pharetra porta, integer nec ipsum nec sed dui pharetra, magna et dignissim ipsum sed dictum, litora eros vivamus scelerisque libero ipsum. Sed ac ac lorem molestie adipiscing morbi, pellentesque imperdiet nunc quis morbi amet ante, libero dui ligula nec risus neque et, velit nonummy phasellus et facilisi amet, ligula in elementum non sapien pulvinar faucibus. Eu leo ut posuere sed aliquet, tincidunt vel urna volutpat tempus sem, sit felis aliquet vestibulum condimentum sit, amet nibh vel tellus purus ullamcorper libero, nulla vestibulum pede ut vestibulum pretium. Eu nulla vestibulum a neque in metus, quisquam nam sed cursus eget luctus, pede ultrices nec sed dignissim pellentesque, sit class cursus metus nulla placerat mauris, consequat mollis neque vivamus amet pede. Mauris dolor nulla diam eros bibendum, quam ante vestibulum morbi non ligula vel, molestie curabitur rhoncus nulla euismod interdum non. Nulla fringilla lorem mollis ad massa, sit molestie nibh lorem arcu volutpat, accumsan commodo lectus eu et donec, sit tempor tempus rutrum in curabitur amet. Nec urna euismod a tincidunt commodo, eu pede turpis libero vitae viverra, ante vestibulum nam non habitasse potenti, mauris imperdiet in in nunc convallis. Et nostra wisi in est accumsan vehicula, quisque vitae felis mauris sed vulputate nec, ante imperdiet sollicitudin massa iaculis massa sit.\n\n
+Quam libero nulla netus eu porta curae, ut nulla bibendum facilisis et urna sed, quis congue vestibulum aliquam interdum etiam. Nulla vel lobortis ullamcorper vitae excepturi, neque urna feugiat lectus vel lacinia, massa pretium orci eu metus neque vulputate. Imperdiet ac velit rhoncus nulla malesuada nullam, nec pulvinar justo gravida lorem rutrum magna, habitasse repudiandae mi eros vestibulum ante, nec euismod dui iaculis in turpis pretium, ac id metus egestas proin lacus lectus. Laoreet lorem nec vitae risus erat arcu, vitae quam ut in ante tristique, porta dolor pede quam et odio nam, arcu lacus sem congue ante cursus massa. Et mattis sagittis erat accumsan fusce quam, vehicula ligula beatae natoque fusce sodales conubia, habitasse metus cum magnis viverra nam cursus, egestas urna wisi primis blandit eu magna, eget libero elit lacus lorem dis aliquam. Ut mauris ante natoque lacus massa, justo a lectus sodales enim adipiscing id, accumsan ut ipsum vestibulum sed enim auctor, vitae congue tincidunt id phasellus lacinia scelerisque, tincidunt sapien nulla euismod volutpat iaculis. Platea sociis nec aliquet nec molestie, in mi et augue sapien in vivamus, integer fames proin vitae in ullamcorper et. Fringilla etiam sapiente rhoncus suspendisse nec id, lobortis cras eget egestas dui ac nec, justo lacus ut lorem bibendum quia eros, eget a gravida id donec nunc suscipit, porta sed in sodales non rutrum. Lectus vel dui elementum pellentesque magna aliquam, vitae non sit pede et fusce nibh, id id deserunt ornare dui sit condimentum, in adipiscing imperdiet turpis nam aliquet, facilisis metus magna lacus wisi facilisis tortor. Vulputate elit accumsan quam amet ligula, suspendisse lacus mi nonummy integer urna, libero nulla nunc varius in odio, laoreet nulla amet placerat amet nec. Consectetuer vel massa hendrerit vitae iaculis id, sed ut ut laudantium odio in, elit vestibulum duis ante maecenas interdum in, neque vehicula ultrices varius in quam, pede tellus pellentesque sed nullam quis.</string>
+    <string name="lipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus sem et ante rhoncus pharetra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur lacinia mattis quam, non laoreet felis vestibulum ac. Curabitur pharetra vel est quis cursus. Etiam faucibus turpis in nunc semper sollicitudin. Nam fermentum commodo ligula. Aliquam a tellus sollicitudin, ultricies est ac, porta ante. Nam aliquet mi nulla, ut laoreet nunc vestibulum ut. Quisque non purus urna. Aliquam sed porta lectus. In a ipsum varius, imperdiet magna in, hendrerit arcu. Donec porta, nulla non viverra sollicitudin, nisl mi suscipit nisl, nec pellentesque est mi ut neque. Duis viverra laoreet nibh at malesuada.</string>
+    <string name="sticky_header">Sticky</string>
+
+    <string name="menu_about">About</string>
+    <string name="msg_app_version">App Version: %1$s (Build: %2$s)</string>
+    <string name="msg_lib_version">Library Version: %1$s</string>
+    <string name="msg_copyright">© 2014 Soichiro Kashima All rights reserved.</string>
+    <string name="msg_about_description">Demo app for Android-ObservableScrollView.</string>
+    <string name="msg_about_fork_me_on_github">Fork me on GitHub!</string>
+    <string name="msg_about_github_url">https://github.com/ksoichiro/Android-ObservableScrollView</string>
+    <string name="msg_about_library_description">Android-ObservableScrollView is a library to observe scroll events for scrollable views.</string>
+    <string name="msg_android_trademark">Android is a trademark of Google Inc.</string>
+    <string name="desc_about_app">About this app</string>
+
+
+    <string name="card_front">正面</string>
+    <string name="card_back">反面</string>
+
+    <string name="str_to">：</string>
+    <string name="str_at">\@</string>
+    <string name="str_send_to">我给主播赠送了</string>
+    <string name="str_news">News</string>
+    <!-- Fragment Labels -->
+    <string name="default_configuration_xml_fragment">Default Configuration via XML</string>
+    <string name="default_configuration_code_fragment">Default Configuration via Code</string>
+
+    <string name="expandablefab_fragment">ExpandableFab</string>
+    <string name="faboptions_fragment">FabOptions</string>
+    <string name="labels_fragment">Labels</string>
+    <string name="overlay_fragment">Overlay</string>
+    <string name="no_faboptions_fragment">No FabOptions</string>
+    <string name="no_labels_fragment">No Labels</string>
+    <string name="remove_faboptions_fragment">Remove FabOptions</string>
+
+    <string name="open_downwards_fragment">Open Downwards</string>
+    <string name="disabled_fragment">Disabled</string>
+    <string name="multiple_expandablefabs_fragment">Multiple ExpandableFabs</string>
+    <string name="custom_sizes_fragment">Custom Sizes</string>
+    <string name="wacky_fragment">Wacky</string>
+    <string name="snackbar_compatibility_fragment">Snackbar Compatibility</string>
+    <string name="bottom_app_bar_compatibility_fragment">BottomAppBar Compatibility</string>
+
+    <!-- Fragment Info Blocks -->
+    <string name="default_configuration_xml_fragment_info">
+        Although ExpandableFab widgets can be highly customized to fit your needs, they\'re also
+        initialized with user-friendly default values out of the box for quick setup as well. This
+        fragment displays an ExpandableFab widget in its default configuration with just icons and
+        labels for the FabOptions added.\n\nTilt the device into landscape orientation to see how
+        the ExpandableFab can be orientation-aware as well.\n\nOpen the Navigation Drawer to the
+        left to see a few other common customizations that can be achieved (not an exhaustive list;
+        review the docs to see every customizable property!).
+    </string>
+    <string name="default_configuration_code_fragment_info">
+        Shows the exact same configuration as \'Default Configuration via XML\', but configured via
+        code.\n\nHave a look at the \'onViewCreated\' method within this fragment for some other
+        helpful tips when interacting with the widget programmatically.
+    </string>
+
+    <string name="expandablefab_fragment_info">
+        The ExpandableFab is the focal point for the widget\'s functionality, from an end-user\'s
+        perspective. Easily customize it through the API (programmatically or XML) to match your
+        app\'s theme and be eye-catching to your clients.\n\nBelow is an example of an
+        ExpandableFab with a Label.
+    </string>
+    <string name="faboptions_fragment_info">
+        FabOptions are the buttons that animate out from the ExpandableFab and present the user
+        with different actions they can take on the current screen. There are many ways to customize
+        a FabOption, and a subset of those customizations are shown below.\n\nNote: FabOptions are
+        optional. To see an example of an ExpandableFab without FabOptions, navigate to
+        \'No FabOptions\'.
+    </string>
+    <string name="labels_fragment_info">
+        All labeled views (currently just ExpandableFab and FabOption) have a Label that is hidden
+        by default. Simply set the Label\'s \'labelText\' property to non-null in order to make it
+        visible.\n\nA few of the available properties for customizing Labels are shown below, like
+        its text size and background color.
+    </string>
+    <string name="overlay_fragment_info">
+        An Overlay is an optional view that will partially or fully obscure the screen\'s content
+        when an ExpandableFab is clicked (depending on the opacity you set), allowing the
+        ExpandableFab and FabOptions to become more apparent to the user.\n\nClick the
+        ExpandableFab below to see a fully opaque Overlay in action.
+    </string>
+
+    <string name="no_faboptions_fragment_info">
+        FabOptions are optional. You can use an ExpandableFab like a super-powered Floating Action
+        Button by simply not setting any FabOptions for that orientation. You can still include an
+        Overlay or use animations and other properties of the ExpandableFab if desired.
+    </string>
+    <string name="no_labels_fragment_info">
+        Labels for every labeled view are optional. You\'ve seen that so far with the ExpandableFab
+        itself, but this example also shows it for FabOptions.\n\nYou can also hide a currently
+        visible label (even if it was set via XML) at any time programmatically by setting the
+        \'labelText\' property to null. If later set non-null, the label will still retain all
+        previous customizations.
+    </string>
+    <string name="remove_faboptions_fragment_info">
+        You can dynamically remove FabOptions at runtime.\n\nSelect the index of a FabOption to
+        remove from the Spinner below, then click \'Remove\' to see it disappear from the
+        ExpandableFab. Note that the indices are zero based, so Option 1 has an index of 0.
+        \n\nCheck the code of this Fragment to see how to remove FabOptions by index and by object
+        reference in both Java and Kotlin.
+    </string>
+    <string name="open_downwards_fragment_info">
+        You can specify a \'FabOptionPosition\' that will be applied to all FabOptions in a
+        particular orientation, determining how they will position themselves when drawn relative
+        to the previous FabOption.\n\nIn this example, we have set the FabOptions in both portrait
+        and landscape orientation to \'FabOptionPosition.BELOW\'.\n\nNotice how the labels animate
+        in a different direction than in the \'Default Configuration\' examples. This is due to the
+        value set on \'translationXPx\'. Read the documentation to see how this value gets used.
+    </string>
+    <string name="disabled_fragment_info">
+        You can easily disable and enable an ExpandableFab or FabOptions. When disabled through the
+        API, the views become visually distinct and unclickable. Note that if you don\'t like the
+        color scheme used for disabled views, you can edit them manually (they derive from
+        subclasses of \'View\' and thus have all the properties you\'d expect).\n\nClick this
+        TextView to toggle the ExpandableFab below back and forth between enabled and disabled.
+        When enabled, you can also click the ExpandableFab to see some disabled FabOptions.
+    </string>
+    <string name="multiple_expandablefabs_fragment_info">
+        It\'s perfectly legal to include multiple \'ExpandableFabLayout\'s per screen, and each one
+        is self contained and orientation aware.\n\nClick each ExpandableFab to see it operate
+        independently of the others. Then rotate the device to see landscape changes.
+    </string>
+    <string name="custom_sizes_fragment_info">
+        If you would like your ExpandableFab and/or FabOptions to be custom sizes, set the
+        layout_width and layout_height as desired, then set the correct property (\'efabSize\' or
+        \'fabOptionSize\') to FabSize.CUSTOM (which tells the library not to overwrite your custom
+        sizing).\n\nIf your custom sized ExpandableFab or FabOption also displays an icon, then the
+        Android Framework also requires you to set \'app:fabCustomSize\' (XML) or \'setCustomSize\'
+        (code) equal to your layout_width/height, and \'app:maxImageSize\' (XML) equal to your
+        icon\'s size. Currently, the Android API does not seem to have a maxImageSize method
+        available programmatically.\n\nNote: To ensure proper spacing, consider making all
+        FabOptions within a particular orientation have identical sizes.
+    </string>
+    <string name="wacky_fragment_info">
+        This fragment makes use of every property you can customize on an Overlay, ExpandableFab,
+        FabOption and Label (though many are just set to their default values).\n\nNote that since
+        we only defined a portrait configuration, the same widget will appear when the device is
+        rotated to landscape. However, many devices won\'t have the screen real estate to show all
+        options correctly in landscape.\n\nThis fragment is thus a perfect example of showing when
+        you\'d likely want your landscape widget to be different from your portrait widget.
+    </string>
+    <string name="snackbar_compatibility_fragment_info">
+        \'ExpandableFabLayout\' is the parent of every view in the ExpandableFab widget. It derives
+        from CoordinatorLayout, meaning it can play nicely with many of the new Material Design
+        behaviors, views and animations.\n\nClick the buttons below to see the widget interact with
+        a \'Snackbar\' for instance.
+    </string>
+    <string name="bottom_app_bar_compatibility_fragment_info">
+        Below we see the ExpandableFab working with the BottomAppBar, right out of the box.\n\nFor
+        developers using a BottomAppBar with different ExpandableFabs in portrait and landscape
+        (like this example): see the code in this fragment for a simple runtime anchor trick. Turn
+        your device to landscape to see how it works.\n\nTo have the Overlay cover the BottomAppBar,
+        define the Overlay AFTER the BottomAppBar in your \'ExpandableFabLayout\'.
+    </string>
+
+    <!-- Misc -->
+    <string name="no_faboptions_fragment_dialog_title">Hey, you!</string>
+    <string name="no_faboptions_fragment_dialog_message">
+        Thanks for checking out the library!\n\nHead to the repo
+        (www.github.com/nambicompany/expandable-fab) to find the full documentation, library
+        website, guidance on contributing to the library or putting in a feature request/support
+        ticket, and other helpful info.
+    </string>
+    <string name="clcf_snackbar_above_efab">Display Snackbar above ExpandableFab</string>
+    <string name="clcf_snackbar_below_efab">Display Snackbar below ExpandableFab</string>
+    <string name="remove">Remove</string>
+
+    <string name="star">Star</string>
+    <string name="heart">Heart</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="star_layout_text">Highly customizable and lightweight library that allows you to create a button with animation effect similar to Twitter\'s heart.</string>
+    <string name="star_layout_text2">Tap on this card to check out the sleek animation!! Any custom icon of choice can be used with this library very easily. Checkout more examples by switching views from the tab above.</string>
+    <string name="heart_layout_text">Increase user engagement and social activities in your App with the help of these buttons.</string>
+    <string name="facebook_layout_text">Increase clicks where it matters the most to you, by attracting user attention.</string>
+    <string name="twitter_layout_text">Follow me on Twitter</string>
+    <string name="thankyou_text">Thank You :)</string>
+    <string name="github_source_code">Source Code</string>
+
+    <string name="reset">Reset</string>
+    <string name="contributors">Contributors</string>
+    <string name="see_the_sauce">See the Sauce</string>
+
+    <string name="product_title">Product Title</string>
+    <string name="product_description_goes_here">Product Description goes here</string>
+    <string name="check_other_product">Check other product</string>
+    <string name="other_product_info_goes_here">Other product info goes here</string>
+    <string name="product_similar">Product Similar</string>
+    <string name="similar_items_go_here">Similar items go here</string>
+    <string name="save">SAVE</string>
+    <string name="buy">BUY</string>
+    <string name="other_product_related_info_goes_here">Other product related info goes here!</string>
+    <string name="you_can_add_more_data_here">You can add more data here</string>
+    <string name="more_colors">More colors</string>
+    <string name="text_right"></string>
+    <string name="text_left"></string>
+
+    <string name="expandable_card_view_image_content_description">Arrow to expand card</string>
+    <string name="expandable_card_view_icon_content_description">Card icon</string>
+
+    <string name="card_title_preview">Preview</string>
+    <string name="card_title_credits">Credits</string>
+
+    <string name="preview_title_big_cards">Big cards</string>
+    <string name="preview_title_small_cards">Small cards</string>
+    <string name="preview_title_vertical">Vertical scroll</string>
+
+    <string name="credit_title_taya">Taisiya Yurkiv</string>
+    <string name="credit_title_flaticon">Zlatko Najdenovski, Freepik</string>
+    <string name="credit_title_herriot">Herriottgrace</string>
+    <string name="credit_summary_taya">Sample app design</string>
+    <string name="credit_summary_flaticon">Monument icons from www.flaticon.com</string>
+    <string name="credit_summary_herriot">Shop goods photos from www.herriottgrace.com</string>
+
+    <string name="btn_smooth_scroll">Smooth scroll</string>
+    <string name="btn_transition_time">Transition time</string>
+
+    <string name="dialog_seekbar_transition_time">Item transition time in millis</string>
+
+    <string name="msg_no_browser">No app found to open the url</string>
+    <string name="msg_unsupported_op">Unsupported operation</string>
+
+    <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+
+    <string name="mi_rate_on_github">Rate on GitHub</string>
+
+    <string name="cd_back">Back</string>
+    <string name="cd_comment">Comment</string>
+    <string name="cd_favourite">Favourite</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sort_ascending">Sort Ascending</string>
+    <string name="sort_descending">Sort Descending</string>
+    <string name="hiding_row_sample">Hiding 3. Row Sample</string>
+    <string name="showing_row_sample">Showing 3. Row Sample</string>
+    <string name="scroll_to_column_position">Scroll to 15. column position</string>
+    <string name="scroll_to_row_position">Scroll to 5. row position</string>
+    <string name="show_hide_the_column">Showing / Hiding 1. column</string>
+    <string name="table_pagination_details">Page %s, showing items %s - %s.</string>
+
+
+    <string-array name="moods">
+        <item />
+        <item>Happy</item>
+        <item>Sad</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item />
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="items_per_page">
+        <item>10</item>
+        <item>20</item>
+        <item>25</item>
+        <item>50</item>
+        <item>All</item>
+    </string-array>
+
+
+    <string name="options">Options</string>
+    <string name="orientation">Orientation</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="scallop">Scallop</string>
+    <string name="background_color">Background Color</string>
+    <string name="ticket_options">Ticket Options</string>
+    <string name="border">Border</string>
+    <string name="divider">Divider</string>
+    <string name="radius">Radius</string>
+    <string name="elevation">Elevation</string>
+    <string name="position_percent">Position(in %)</string>
+    <string name="color">Color</string>
+    <string name="shadow_color">Shadow Color</string>
+    <string name="width">Width</string>
+    <string name="padding">Padding</string>
+    <string name="enable">Enable</string>
+    <string name="type">Type</string>
+    <string name="dash_length">Dash Length</string>
+    <string name="dash_gap">Dash Gap</string>
+    <string name="ticket_attributes">Ticket Attributes</string>
+    <string name="movie_title"><![CDATA[Fantastic Beast & Where to Find Them]]></string>
+    <string name="movie_duration">2h 13min</string>
+    <string name="movie_genre">Adventure, Fantasy, Action</string>
+    <string name="movie_ticket_number">400&#8211;2000&#8211;2020</string>
+    <string name="date">Date</string>
+    <string name="movie_date">01&#8211;03&#8211;2017</string>
+    <string name="time">Time</string>
+    <string name="movie_time">23:30</string>
+    <string name="seat">Seat</string>
+    <string name="movie_seat">C5-C8</string>
+    <string name="corners">Corners</string>
+    <string name="example">Example</string>
+    <string name="background">Background</string>
+    <string name="color_before_divider">Color before Divider</string>
+    <string name="color_after_divider">Color after Divider</string>
+    <string-array name="divider_type">
+        <item>Normal</item>
+        <item>Dashed</item>
+    </string-array>
+
+    <string-array name="scallop_position">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="corner_type">
+        <item>Normal</item>
+        <item>Rounded</item>
+        <item>Scallop</item>
+    </string-array>
+
+    <string-array name="tabs">
+        <item>Smiley &amp; People</item>
+        <item>Animals</item>
+        <item>Food &amp; Drink</item>
+        <item>Activity</item>
+        <item>Travel &amp; Places</item>
+        <item>Flags</item>
+    </string-array>
+
 </resources>

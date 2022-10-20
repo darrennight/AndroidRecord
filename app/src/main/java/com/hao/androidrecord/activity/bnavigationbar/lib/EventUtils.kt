@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.bnavigationbar
+package com.hao.androidrecord.activity.bnavigationbar.lib
 
 import android.graphics.Rect
 import android.view.View

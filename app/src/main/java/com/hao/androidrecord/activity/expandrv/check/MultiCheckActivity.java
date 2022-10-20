@@ -1,4 +1,6 @@
-package com.hao.androidrecord.activity.expandrv;
+package com.hao.androidrecord.activity.expandrv.check;
+
+import static com.hao.androidrecord.activity.expandrv.GenreDataFactory.makeMultiCheckGenres;
 
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,7 @@ public class MultiCheckActivity extends AppCompatActivity {
     LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
     adapter = new MultiCheckGenreAdapter(makeMultiCheckGenres());
+//    adapter.toggleGroup(0)
     recyclerView.setLayoutManager(layoutManager);
     recyclerView.setAdapter(adapter);
 

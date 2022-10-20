@@ -1,6 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/Heading"
+        android:text="@string/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/enable"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox_show_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/width"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/seekBar_divider_width"
+            style="@style/DiscreteSeekBar"
+            app:dsb_max="30"
+            app:dsb_min="0"
+            app:dsb_value="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/padding"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/seekBar_divider_padding"
+            style="@style/DiscreteSeekBar"
+            app:dsb_max="40"
+            app:dsb_min="0"
+            app:dsb_value="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_oval_border_black"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/image_divider_color"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/bg_oval_white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_divider_type"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/divider_type"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dash_length"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/seekBar_divider_dash_length"
+            style="@style/DiscreteSeekBar"
+            app:dsb_max="50"
+            app:dsb_min="0"
+            app:dsb_value="16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dash_gap"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/seekBar_divider_dash_gap"
+            style="@style/DiscreteSeekBar"
+            app:dsb_max="50"
+            app:dsb_min="0"
+            app:dsb_value="8" />
+
+    </LinearLayout>
+
+</merge>
