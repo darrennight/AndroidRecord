@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hao.androidrecord.custom.PressAlphaTextView
+        android:id="@+id/tv_alpha"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="长按点击有透明度"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
