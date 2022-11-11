@@ -560,4 +560,11 @@
     <color name="lightGray">#999999</color>
 
 
+    <color name="calendar_bg_color">#FFFFFF</color>
+    <color name="holiday_text_color">#9082BD</color>
+    <color name="select_circle_color">#FF8594</color>
+    <color name="calendar_colorBackground">#F0F1F5</color>
+
+    <color name="color_select_date_dialog_edit_text_bg_focus">#A68BFF</color>
+
 </resources>

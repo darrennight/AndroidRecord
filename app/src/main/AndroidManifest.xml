@@ -430,6 +430,8 @@
         <activity android:name=".activity.scalingLayout.SearchBarDemoActivity"/>
 
         <activity android:name=".activity.tabScrollAttacher.TabScrollActivity"/>
+
+        <activity android:name=".calendar.activity.CalendarActivity"/>
     </application>
 
 </manifest>
