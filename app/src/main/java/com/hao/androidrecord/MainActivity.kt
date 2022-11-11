@@ -1144,6 +1144,8 @@ class MainActivity : AppCompatActivity() {
         val gson = Gson()
         val jscity = gson.toJson(listPri)
         Log.e("=======city","$jscity")
+
+        
     }
 
 }
