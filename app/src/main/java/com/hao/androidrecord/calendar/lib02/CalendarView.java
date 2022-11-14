@@ -98,7 +98,7 @@ public class CalendarView extends FrameLayout {
      * @param context context
      */
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.cv_layout_calendar_view, this, true);
+        LayoutInflater.from(context).inflate(R.layout.cv_layout_calendar_view_lib02, this, true);
         FrameLayout frameContent = findViewById(R.id.frameContent);
         this.mWeekPager = findViewById(R.id.vp_week);
         this.mWeekPager.setup(mDelegate);

@@ -458,6 +458,23 @@
 
         <activity android:name=".calendar.activity.lib01.TestActivity"
             android:theme="@style/AppTicketTheme.NoActionBar"/>
+
+
+        <activity android:name=".calendar.activity.lib02.custom.CustomActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"
+            />
+        <activity android:name=".calendar.activity.lib02.full.FullActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"
+            />
+        <activity android:name=".calendar.activity.lib02.mix.MixActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"
+            />
+        <activity android:name=".calendar.activity.lib02.multi.MultiActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib02.range.RangeActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib02.CalendarLib02Activity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -17,4 +17,9 @@
         android:layout_height="wrap_content"
         android:text="日历--优雅--可以自定义--适配自己需要的"
         />
+    <Button
+        android:id="@+id/btn_calendar_lib02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日历--优雅--跟上面代码lib几乎一样，用这个start更多"/>
 </LinearLayout>
