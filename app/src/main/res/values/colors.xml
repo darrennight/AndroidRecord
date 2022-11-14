@@ -567,4 +567,8 @@
 
     <color name="color_select_date_dialog_edit_text_bg_focus">#A68BFF</color>
 
+
+    <color name="line_color">#e7e7e7</color>
+    <color name="content_background">#f2f2f2</color>
+    <color name="solar_background">#009988</color>
 </resources>

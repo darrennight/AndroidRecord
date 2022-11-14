@@ -431,7 +431,33 @@
 
         <activity android:name=".activity.tabScrollAttacher.TabScrollActivity"/>
 
-        <activity android:name=".calendar.activity.CalendarActivity"/>
+        <activity android:name=".calendar.activity.CalendarMainActivity"/>
+
+        <activity android:name=".calendar.activity.lib.CalendarActivity"/>
+
+        <activity android:name=".calendar.activity.lib01.CalendarLib01Activity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.colorful.ColorfulActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.custom.CustomActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.index.IndexActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.meizu.MeiZuActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.pager.CalendarViewPagerActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.progress.ProgressActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.simple.SimpleActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.single.SingleActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".calendar.activity.lib01.solay.SolarActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
+
+        <activity android:name=".calendar.activity.lib01.TestActivity"
+            android:theme="@style/AppTicketTheme.NoActionBar"/>
     </application>
 
 </manifest>

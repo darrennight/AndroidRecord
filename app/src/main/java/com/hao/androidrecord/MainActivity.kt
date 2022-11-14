@@ -130,7 +130,7 @@ import com.hao.androidrecord.adapter.CityData
 import com.hao.androidrecord.adapter.DemoAdapter
 import com.hao.androidrecord.adapter.JsonBean
 import com.hao.androidrecord.animtest.AnimationTestMainActivity
-import com.hao.androidrecord.calendar.activity.CalendarActivity
+import com.hao.androidrecord.calendar.activity.CalendarMainActivity
 import com.hao.androidrecord.custom.drapmenu.DropMenuActivity
 import com.hao.androidrecord.custom.pickerads.AddressDialog
 import com.hao.androidrecord.custom.pickerads.BaseDialog
@@ -780,7 +780,7 @@ class MainActivity : AppCompatActivity() {
 
                     157 -> {
                         startActivity(Intent(this@MainActivity,
-                            CalendarActivity::class.java))
+                            CalendarMainActivity::class.java))
                     }
                 }
             }
@@ -956,7 +956,7 @@ class MainActivity : AppCompatActivity() {
         list.add("154弹出键盘自动上移")
         list.add("155 滚动 动态缩放 layout")
         list.add("156 列表滚动，上面tab切换")
-        list.add("157 日历--day绘制被封装到month里面了 耦合严重")
+        list.add("157 日历相关")
         adapter.notifyDataSetChanged()
 
 
