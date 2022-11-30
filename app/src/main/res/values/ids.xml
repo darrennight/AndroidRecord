@@ -12,4 +12,8 @@
 
     <item name="fixed_pin_id" type="id"/>
     <item name="chat_news_id" type="id" />
+
+    <item name="swipeHorizontalView" type="id" />
+    <item name="swipeHorizontalShadowView" type="id" />
+    <item name="swipeHorizontalDingWrapperView" type="id" />
 </resources>

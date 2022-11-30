@@ -111,6 +111,7 @@ import com.hao.androidrecord.activity.sheet.MainGaodeSheetActivity
 import com.hao.androidrecord.activity.slidingTab.MainSlidingActivity
 import com.hao.androidrecord.activity.snaphelper.SnapHelperActivity
 import com.hao.androidrecord.activity.stickscroll.MainStickScrollActivity
+import com.hao.androidrecord.activity.swipehorizontalscrollview.HorizontalMainActivity
 import com.hao.androidrecord.activity.switchButton.SwitchButtonMainActivity
 import com.hao.androidrecord.activity.tabScrollAttacher.TabScrollActivity
 import com.hao.androidrecord.activity.table.ChangeTableColorActivity
@@ -786,6 +787,12 @@ class MainActivity : AppCompatActivity() {
                     158 -> {
                         startActivity(Intent(this@MainActivity,
                             ElasticViewMainActivity::class.java))
+
+                    }
+
+                    159 -> {
+                        startActivity(Intent(this@MainActivity,
+                            HorizontalMainActivity::class.java))
                     }
                 }
             }
@@ -963,6 +970,7 @@ class MainActivity : AppCompatActivity() {
         list.add("156 列表滚动，上面tab切换")
         list.add("157 日历相关")
         list.add("158 点击缩放效果")
+        list.add("159 表格水平滚动")
         adapter.notifyDataSetChanged()
 
 

@@ -917,4 +917,13 @@
     </declare-styleable>
 
 
+
+    <declare-styleable name="HorizontalRecyclerView">
+        <attr name="needHideLeft" format="boolean" />
+        <attr name="needShadow" format="boolean" />
+        <attr name="needVibrate" format="boolean" />
+        <attr name="extendThreshold" format="dimension" />
+        <attr name="foldThreshold" format="dimension" />
+        <attr name="needFixItemPosition" format="boolean" />
+    </declare-styleable>
 </resources>
