@@ -475,6 +475,11 @@
             android:theme="@style/AppTicketTheme.NoActionBar"/>
         <activity android:name=".calendar.activity.lib02.CalendarLib02Activity"
             android:theme="@style/AppTicketTheme.NoActionBar"/>
+        <activity android:name=".activity.elasticviews.ElasticViewMainActivity"
+            />
+        <activity android:name=".activity.elasticviews.ExampleActivity0"/>
+        <activity android:name=".activity.elasticviews.ExampleActivity1"/>
+        <activity android:name=".activity.elasticviews.ExampleActivity2"/>
     </application>
 
 </manifest>

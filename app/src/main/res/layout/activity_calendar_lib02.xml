@@ -171,7 +171,9 @@
             app:year_view_week_height="0dp"
             app:year_view_week_text_color="#666666"
             app:month_view_auto_select_day="last_select_day_ignore_current"
-            app:year_view_week_text_size="7sp" />
+            app:year_view_week_text_size="7sp"
+            app:calendar_height="30dp"
+            />
 
 
         <androidx.core.widget.NestedScrollView

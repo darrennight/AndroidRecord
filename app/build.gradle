@@ -353,4 +353,6 @@ dependencies {
 
     //时间 日前 处理的api
     implementation 'joda-time:joda-time:2.12.1'
+
+    implementation "com.github.skydoves:elasticviews:2.1.0"
 }

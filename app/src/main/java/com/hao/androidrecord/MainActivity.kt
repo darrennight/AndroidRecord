@@ -54,6 +54,7 @@ import com.hao.androidrecord.activity.dfilp.MainDialogActivity
 import com.hao.androidrecord.activity.dialog.DialogActivity
 import com.hao.androidrecord.activity.drag.DragCardActivity
 import com.hao.androidrecord.activity.dyindex.DYIndexMainActivity
+import com.hao.androidrecord.activity.elasticviews.ElasticViewMainActivity
 import com.hao.androidrecord.activity.expandable.ExpandableRecycleActivity
 import com.hao.androidrecord.activity.expandable.two.TwoExpandableActivity
 import com.hao.androidrecord.activity.expandablecardview.ExpandCardMainActivity
@@ -782,6 +783,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             CalendarMainActivity::class.java))
                     }
+                    158 -> {
+                        startActivity(Intent(this@MainActivity,
+                            ElasticViewMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -957,6 +962,7 @@ class MainActivity : AppCompatActivity() {
         list.add("155 滚动 动态缩放 layout")
         list.add("156 列表滚动，上面tab切换")
         list.add("157 日历相关")
+        list.add("158 点击缩放效果")
         adapter.notifyDataSetChanged()
 
 
