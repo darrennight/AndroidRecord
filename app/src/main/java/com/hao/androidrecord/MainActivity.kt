@@ -142,6 +142,7 @@ import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import com.hao.androidrecord.indexable.IndexableCityActivity
 import com.hao.androidrecord.service.MusicPlayerService
+import com.hao.androidrecord.table.LunaActivity
 import com.hao.androidrecord.threestateswitch.ThreeStateActivity
 import com.hao.androidrecord.util.AliBase64
 import com.hao.androidrecord.util.MBase64
@@ -794,6 +795,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             HorizontalMainActivity::class.java))
                     }
+                    160 -> {
+                        startActivity(Intent(this@MainActivity,
+                            LunaActivity::class.java))
+                    }
                 }
             }
         }
@@ -971,6 +976,7 @@ class MainActivity : AppCompatActivity() {
         list.add("157 日历相关")
         list.add("158 点击缩放效果")
         list.add("159 表格水平滚动")
+        list.add("160 表格 table-layout-manager--黄历")
         adapter.notifyDataSetChanged()
 
 

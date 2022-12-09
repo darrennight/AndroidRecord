@@ -487,6 +487,8 @@
         <activity android:name=".activity.swipehorizontalscrollview.HideLeftActivity"/>
         <activity android:name=".activity.swipehorizontalscrollview.HorizontalMainActivity"/>
         <activity android:name=".activity.swipehorizontalscrollview.NeedFixItemPositionActivity"/>
+
+        <activity android:name=".table.LunaActivity"/>
     </application>
 
 </manifest>
