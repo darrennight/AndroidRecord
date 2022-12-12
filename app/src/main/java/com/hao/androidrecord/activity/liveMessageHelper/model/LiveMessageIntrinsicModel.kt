@@ -1,6 +1,12 @@
 package com.hao.androidrecord.activity.liveMessageHelper.model
 
-open class LiveMessageIntrinsicModel : Object() {
+import android.os.Parcelable
+import com.squareup.moshi.JsonClass
+import kotlinx.android.parcel.Parcelize
+
+@JsonClass(generateAdapter = true)
+@Parcelize
+open class LiveMessageIntrinsicModel : Parcelable {
 
     companion object {
         val TYPE_SYSTEM: Int = 1//系统通知

@@ -5,8 +5,8 @@ import android.text.SpannableStringBuilder
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.ViewGroup
+import com.dq.livemessagedemo.view.DrawablePaintTextView
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageIntrinsicModel
-import com.hao.androidrecord.activity.liveMessageHelper.view.DrawablePaintTextView
 
 class LiveMessageTextViewHelper {
 

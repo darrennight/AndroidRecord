@@ -1,14 +1,13 @@
 package com.hao.androidrecord.activity.liveMessageHelper.tool
 
 import android.text.style.ImageSpan
-import android.util.Log
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.dq.livemessage.ImageSpanCacheInstance
 import com.dq.livemessage.QCenterAlignImageSpan
+import com.dq.livemessage.ImageSpanCacheInstance
+import com.dq.livemessagedemo.view.DrawablePaintTextView
 import com.hao.androidrecord.R
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageIntrinsicModel
-import com.hao.androidrecord.activity.liveMessageHelper.view.DrawablePaintTextView
 
 //直播间 - 左下角公屏RV - 其中一条Item消息 - TextView的第一个Tag（比如 "通知" "榜1" "房管"）
 class LiveMessageImageSpanTitleStrategy : LiveMessageImageSpanStrategy {

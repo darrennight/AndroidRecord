@@ -6,7 +6,6 @@ import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.CharacterStyle
 import android.text.style.ImageSpan
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageIntrinsicModel

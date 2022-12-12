@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hao.androidrecord.R;
 
+//https://github.com/QDong415/QLiveMessageHelper
 public class RootActivity extends AppCompatActivity {
 
     private EditText minRefreshTimeEditText, maxCacheEditText;

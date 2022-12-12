@@ -3,10 +3,7 @@ package com.hao.androidrecord.activity.liveMessageHelper.tool
 import android.graphics.Color
 import android.text.Spannable
 import android.text.SpannableStringBuilder
-import android.text.style.CharacterStyle
 import android.text.style.ForegroundColorSpan
-import android.text.style.ImageSpan
-import android.widget.TextView
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageIntrinsicModel
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageIntrinsicModel.Companion.TYPE_GIFT
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageIntrinsicModel.Companion.TYPE_MESSAGE

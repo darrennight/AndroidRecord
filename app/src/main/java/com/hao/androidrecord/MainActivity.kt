@@ -46,6 +46,8 @@ import com.hao.androidrecord.activity.bottomsheet.CoordinatorActivity
 import com.hao.androidrecord.activity.bottomtab.RVBottomActivity
 import com.hao.androidrecord.activity.chatview.SimpleChatViewActivity
 import com.hao.androidrecord.activity.chooser.ChooseMainActivity
+import com.hao.androidrecord.activity.coffeeView.CoffeeView
+import com.hao.androidrecord.activity.coffeeView.CoffeeViewActivity
 import com.hao.androidrecord.activity.consecutivescroller.MainScrollerActivity
 import com.hao.androidrecord.activity.coroutine.*
 import com.hao.androidrecord.activity.cusTab.TabMainActivity
@@ -142,7 +144,9 @@ import com.hao.androidrecord.custom.selector.MimeType
 import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import com.hao.androidrecord.indexable.IndexableCityActivity
+import com.hao.androidrecord.leonids.ExampleListActivity
 import com.hao.androidrecord.service.MusicPlayerService
+import com.hao.androidrecord.table.table01.TableActivity
 import com.hao.androidrecord.table.tablelunar.LunaActivity
 import com.hao.androidrecord.threestateswitch.ThreeStateActivity
 import com.hao.androidrecord.util.AliBase64
@@ -800,9 +804,22 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             LunaActivity::class.java))
                     }
-                    161 -> {
+
+                      161 -> {
+                        startActivity(Intent(this@MainActivity,
+                            TableActivity::class.java))
+                    }
+                     162 -> {
                         startActivity(Intent(this@MainActivity,
                             RootActivity::class.java))
+                    }
+                    163 -> {
+                        startActivity(Intent(this@MainActivity,
+                            ExampleListActivity::class.java))
+                    }
+                    164 -> {
+                        startActivity(Intent(this@MainActivity,
+                            CoffeeViewActivity::class.java))
                     }
                 }
             }
@@ -982,8 +999,13 @@ class MainActivity : AppCompatActivity() {
         list.add("158 点击缩放效果")
         list.add("159 表格水平滚动")
         list.add("160 表格 table-layout-manager--黄历")
-        list.add("161 直播间聊天消息列表")
+        list.add("161 表格")
+        list.add("162 直播间聊天消息列表")
+        list.add("163粒子爆炸效果")
+        list.add("164咖啡冒烟效果")
         adapter.notifyDataSetChanged()
+
+        rv_demo_list.scrollToPosition(list.size-1)
 
 
         testWebView()

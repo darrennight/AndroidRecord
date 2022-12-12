@@ -494,6 +494,22 @@
         <activity android:name=".activity.liveMessageHelper.RootActivity"/>
 
         <activity android:name=".table.table01.TableActivity"/>
+
+        <activity android:name=".leonids.AnimatedParticlesExampleActivity"/>
+        <activity android:name=".leonids.ConfettiExampleActivity"/>
+        <activity android:name=".leonids.DustExampleActivity"/>
+        <activity android:name=".leonids.EmiterBackgroundSimpleExampleActivity"/>
+        <activity android:name=".leonids.EmiterIntermediateExampleActivity"/>
+        <activity android:name=".leonids.EmiterSimpleExampleActivity"/>
+        <activity android:name=".leonids.EmiterTimeLimitedExampleActivity"/>
+        <activity android:name=".leonids.EmiterWithGravityExampleActivity"/>
+        <activity android:name=".leonids.ExampleListActivity"/>
+        <activity android:name=".leonids.FireworksExampleActivity"/>
+        <activity android:name=".leonids.FollowCursorExampleActivity"/>
+        <activity android:name=".leonids.OneShotAdvancedExampleActivity"/>
+        <activity android:name=".leonids.OneShotSimpleExampleActivity"/>
+        <activity android:name=".leonids.StarsExampleActivity"/>
+        <activity android:name=".activity.coffeeView.CoffeeViewActivity"/>
     </application>
 
 </manifest>

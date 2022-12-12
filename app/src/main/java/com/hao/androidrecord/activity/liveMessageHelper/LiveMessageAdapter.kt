@@ -1,6 +1,7 @@
-package com.hao.androidrecord.activity.liveMessageHelper
+package com.dq.livemessagedemo
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

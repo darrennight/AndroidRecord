@@ -1,4 +1,4 @@
-package com.hao.androidrecord.activity.liveMessageHelper.view
+package com.dq.livemessagedemo.view
 
 import android.content.Context
 import android.graphics.Canvas

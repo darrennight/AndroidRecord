@@ -26,7 +26,6 @@ class MyApplication:Application() {
         var instance: MyApplication by Delegates.notNull()
     }
     lateinit var socketManager: SocketManager
-        private set
     override fun onCreate() {
         super.onCreate()
         ContextHolder.application = this
@@ -41,9 +40,11 @@ class MyApplication:Application() {
         if (getCurrentProcessName() == packageName){
             preloadWebView()
             DiscreteScrollViewOptions.init(this);
+
+            socketManager = SocketManager()
         }
 
-        socketManager = SocketManager()
+
     }
 
     override fun attachBaseContext(base: Context?) {

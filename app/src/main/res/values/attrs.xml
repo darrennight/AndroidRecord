@@ -1244,5 +1244,11 @@
     </declare-styleable>
 
 
+    <declare-styleable name="CoffeeView">
+        <attr name="cupColor" format="color|reference"></attr>
+        <attr name="coasterColor" format="color|reference"></attr>
+        <attr name="vaporColor" format="color|reference"></attr>
+    </declare-styleable>
+
 
 </resources>

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dq.livemessage.ImageSpanCacheInstance
 import com.dq.livemessage.LiveMessageRecyclerHelper
+import com.dq.livemessagedemo.LiveMessageAdapter
 import com.hao.androidrecord.R
 import com.hao.androidrecord.activity.liveMessageHelper.model.LiveMessageModel
 import com.hao.androidrecord.activity.liveMessageHelper.tool.*
