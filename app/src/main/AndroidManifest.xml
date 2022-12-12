@@ -488,7 +488,12 @@
         <activity android:name=".activity.swipehorizontalscrollview.HorizontalMainActivity"/>
         <activity android:name=".activity.swipehorizontalscrollview.NeedFixItemPositionActivity"/>
 
-        <activity android:name=".table.LunaActivity"/>
+        <activity android:name=".table.tablelunar.LunaActivity"/>
+
+        <activity android:name=".activity.liveMessageHelper.LiveActivity"/>
+        <activity android:name=".activity.liveMessageHelper.RootActivity"/>
+
+        <activity android:name=".table.table01.TableActivity"/>
     </application>
 
 </manifest>

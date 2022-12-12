@@ -355,4 +355,6 @@ dependencies {
     implementation 'joda-time:joda-time:2.12.1'
 
     implementation "com.github.skydoves:elasticviews:2.1.0"
+
+    implementation 'com.github.QDong415:QLiveMessageHelper:v1.0'
 }

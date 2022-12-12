@@ -885,4 +885,6 @@
     <integer name="small_calendar_text_size">10</integer>
     <dimen name="small_week_bar_height">28dp</dimen>
     <dimen name="small_month_calendar_height">224dp</dimen>
+
+    <dimen name="toolbar_height">45dp</dimen>
 </resources>

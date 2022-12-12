@@ -72,6 +72,7 @@ import com.hao.androidrecord.activity.indexbar2.LauncherActivity
 import com.hao.androidrecord.activity.interval.IntervalActivity
 import com.hao.androidrecord.activity.keyboard.MainKeyboardActivity
 import com.hao.androidrecord.activity.keyboardbottom.KeyboardMainActivity
+import com.hao.androidrecord.activity.liveMessageHelper.RootActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.nine.CustomGirdActivity
 import com.hao.androidrecord.activity.nine.NineGridActivity
@@ -142,7 +143,7 @@ import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import com.hao.androidrecord.indexable.IndexableCityActivity
 import com.hao.androidrecord.service.MusicPlayerService
-import com.hao.androidrecord.table.LunaActivity
+import com.hao.androidrecord.table.tablelunar.LunaActivity
 import com.hao.androidrecord.threestateswitch.ThreeStateActivity
 import com.hao.androidrecord.util.AliBase64
 import com.hao.androidrecord.util.MBase64
@@ -799,6 +800,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             LunaActivity::class.java))
                     }
+                    161 -> {
+                        startActivity(Intent(this@MainActivity,
+                            RootActivity::class.java))
+                    }
                 }
             }
         }
@@ -977,6 +982,7 @@ class MainActivity : AppCompatActivity() {
         list.add("158 点击缩放效果")
         list.add("159 表格水平滚动")
         list.add("160 表格 table-layout-manager--黄历")
+        list.add("161 直播间聊天消息列表")
         adapter.notifyDataSetChanged()
 
 

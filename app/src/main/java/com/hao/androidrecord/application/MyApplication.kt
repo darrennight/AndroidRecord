@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Process
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.hao.androidrecord.activity.chatview.chatlib.AppUtils
+import com.hao.androidrecord.activity.liveMessageHelper.tool.SocketManager
 import com.hao.androidrecord.activity.robustwebview.base.WebViewInitTask
 import com.hao.androidrecord.activity.robustwebview.utils.ContextHolder
 import com.hao.androidrecord.activity.rv_vp.DiscreteScrollViewOptions
@@ -24,7 +25,8 @@ class MyApplication:Application() {
     companion object {
         var instance: MyApplication by Delegates.notNull()
     }
-
+    lateinit var socketManager: SocketManager
+        private set
     override fun onCreate() {
         super.onCreate()
         ContextHolder.application = this
@@ -41,6 +43,7 @@ class MyApplication:Application() {
             DiscreteScrollViewOptions.init(this);
         }
 
+        socketManager = SocketManager()
     }
 
     override fun attachBaseContext(base: Context?) {

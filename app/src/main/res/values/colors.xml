@@ -592,4 +592,8 @@
     <color name="md_blue_200">#0091EA</color>
     <color name="md_purple_100">#AA00FF</color>
     <color name="md_purple_200">#7200CA</color>
+
+    <color name="color_black_59">#59000000</color>
+    <color name="colorOdd">#0E2F50</color>
+    <color name="colorEven">#0F3356</color>
 </resources>
