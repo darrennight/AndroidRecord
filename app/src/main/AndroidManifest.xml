@@ -510,6 +510,7 @@
         <activity android:name=".leonids.OneShotSimpleExampleActivity"/>
         <activity android:name=".leonids.StarsExampleActivity"/>
         <activity android:name=".activity.coffeeView.CoffeeViewActivity"/>
+        <activity android:name=".activity.candle.CandleActivity"/>
     </application>
 
 </manifest>

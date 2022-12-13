@@ -44,6 +44,7 @@ import com.hao.androidrecord.activity.bottomsheet.BottomBarActivity
 import com.hao.androidrecord.activity.bottomsheet.BottomSheetActivity
 import com.hao.androidrecord.activity.bottomsheet.CoordinatorActivity
 import com.hao.androidrecord.activity.bottomtab.RVBottomActivity
+import com.hao.androidrecord.activity.candle.CandleActivity
 import com.hao.androidrecord.activity.chatview.SimpleChatViewActivity
 import com.hao.androidrecord.activity.chooser.ChooseMainActivity
 import com.hao.androidrecord.activity.coffeeView.CoffeeView
@@ -821,6 +822,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             CoffeeViewActivity::class.java))
                     }
+                    165 -> {
+                        startActivity(Intent(this@MainActivity,
+                            CandleActivity::class.java))
+                    }
                 }
             }
         }
@@ -1003,6 +1008,7 @@ class MainActivity : AppCompatActivity() {
         list.add("162 直播间聊天消息列表")
         list.add("163粒子爆炸效果")
         list.add("164咖啡冒烟效果")
+        list.add("165draw 烛光 test")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)
