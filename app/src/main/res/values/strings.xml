@@ -1035,4 +1035,26 @@ Quam libero nulla netus eu porta curae, ut nulla bibendum facilisis et urna sed,
 
     <string name="simple">Simple style</string>
     <string name="simple_desc">Simple calendar</string>
+
+    <string-array name="npv_lunar_year_without_measure_hint">
+        <item>二零一六</item>
+    </string-array>
+    <string-array name="npv_lunar_month_without_measure_hint">
+        <item>十一</item>
+    </string-array>
+    <string-array name="npv_lunar_day_with_measure_hint">
+        <item>初一</item>
+    </string-array>
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+
+    <string name="get_data">获取数据</string>
+    <string name="in_dialog">在Dialog中显示</string>
+
+    <string-array name="indicator_string_array">
+        <item>公历</item>
+        <item>农历</item>
+    </string-array>
 </resources>

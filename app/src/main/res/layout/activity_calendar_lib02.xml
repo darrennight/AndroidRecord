@@ -158,7 +158,7 @@
             app:week_bar_height="46dp"
             app:week_bar_view="com.hao.androidrecord.calendar.activity.lib02.custom.CustomWeekBar"
             app:week_line_background="#00000000"
-            app:week_line_margin="16dp"
+            app:week_line_margin="1dp"
             app:week_start_with="sun"
             app:week_lib01_text_size="10sp"
             app:week_view="com.hao.androidrecord.calendar.activity.lib02.custom.CustomWeekView"

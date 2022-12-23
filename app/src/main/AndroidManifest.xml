@@ -511,6 +511,7 @@
         <activity android:name=".leonids.StarsExampleActivity"/>
         <activity android:name=".activity.coffeeView.CoffeeViewActivity"/>
         <activity android:name=".activity.candle.CandleActivity"/>
+        <activity android:name=".activity.lunarPick.LunarDialogActivity"/>
     </application>
 
 </manifest>

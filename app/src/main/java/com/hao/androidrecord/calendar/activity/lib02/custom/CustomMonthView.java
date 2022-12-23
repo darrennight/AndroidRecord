@@ -126,6 +126,8 @@ public class CustomMonthView extends MonthView {
     @SuppressWarnings("IntegerDivisionInFloatingPointContext")
     @Override
     protected void onDrawText(Canvas canvas, Calendar calendar, int x, int y, boolean hasScheme, boolean isSelected) {
+//        canvas.drawColor(Color.BLACK);
+
         int cx = x + mItemWidth / 2;
         int cy = y + mItemHeight / 2;
         int top = y - mItemHeight / 6;
@@ -180,6 +182,8 @@ public class CustomMonthView extends MonthView {
                                     mCurMonthLunarTextPaint : mOtherMonthLunarTextPaint);
         }
     }
+
+
 
     /**
      * dp转px

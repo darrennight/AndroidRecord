@@ -596,4 +596,11 @@
     <color name="color_black_59">#59000000</color>
     <color name="colorOdd">#0E2F50</color>
     <color name="colorEven">#0F3356</color>
+
+    <color name="colorGregorian">#ff3388ff</color>
+    <color name="colorLunar">#ffee5544</color>
+    <color name="colorPickerTextNormal">#FF555555</color>
+    <color name="colorPickerTextSelected">#FFF56313</color>
+    <color name="colorIndicatorTextNormal">#FF555555</color>
+    <color name="colorTransparent">#00000000</color>
 </resources>

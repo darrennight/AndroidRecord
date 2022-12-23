@@ -76,6 +76,7 @@ import com.hao.androidrecord.activity.interval.IntervalActivity
 import com.hao.androidrecord.activity.keyboard.MainKeyboardActivity
 import com.hao.androidrecord.activity.keyboardbottom.KeyboardMainActivity
 import com.hao.androidrecord.activity.liveMessageHelper.RootActivity
+import com.hao.androidrecord.activity.lunarPick.LunarDialogActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.nine.CustomGirdActivity
 import com.hao.androidrecord.activity.nine.NineGridActivity
@@ -826,6 +827,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             CandleActivity::class.java))
                     }
+                    166 -> {
+                        startActivity(Intent(this@MainActivity,
+                            LunarDialogActivity::class.java))
+                    }
                 }
             }
         }
@@ -1009,6 +1014,7 @@ class MainActivity : AppCompatActivity() {
         list.add("163粒子爆炸效果")
         list.add("164咖啡冒烟效果")
         list.add("165draw 烛光 test")
+        list.add("166农历lunar选择器")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)
