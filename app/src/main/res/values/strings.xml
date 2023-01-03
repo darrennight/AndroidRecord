@@ -1057,4 +1057,7 @@ Quam libero nulla netus eu porta curae, ut nulla bibendum facilisis et urna sed,
         <item>公历</item>
         <item>农历</item>
     </string-array>
+
+    <string name="marquee_text">心中有阳光，脚底有力量。</string>
+    <string name="marquee_texts">心中有阳光，脚底有力量。心中有阳光，脚底有力量。心中有阳光，脚底有力量。心中有阳光，脚底有力量。</string>
 </resources>

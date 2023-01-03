@@ -47,7 +47,6 @@ import com.hao.androidrecord.activity.bottomtab.RVBottomActivity
 import com.hao.androidrecord.activity.candle.CandleActivity
 import com.hao.androidrecord.activity.chatview.SimpleChatViewActivity
 import com.hao.androidrecord.activity.chooser.ChooseMainActivity
-import com.hao.androidrecord.activity.coffeeView.CoffeeView
 import com.hao.androidrecord.activity.coffeeView.CoffeeViewActivity
 import com.hao.androidrecord.activity.consecutivescroller.MainScrollerActivity
 import com.hao.androidrecord.activity.coroutine.*
@@ -77,6 +76,9 @@ import com.hao.androidrecord.activity.keyboard.MainKeyboardActivity
 import com.hao.androidrecord.activity.keyboardbottom.KeyboardMainActivity
 import com.hao.androidrecord.activity.liveMessageHelper.RootActivity
 import com.hao.androidrecord.activity.lunarPick.LunarDialogActivity
+import com.hao.androidrecord.activity.marqueeView.lib1.ui.MarqueeMainActivity
+import com.hao.androidrecord.activity.marqueeView.lib2.ui.Marqueelib2MainActivity
+import com.hao.androidrecord.activity.marqueeView.lib3.MarqueeLib3MainActivity
 import com.hao.androidrecord.activity.nestedscrolling.NestedMainActivity
 import com.hao.androidrecord.activity.nine.CustomGirdActivity
 import com.hao.androidrecord.activity.nine.NineGridActivity
@@ -831,6 +833,18 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             LunarDialogActivity::class.java))
                     }
+                    167 -> {
+                        startActivity(Intent(this@MainActivity,
+                            MarqueeMainActivity::class.java))
+                    }
+                    168 -> {
+                        startActivity(Intent(this@MainActivity,
+                            Marqueelib2MainActivity::class.java))
+                    }
+                    169 -> {
+                        startActivity(Intent(this@MainActivity,
+                            MarqueeLib3MainActivity::class.java))
+                    }
                 }
             }
         }
@@ -1015,6 +1029,9 @@ class MainActivity : AppCompatActivity() {
         list.add("164咖啡冒烟效果")
         list.add("165draw 烛光 test")
         list.add("166农历lunar选择器")
+        list.add("167跑马灯")
+        list.add("168跑马灯")
+        list.add("169跑马灯")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)

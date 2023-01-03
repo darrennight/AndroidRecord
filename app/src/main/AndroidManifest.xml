@@ -512,6 +512,10 @@
         <activity android:name=".activity.coffeeView.CoffeeViewActivity"/>
         <activity android:name=".activity.candle.CandleActivity"/>
         <activity android:name=".activity.lunarPick.LunarDialogActivity"/>
+
+        <activity android:name=".activity.marqueeView.lib1.ui.MarqueeMainActivity"/>
+        <activity android:name=".activity.marqueeView.lib2.ui.Marqueelib2MainActivity"/>
+        <activity android:name=".activity.marqueeView.lib3.MarqueeLib3MainActivity"/>
     </application>
 
 </manifest>
