@@ -56,6 +56,7 @@ import com.hao.androidrecord.activity.dfilp.MainDialogActivity
 import com.hao.androidrecord.activity.dialog.DialogActivity
 import com.hao.androidrecord.activity.drag.DragCardActivity
 import com.hao.androidrecord.activity.dyindex.DYIndexMainActivity
+import com.hao.androidrecord.activity.easyScollImage.SplashScrollImageActivity
 import com.hao.androidrecord.activity.elasticviews.ElasticViewMainActivity
 import com.hao.androidrecord.activity.expandable.ExpandableRecycleActivity
 import com.hao.androidrecord.activity.expandable.two.TwoExpandableActivity
@@ -845,6 +846,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             MarqueeLib3MainActivity::class.java))
                     }
+                    170 -> {
+                        startActivity(Intent(this@MainActivity,
+                            SplashScrollImageActivity::class.java))
+                    }
                 }
             }
         }
@@ -1032,6 +1037,7 @@ class MainActivity : AppCompatActivity() {
         list.add("167跑马灯")
         list.add("168跑马灯")
         list.add("169跑马灯")
+        list.add("170小红书splash背景图片滚动")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)
