@@ -517,6 +517,8 @@
         <activity android:name=".activity.marqueeView.lib2.ui.Marqueelib2MainActivity"/>
         <activity android:name=".activity.marqueeView.lib3.MarqueeLib3MainActivity"/>
         <activity android:name=".activity.easyScollImage.SplashScrollImageActivity"/>
+
+        <activity android:name=".omnipotent.OmnipotentActivity"/>
     </application>
 
 </manifest>

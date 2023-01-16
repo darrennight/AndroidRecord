@@ -150,6 +150,7 @@ import com.hao.androidrecord.custom.selector.engine.impl.GlideEngine
 import com.hao.androidrecord.custom.selector.ui.MatisseCustomActivity
 import com.hao.androidrecord.indexable.IndexableCityActivity
 import com.hao.androidrecord.leonids.ExampleListActivity
+import com.hao.androidrecord.omnipotent.OmnipotentActivity
 import com.hao.androidrecord.service.MusicPlayerService
 import com.hao.androidrecord.table.table01.TableActivity
 import com.hao.androidrecord.table.tablelunar.LunaActivity
@@ -850,6 +851,10 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             SplashScrollImageActivity::class.java))
                     }
+                    171 -> {
+                        startActivity(Intent(this@MainActivity,
+                            OmnipotentActivity::class.java))
+                    }
                 }
             }
         }
@@ -1038,6 +1043,7 @@ class MainActivity : AppCompatActivity() {
         list.add("168跑马灯")
         list.add("169跑马灯")
         list.add("170小红书splash背景图片滚动")
+        list.add("171activity和fragment通信框架简单框架")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)
