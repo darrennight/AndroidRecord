@@ -40,6 +40,7 @@ import com.hao.androidrecord.activity.bookpage.BookPageActivity00
 import com.hao.androidrecord.activity.bottom.MainBottomActivity
 import com.hao.androidrecord.activity.bottom.MainBottomActivity01
 import com.hao.androidrecord.activity.bottom.MainBottomActivity02
+import com.hao.androidrecord.activity.bottom.MainBottomActivity03
 import com.hao.androidrecord.activity.bottomsheet.BottomBarActivity
 import com.hao.androidrecord.activity.bottomsheet.BottomSheetActivity
 import com.hao.androidrecord.activity.bottomsheet.CoordinatorActivity
@@ -855,6 +856,9 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(this@MainActivity,
                             OmnipotentActivity::class.java))
                     }
+                    172-> {
+                        startActivity(Intent(this@MainActivity, MainBottomActivity03::class.java))
+                    }
                 }
             }
         }
@@ -1044,6 +1048,7 @@ class MainActivity : AppCompatActivity() {
         list.add("169跑马灯")
         list.add("170小红书splash背景图片滚动")
         list.add("171activity和fragment通信框架简单框架")
+        list.add("172底部凹陷导航")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)

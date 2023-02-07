@@ -1060,4 +1060,28 @@ Quam libero nulla netus eu porta curae, ut nulla bibendum facilisis et urna sed,
 
     <string name="marquee_text">心中有阳光，脚底有力量。</string>
     <string name="marquee_texts">心中有阳光，脚底有力量。心中有阳光，脚底有力量。心中有阳光，脚底有力量。心中有阳光，脚底有力量。</string>
+    <string name="title_menu_activity_main_navigation_view_general">General</string>
+    <string name="title_menu_activity_main_navigation_view_latest_issue">Latest issue</string>
+    <string name="title_menu_activity_main_navigation_view_advertise">Advertise</string>
+    <string name="title_menu_activity_main_navigation_view_submit">Submit</string>
+    <string name="title_menu_activity_main_navigation_view_jobs">Jobs</string>
+    <string name="title_menu_activity_main_navigation_view_past_issues">Past issues</string>
+    <string name="title_menu_activity_main_navigation_view_android_weekly">Android weekly</string>
+    <string name="title_menu_activity_main_navigation_view_about">About</string>
+    <string name="title_menu_activity_main_navigation_view_contact_us">Contact us</string>
+    <string name="title_menu_activity_main_navigation_view_imprint">Imprint</string>
+    <string name="title_menu_activity_main_navigation_view_privacy">Privacy</string>
+    <string name="title_menu_activity_main_navigation_view_projects">Projects</string>
+    <string name="title_menu_activity_main_navigation_view_photo_editor_for_android">Photo Editor for Android</string>
+    <string name="title_menu_activity_main_navigation_view_pspdfkit">PSPDFKit</string>
+    <string name="title_menu_activity_main_navigation_view_social">Social</string>
+    <string name="title_menu_activity_main_navigation_view_google_plus">Google plus</string>
+    <string name="title_menu_activity_main_navigation_view_twitter">Twitter</string>
+    <string name="title_menu_activity_main_navigation_view_facebook">Facebook</string>
+    <string name="button_header_activity_main_navigation_view_subscribe">Subscribe</string>
+
+    <string name="message_email_component_not_found">There is no email application installed in your device.</string>
+    <string name="past_issues">Past Issues</string>
+    <string name="adversite">Adversite</string>
+    <string name="title_menu_activity_main_navigation_view_settings">Settings</string>
 </resources>

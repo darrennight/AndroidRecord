@@ -926,4 +926,8 @@
         <attr name="foldThreshold" format="dimension" />
         <attr name="needFixItemPosition" format="boolean" />
     </declare-styleable>
+
+    <style name="BottomNavigationView" parent="Base.TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">9sp</item>
+    </style>
 </resources>
