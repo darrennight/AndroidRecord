@@ -9,6 +9,7 @@ import com.hao.androidrecord.R
 
 //https://www.jianshu.com/p/f6d581a51e0d
 //https://github.com/yale8848/CacheWebView
+//https://juejin.cn/post/7043706765879279629
 class H5WebViewActivity :AppCompatActivity(){
     private val gson: Gson = Gson()
 
