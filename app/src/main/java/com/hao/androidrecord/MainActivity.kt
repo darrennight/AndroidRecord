@@ -22,6 +22,7 @@ import com.hao.androidrecord.activity.DashedLineDivider.DashedLineMainActivity
 import com.hao.androidrecord.activity.DragPanelLayout.DragMainActivity
 import com.hao.androidrecord.activity.KeyboardLayout.KeyboardActivity
 import com.hao.androidrecord.activity.LuckyWheel.LuckWheelActivity
+import com.hao.androidrecord.activity.MagicIndicator.ExampleMainActivity
 import com.hao.androidrecord.activity.NotchTools.NotchToolsMainActivity
 import com.hao.androidrecord.activity.SelectableTextHelper.SelectHelpMainActivity
 import com.hao.androidrecord.activity.SelectableTextView.SelectTextActivity
@@ -62,6 +63,7 @@ import com.hao.androidrecord.activity.elasticviews.ElasticViewMainActivity
 import com.hao.androidrecord.activity.expandable.ExpandableRecycleActivity
 import com.hao.androidrecord.activity.expandable.two.TwoExpandableActivity
 import com.hao.androidrecord.activity.expandablecardview.ExpandCardMainActivity
+import com.hao.androidrecord.activity.expandflow.ExpandFlow02Activity
 import com.hao.androidrecord.activity.expandflow.ExpandFlowActivity
 import com.hao.androidrecord.activity.expandrv.ExpandMenuActivity
 import com.hao.androidrecord.activity.fabpop.FabPopMainActivity
@@ -859,6 +861,15 @@ class MainActivity : AppCompatActivity() {
                     172-> {
                         startActivity(Intent(this@MainActivity, MainBottomActivity03::class.java))
                     }
+                    173-> {
+                        startActivity(Intent(this@MainActivity, RecyclePositonActivity::class.java))
+                    }
+                    174-> {
+                        startActivity(Intent(this@MainActivity, ExpandFlow02Activity::class.java))
+                    }
+                    175-> {
+                        startActivity(Intent(this@MainActivity, ExampleMainActivity::class.java))
+                    }
                 }
             }
         }
@@ -1049,6 +1060,9 @@ class MainActivity : AppCompatActivity() {
         list.add("170小红书splash背景图片滚动")
         list.add("171activity和fragment通信框架简单框架")
         list.add("172底部凹陷导航")
+        list.add("173recyclerview 滚动位置")
+        list.add("174flowLayout展开收缩")
+        list.add("175MagicIndicator指示器——tab")
         adapter.notifyDataSetChanged()
 
         rv_demo_list.scrollToPosition(list.size-1)

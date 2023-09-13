@@ -521,6 +521,19 @@
 
         <activity android:name=".omnipotent.OmnipotentActivity"/>
         <activity android:name=".activity.bottom.MainBottomActivity03"/>
+
+        <activity android:name=".activity.RecyclePositonActivity"/>
+        <activity android:name=".activity.expandflow.ExpandFlow02Activity"/>
+
+        <activity android:name=".activity.MagicIndicator.BadgeTabExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.CustomNavigatorExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.DynamicTabExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.ExampleMainActivity"/>
+        <activity android:name=".activity.MagicIndicator.FixedTabExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.FragmentContainerExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.LoadCustomLayoutExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.NoTabOnlyIndicatorExampleActivity"/>
+        <activity android:name=".activity.MagicIndicator.ScrollableTabExampleActivity"/>
     </application>
 
 </manifest>

@@ -1332,4 +1332,12 @@
         <attr name="mv3speed" format="integer" />
         <attr name="mv3spacing" format="dimension" />
     </declare-styleable>
+
+
+
+    <declare-styleable name="FlowLayout">
+        <attr name="rowsCount" format="integer" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="horizontalSpacing" format="dimension" />
+    </declare-styleable>
 </resources>

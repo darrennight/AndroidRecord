@@ -887,4 +887,19 @@
     <dimen name="small_month_calendar_height">224dp</dimen>
 
     <dimen name="toolbar_height">45dp</dimen>
+
+    <dimen name="vertical_spacing">8dp</dimen>
+    <dimen name="horizontal_spacing">8dp</dimen>
+
+    <dimen name="margin_main">16dp</dimen>
+    <dimen name="margin_top">8dp</dimen>
+
+    <dimen name="blob_text_size">12dp</dimen>
+    <dimen name="blob_padding">16dp</dimen>
+
+    <dimen name="common_navigator_height">45dp</dimen>
+    <dimen name="navigator_margin_top">5dp</dimen>
+    <dimen name="small_navigator_height">5dp</dimen>
+    <dimen name="navigator_margin_top_large">45dp</dimen>
+    <dimen name="large_navigator_height">65dp</dimen>
 </resources>
